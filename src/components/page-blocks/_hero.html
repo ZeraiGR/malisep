@@ -6,13 +6,40 @@
 			</h1>
 
 			<div class="hero__content">
-				<a class="hero__link" href="#">
-					смотреть программы
-				</a>
-				<p class="hero__descr">
-					Сочетаем авторские программы ведущих российских и зарубежных педагогов с международным опытом в образовании
-				</p>
+				<div class="hero__decor">
+					<div class="button-wrapper">
+						<a class="hero__link button button--follow blob-btn" href="#">
+							смотреть программы
+							<span class="blob-btn__inner">
+								<span class="blob-btn__blobs">
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+								</span>
+							</span>
+						</a>
+						<br />
+						<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+							<defs>
+								<filter id="goo">
+									<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+									<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+										result="goo">
+									</fecolormatrix>
+									<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+								</filter>
+							</defs>
+						</svg>
+					</div>
+				</div>
+
+				<div class="hero__descr-wrapper">
+					<p class="hero__descr">
+						Сочетаем авторские программы ведущих российских и зарубежных педагогов с международным опытом в образовании
+					</p>
+				</div>
+
 			</div>
 		</div>
-	</div>
 </section>
