@@ -1,0 +1,102 @@
+.header {
+    margin-bottom: 5.625rem;
+    padding-top: 1.875rem;
+    color: $black;
+    font-size: 14px;
+}
+
+.header .container {
+    max-width: 1733px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 4rem;
+    max-width: 12.875rem;
+    text-transform: uppercase;
+}
+
+.header__menu-btn {
+    margin-right: 2.2rem;
+    font-size: 0;
+}
+
+.header__lang {
+    margin-right: 0.815rem;
+    padding: 0.315rem;
+    border: none;
+    color: $accent;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__programs {
+    margin-right: 7rem;
+    max-width: 10rem;
+    color: $grey;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    padding: 10px 20px;
+    @extend %gilroy-500;
+    border-radius: 5.625rem;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    transition: background-color 0.3s ease;
+    font-style: italic;
+    background-color: #dcdfe2;
+}
+
+.header__login {
+    position: relative;
+    margin-left: auto;
+    padding-left: 3.75rem;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        z-index: 1;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #dadde0;
+        border-radius: 90px;
+        background-image: url('../img/star.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-color 0.3s ease;
+    }
+
+    &:hover {
+        color: #434343;
+        &::before {
+            background-color: #8bc540;
+            border-color: transparent;
+            background-image: url('../img/door.svg');
+        }
+    }
+}

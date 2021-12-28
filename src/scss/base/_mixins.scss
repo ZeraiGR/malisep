@@ -1,60 +1,127 @@
 @mixin font-face($name, $file, $weight: 400, $style: normal) {
-	@font-face {
-		font-family: "#{$name}";
-		src: local("#{$file}"),
-		url('../fonts/#{$file}.woff2') format('woff2'),
-		url('../fonts/#{$file}.woff') format('woff');
-		font-weight: $weight;
-		font-style: $style;
-		font-display: swap;
-	}
+    @font-face {
+        font-family: '#{$name}';
+        src: local('#{$file}'), url('../fonts/#{$file}.woff2') format('woff2'),
+            url('../fonts/#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
 }
 
-@mixin bg ($size:"contain", $position: "center") {
-	background-size: #{$size};
-	background-position: #{$position};
-	background-repeat: no-repeat;
+@mixin bg($size: 'contain', $position: 'center') {
+    background-size: #{$size};
+    background-position: #{$position};
+    background-repeat: no-repeat;
 }
 
-@mixin btn_anim($scaleMax:1.05, $scaleMin:0.95) {
-	transform-origin: center center;
-	transition: all ease-out 240ms;
+@mixin btn_anim($scaleMax: 1.05, $scaleMin: 0.95) {
+    transform-origin: center center;
+    transition: all ease-out 240ms;
 
-	&:hover {
-		transform: scale(#{$scaleMax});
-	}
+    &:hover {
+        transform: scale(#{$scaleMax});
+    }
 
-	&:focus {
-		outline: transparent;
-	}
+    &:focus {
+        outline: transparent;
+    }
 
-	&:focus-visible {
-		transform: scale(#{$scaleMax}) translateY(-5%);
-	}
+    &:focus-visible {
+        transform: scale(#{$scaleMax}) translateY(-5%);
+    }
 
-	&:active {
-		transform: scale(#{$scaleMin});
-	}
+    &:active {
+        transform: scale(#{$scaleMin});
+    }
 }
 
-@mixin no-btn ($display:"inline-block") {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	background-color: transparent;
-	border-radius: 0;
-	cursor: pointer;
-	appearance: none;
-	display: #{$display};
+@mixin no-btn($display: 'inline-block') {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+    display: #{$display};
 }
 
-@mixin transit ($tr:0.24) {
-	transition: all #{$tr}s;
+@mixin transit($tr: 0.24) {
+    transition: all #{$tr}s;
 }
 
-@mixin container($max-width:"120rem", $padding:"2rem") {
-	width: 100%;
-	max-width: #{$max-width};
-	padding: 0 #{$padding};
-	margin: 0 auto;
+@mixin container($max-width: '120rem', $padding: '2rem') {
+    width: 100%;
+    max-width: #{$max-width};
+    padding: 0 #{$padding};
+    margin: 0 auto;
 }
+
+@mixin cut-text($line) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin _1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin _1366 {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin _1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin _979 {
+    @media (max-width: 979px) {
+        @content;
+    }
+}
+
+@mixin min_979 {
+    @media (min-width: 979px) {
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media (max-width: 767.9px) {
+        @content;
+    }
+}
+
+@mixin _630 {
+    @media (max-width: 630px) {
+        @content;
+    }
+}
+
+@mixin min_630 {
+    @media (min-width: 630px) {
+        @content;
+    }
+}
+
+@mixin _414 {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin _380 {
+    @media (max-width: 380px) {
+        @content;
+    }
+}
+

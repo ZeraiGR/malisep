@@ -1,0 +1,28 @@
+%gilroy-500 {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%gilroy-600 {
+    font-family: 'Gilroy-Semibold', sans-serif;
+    font-weight: 600;
+}
+
+%grotesk-600 {
+    font-family: 'QuadratGroteskNew', sans-serif;
+    font-weight: 600;
+}
+
+%checkbox-hidden,
+%radio-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+$text: #19191c;
+$black: #060506;
+$accent: #5a15eb;
+$grey: #979faa;
