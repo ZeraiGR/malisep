@@ -126,3 +126,20 @@ body {
         @include bg(15px, calc(100% - 20px));
     }
 }
+
+.follow {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &::after {
+        position: absolute;
+        right: -28px;
+        top: 50%;
+        transform: translateY(-56%);
+        width: 18px;
+        height: 18px;
+        background-image: url('../img/decor-icons/plus-icon.svg');
+        content: '';
+    }
+}

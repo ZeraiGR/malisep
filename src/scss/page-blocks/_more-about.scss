@@ -1,0 +1,21 @@
+.more-about {
+    background-color: $green;
+}
+
+.more-about__link {
+    padding: 45px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.more-about__text {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+        border-color: $text;
+    }
+}
