@@ -1,3 +1,8 @@
+%gilroy-400 {
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: 400;
+}
+
 %gilroy-500 {
     font-family: 'Gilroy-Medium', sans-serif;
     font-weight: 500;
@@ -26,3 +31,13 @@ $text: #19191c;
 $black: #060506;
 $accent: #5a15eb;
 $grey: #979faa;
+
+@keyframes marquee {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}

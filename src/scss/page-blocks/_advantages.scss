@@ -1,0 +1,121 @@
+.advantages {
+    background-color: #dcdfe2;
+}
+
+.advantages .container {
+    max-width: 1345px;
+}
+
+.advantages__inner {
+    display: flex;
+    align-items: center;
+    max-height: 445px;
+}
+
+.advantages__decor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 395px;
+    width: 100%;
+    height: 395px;
+    font-size: 24px;
+    @extend %gilroy-600;
+    background-image: url('../img/advantage-decor.svg');
+}
+
+.advantages__runline {
+    max-width: 120px;
+    width: 100%;
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    font-size: 80px;
+    @extend %grotesk-400;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.advantages__runline-text {
+    animation: marquee 5s linear infinite;
+    display: inline-flex;
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 70px;
+    display: flex;
+    max-width: 30%;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    color: #434343;
+    @extend %gilroy-500;
+    white-space: nowrap;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(151, 159, 170, 0.3);
+        border-radius: 50%;
+        @include bg(25px);
+        content: '';
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--international {
+        &::before {
+            background-image: url('../img/decor-icons/international.png');
+        }
+    }
+
+    &--extend {
+        &::before {
+            background-image: url('../img/decor-icons/extend.png');
+        }
+    }
+
+    &--service {
+        &::before {
+            background-image: url('../img/decor-icons/service.png');
+        }
+    }
+
+    &--portfolio {
+        &::before {
+            background-image: url('../img/decor-icons/portfolio.png');
+        }
+    }
+
+    &--industry {
+        &::before {
+            background-image: url('../img/decor-icons/industry.png');
+        }
+    }
+
+    &--teachers {
+        &::before {
+            background-image: url('../img/decor-icons/teachers.png');
+        }
+    }
+
+    &--diplom {
+        &::before {
+            background-image: url('../img/decor-icons/diplom.png');
+        }
+    }
+}
