@@ -1,8 +1,44 @@
 .offer {
+    position: relative;
     background-color: #dcdfe2;
     background-image: url('../img/pattern.png');
+
+    &::before {
+        position: absolute;
+        top: -46px;
+        left: 0;
+        width: 100%;
+        height: 46px;
+        background-color: $accent;
+        position: absolute;
+        content: '';
+    }
 }
 
 .offer__inner {
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer__text {
+    margin-bottom: 30px;
+    max-width: 993px;
+    font-size: 24px;
+    text-align: center;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.offer__text span {
+    @extend %gilroy-600;
+}
+
+.offer__logo {
+    display: inline;
+    vertical-align: middle;
 }
