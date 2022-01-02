@@ -29,71 +29,124 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     };
 
-    tabsManager();
-
-    var accordion = (function (element) {
-        var _getItem = function (elements, className) {
-            // функция для получения элемента с указанным классом
-            var element = undefined;
-            elements.forEach(function (item) {
-                if (item.classList.contains(className)) {
-                    element = item;
-                }
-            });
-            return element;
-        };
-        return function () {
-            var _mainElement = {}, // .accordion
-                _items = {}, // .accordion-item
-                _contents = {}; // .accordion-item-content
-            var _actionClick = function (e) {
-                    if (!e.target.classList.contains('accordion-item-header')) {
-                        // прекращаем выполнение функции если кликнули не по заголовку
-                        return;
+    const accordionManager = () => {
+        var accordion = (function (element) {
+            var _getItem = function (elements, className) {
+                // функция для получения элемента с указанным классом
+                var element = undefined;
+                elements.forEach(function (item) {
+                    if (item.classList.contains(className)) {
+                        element = item;
                     }
-                    e.preventDefault(); // отменям стандартное действие
-                    // получаем необходимые данные
-                    var header = e.target,
-                        item = header.parentElement,
-                        itemActive = _getItem(_items, 'show');
-                    if (itemActive === undefined) {
-                        // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-                        item.classList.add('show');
-                    } else {
-                        // удаляем класс show у ткущего элемента
-                        itemActive.classList.remove('show');
-                        // если следующая вкладка не равна активной
-                        if (itemActive !== item) {
+                });
+                return element;
+            };
+            return function () {
+                var _mainElement = {}, // .accordion
+                    _items = {}, // .accordion-item
+                    _contents = {}; // .accordion-item-content
+                var _actionClick = function (e) {
+                        if (
+                            !e.target.classList.contains(
+                                'accordion-item-header'
+                            )
+                        ) {
+                            // прекращаем выполнение функции если кликнули не по заголовку
+                            return;
+                        }
+                        e.preventDefault(); // отменям стандартное действие
+                        // получаем необходимые данные
+                        var header = e.target,
+                            item = header.parentElement,
+                            itemActive = _getItem(_items, 'show');
+                        if (itemActive === undefined) {
                             // добавляем класс show к элементу (в зависимости от выбранного заголовка)
                             item.classList.add('show');
+                        } else {
+                            // удаляем класс show у ткущего элемента
+                            itemActive.classList.remove('show');
+                            // если следующая вкладка не равна активной
+                            if (itemActive !== item) {
+                                // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                                item.classList.add('show');
+                            }
                         }
-                    }
-                },
-                _setupListeners = function () {
-                    // добавим к элементу аккордиона обработчик события click
-                    _mainElement.addEventListener('click', _actionClick);
+                    },
+                    _setupListeners = function () {
+                        // добавим к элементу аккордиона обработчик события click
+                        _mainElement.addEventListener('click', _actionClick);
+                    };
+
+                return {
+                    init: function (element) {
+                        _mainElement =
+                            typeof element === 'string'
+                                ? document.querySelector(element)
+                                : element;
+                        _items =
+                            _mainElement.querySelectorAll('.accordion-item');
+                        _setupListeners();
+                    },
                 };
-
-            return {
-                init: function (element) {
-                    _mainElement =
-                        typeof element === 'string'
-                            ? document.querySelector(element)
-                            : element;
-                    _items = _mainElement.querySelectorAll('.accordion-item');
-                    _setupListeners();
-                },
             };
-        };
-    })();
+        })();
 
-    // инициализируем элемент с id="accordion" как аккордеон
-    var accordion1 = accordion();
-    accordion1.init('#accordion');
+        // инициализируем элемент с id="accordion" как аккордеон
+        var accordion1 = accordion();
+        accordion1.init('#accordion');
 
-    document.querySelector('select').addEventListener('change', function () {
-        document.querySelectorAll('.tab').forEach((n, i) => {
-            n.classList.toggle('active', i === this.selectedIndex);
-        });
+        document
+            .querySelector('select')
+            .addEventListener('change', function () {
+                document.querySelectorAll('.tab').forEach((n, i) => {
+                    n.classList.toggle('active', i === this.selectedIndex);
+                });
+            });
+    };
+
+    const scrollbarWidth = () => {
+        let div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        document.body.append(div);
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+
+        return scrollWidth;
+    };
+
+    const calcMarginSliders = () => {
+        const section = document.querySelector('.success-history');
+
+        if (section) {
+            const windowWidth =
+                (window.innerWidth - 1170 - scrollbarWidth()) / 2;
+
+            section.style['padding-left'] = windowWidth + 'px';
+        }
+    };
+
+    // custom scripts
+
+    tabsManager();
+    calcMarginSliders();
+    // accordionManager();
+
+    // sliders
+
+    const swiper = new Swiper('.success-slider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.success-slide__next',
+            prevEl: '.success-slide__prev',
+        },
     });
+
+    // fancybox
+
+    Fancybox.bind('[data-fancybox="test"]', {});
 });

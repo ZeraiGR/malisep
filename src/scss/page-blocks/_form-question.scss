@@ -25,11 +25,16 @@
     @extend %gilroy-500;
 }
 
+.form-question__cols {
+    display: flex;
+    flex-grow: 1;
+}
+
 .form-question__col {
     max-width: 375px;
     width: 100%;
     flex-grow: 1;
-    &:nth-child(2) {
+    &:first-child {
         margin-right: 20px;
     }
 }

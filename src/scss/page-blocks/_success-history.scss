@@ -1,0 +1,148 @@
+.success-history {
+    display: flex;
+    padding: 100px 0;
+}
+
+.success-history__info {
+    margin-right: 20px;
+    padding-right: 70px;
+    max-width: 375px;
+    width: 100%;
+    border-right: 1px solid #c7cbd0;
+}
+
+.success-history__title {
+    margin-bottom: 40px;
+    max-width: 230px;
+    font-size: 24px;
+    @extend %gilroy-600;
+
+    span {
+        color: $green;
+    }
+}
+
+.success-history__text {
+    margin-bottom: 60px;
+    font-size: 18px;
+    @extend %gilroy-500;
+}
+
+.success-history__link {
+    padding: 13.5px 55px 13.5px 37px;
+}
+
+.success-slider {
+    min-width: 0;
+}
+
+.success-slide {
+    position: relative;
+    padding-top: 7px;
+}
+
+.success-slide__hover {
+    display: block;
+
+    &:hover {
+        .success-slide__link,
+        .success-slide__avatar-box::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-slide__avatar-box {
+            border-color: $accent;
+        }
+    }
+}
+
+.success-slide__top {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.success-slide__avatar-box {
+    position: relative;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+
+    &::after {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        content: '';
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+    }
+}
+
+.success-slide__item {
+    display: block;
+    font-size: 12px;
+    @extend %gilroy-500;
+}
+
+.success-slide__descr {
+    margin-bottom: 20px;
+    @include cut-text(3);
+    @extend %gilroy-500;
+    color: $grey;
+}
+
+.success-slide__program {
+    margin-bottom: 30px;
+    max-width: 160px;
+    font-size: 14px;
+    @extend %gilroy-500;
+}
+
+.success-slide__heading {
+    display: block;
+
+    @extend %gilroy-700;
+}
+
+.success-slide__link {
+    text-transform: uppercase;
+    color: $green;
+    @extend %gilroy-600;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.success-slide__prev,
+.success-slide__next {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% - 21px);
+    display: block;
+    width: 68px;
+    height: 21px;
+    background-image: url('../img/decor-icons/slider-arrow.svg');
+    @include bg(68px 21px);
+    font-size: 0;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+    }
+}
+
+.success-slide__prev {
+    right: 41%;
+    transform: rotate(180deg);
+}
+
+.success-slide__next {
+    right: calc(41% - 90px);
+}
