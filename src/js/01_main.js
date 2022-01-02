@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // sliders
 
-    const swiper = new Swiper('.success-slider', {
+    const successSlider = new Swiper('.success-slider', {
         slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
@@ -146,7 +146,67 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    const worksSlider = new Swiper('.works-slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.works-slide__next',
+            prevEl: '.works-slide__prev',
+        },
+        pagination: {
+            el: '.works-slide__counter',
+            type: 'fraction',
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+    });
+
+    // const bullet = document.querySelectorAll('.swiper-menu__item');
+
+    const worksSliderHandler = () => {
+        const bullets = document.querySelector('.works-slide__bullets'),
+            prevArrow = document.querySelector('.works-slide__prev'),
+            nextArrow = document.querySelector('.works-slide__next'),
+            bulletsList = bullets.querySelectorAll('.works-slide__bullet');
+        if (bullets) {
+            bullets.addEventListener('click', (e) => {
+                const target = e.target,
+                    index = target.getAttribute('data-index');
+                if (target.classList.contains('works-slide__bullet')) {
+                    bulletsList.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+
+                    target.classList.add('active');
+                    worksSlider.slideTo(index);
+                }
+            });
+
+            const changeSlide = () => {
+                bulletsList.forEach((el) => {
+                    el.classList.remove('active');
+                });
+                const realIndex = worksSlider.realIndex;
+
+                console.log(bulletsList[realIndex]);
+                bulletsList[realIndex].classList.add('active');
+            };
+
+            prevArrow.addEventListener('click', () => {
+                changeSlide();
+            });
+
+            nextArrow.addEventListener('click', () => {
+                changeSlide();
+            });
+        }
+    };
+
+    worksSliderHandler();
+
     // fancybox
 
-    Fancybox.bind('[data-fancybox="test"]', {});
+    Fancybox.bind('[data-fancybox="works-slide"]', {});
 });
