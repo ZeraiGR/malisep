@@ -1,0 +1,16 @@
+.more-directions {
+    padding: 45px 0;
+    background-color: $text;
+    color: #ffffff;
+    font-size: 40px;
+    @extend %grotesk-400;
+}
+
+.more-directions__link {
+    color: $green;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
