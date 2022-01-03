@@ -118,21 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return scrollWidth;
     };
 
-    const calcMarginSliders = () => {
-        const section = document.querySelector('.success-history');
+    const calcPaddingSliders = () => {
+        const histories = document.querySelector('.success-history');
+        const teachers = document.querySelector('.teachers-main');
 
-        if (section) {
-            const windowWidth =
-                (window.innerWidth - 1170 - scrollbarWidth()) / 2;
+        const calcPadding = (section) => {
+            if (section) {
+                const windowWidth =
+                    (window.innerWidth - 1170 - scrollbarWidth()) / 2;
 
-            section.style['padding-left'] = windowWidth + 'px';
-        }
+                section.style['padding-left'] = windowWidth + 'px';
+            }
+        };
+
+        calcPadding(histories);
+        calcPadding(teachers);
     };
 
     // custom scripts
 
     tabsManager();
-    calcMarginSliders();
+    calcPaddingSliders();
     // accordionManager();
 
     // sliders
@@ -143,6 +149,19 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.success-slide__next',
             prevEl: '.success-slide__prev',
+        },
+    });
+
+    const teacherSlider = new Swiper('.teachers-slider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.teachers-main__slider-next',
+            prevEl: '.teachers-main__slider-prev',
+        },
+        pagination: {
+            el: '.teachers-main__slider-counter',
+            type: 'fraction',
         },
     });
 

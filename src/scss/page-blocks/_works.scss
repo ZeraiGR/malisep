@@ -184,27 +184,14 @@
 
 .works-slide__prev,
 .works-slide__next {
-    display: block;
-    min-width: 68px;
-    height: 21px;
     background-image: url('../img/decor-icons/slider-arrow.svg');
-    @include bg(68px 21px);
-    font-size: 0;
-    cursor: pointer;
-
-    &.swiper-button-disabled {
-        opacity: 0.5;
-    }
 }
 
 .works-slide__counter {
     margin-right: 90px;
-    @extend %gilroy-600;
-    font-size: 14px;
     color: $grey;
 
     .swiper-pagination-current {
-        font-size: 24px;
         color: $text;
     }
 }

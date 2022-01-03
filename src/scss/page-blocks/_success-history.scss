@@ -125,22 +125,11 @@
     position: absolute;
     z-index: 10;
     top: calc(100% - 21px);
-    display: block;
-    width: 68px;
-    height: 21px;
     background-image: url('../img/decor-icons/slider-arrow.svg');
-    @include bg(68px 21px);
-    font-size: 0;
-    cursor: pointer;
-
-    &.swiper-button-disabled {
-        opacity: 0.5;
-    }
 }
 
 .success-slide__prev {
     right: 41%;
-    transform: rotate(180deg);
 }
 
 .success-slide__next {

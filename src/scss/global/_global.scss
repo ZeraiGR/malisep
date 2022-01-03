@@ -237,3 +237,36 @@ body {
         }
     }
 }
+
+.slider-prev,
+.slider-next {
+    display: block;
+    min-width: 68px;
+    height: 21px;
+    background-size: 68px 21px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+    }
+}
+
+.slider-counter {
+    width: max-content;
+    font-size: 14px;
+    @extend %gilroy-600;
+
+    .swiper-pagination-current {
+        font-size: 24px;
+    }
+}
+
+.slider-prev {
+    transform: rotate(180deg);
+}
+
+.slider-next {
+}

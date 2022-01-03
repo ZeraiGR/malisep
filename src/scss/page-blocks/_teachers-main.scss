@@ -1,34 +1,76 @@
 .teachers-main {
+    padding: 100px 0;
+    display: flex;
     background-color: $text;
     color: #ffffff;
 }
 
 .teachers-main__info {
+    margin-right: 120px;
+    max-width: 275px;
+    width: 100%;
 }
 
 .teachers-main__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    @extend %gilroy-600;
+
+    span {
+        color: $green;
+    }
 }
 
 .teachers-main__total {
+    margin-bottom: 200px;
+    font-size: 18px;
+    @extend %gilroy-500;
+    color: $grey;
 }
 
 .teachers-main__slider-nav {
+    max-width: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.teachers-slider {
+.teachers-main__slider-prev,
+.teachers-main__slider-next {
+    background-image: url('../img/decor-icons/slider-arrow-white.svg');
 }
 
-.teachers-slider__wrapper {
+.teachers-main__slider-counter {
+    color: $grey;
+
+    .swiper-pagination-current {
+        font-size: 24px;
+        color: #ffffff;
+    }
 }
 
-.teachers-slide {
+.teachers-slide__hover {
+    display: block;
 }
 
 .teachers-slide__img {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.teachers-slide__name,
+.teachers-slide__position {
+    @extend %gilroy-500;
+    font-size: 14px;
 }
 
 .teachers-slide__name {
+    margin-bottom: 5px;
+    display: block;
 }
 
 .teachers-slide__position {
+    color: $grey;
 }
