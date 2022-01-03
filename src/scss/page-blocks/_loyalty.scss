@@ -1,0 +1,72 @@
+.loyalty {
+}
+
+.loyalty__inner {
+    padding: 100px 0;
+    display: flex;
+}
+
+.loyalty__info {
+    margin-right: 55px;
+    max-width: 340px;
+}
+
+.loyalty__title {
+    margin-bottom: 30px;
+    max-width: 250px;
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.loyalty__descr {
+    margin-bottom: 20px;
+    font-size: 18px;
+    @extend %gilroy-500;
+}
+
+.loyalty__text {
+    font-size: 14px;
+    color: $grey;
+    @extend %gilroy-500;
+}
+
+.loyalty__list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.loyalty__item {
+    max-width: 180px;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+        .loyalty__offer {
+            text-decoration: underline;
+        }
+
+        .loyalty__logo {
+            border-color: $accent;
+        }
+    }
+}
+
+.loyalty__logo {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #c7cbd0;
+    transition: border-color 0.3s ease;
+}
+
+.loyalty__logo-img {
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.loyalty__offer {
+    text-transform: uppercase;
+    font-size: 14px;
+    @extend %gilroy-600;
+}

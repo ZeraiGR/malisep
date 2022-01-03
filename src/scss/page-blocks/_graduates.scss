@@ -13,7 +13,7 @@
             url('../img/decor-icons/graduates-cover.svg');
         background-repeat: no-repeat;
         background-position: 51% bottom, left top;
-        background-size: 180px 230px, 100%;
+        background-size: 180px 230px, 120%;
         content: '';
     }
 }
@@ -37,13 +37,13 @@
     margin-bottom: 30px;
     max-width: 270px;
     font-size: 24px;
-    @extend %gilroy-700;
+    @extend %gilroy-600;
 }
 
 .graduates__descr {
     margin-bottom: 30px;
     font-size: 18px;
-    @extend %gilroy-600;
+    @extend %gilroy-500;
 }
 
 .graduates__link,
