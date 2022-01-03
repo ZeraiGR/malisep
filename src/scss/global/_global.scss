@@ -180,4 +180,60 @@ body {
             background-image: url('../img/decor-icons/plus-icon-accent.svg');
         }
     }
+
+    &--blur {
+        padding-left: 35px;
+        @include bg(15px, left center);
+        text-decoration: underline;
+        @extend %gilroy-600;
+
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            position: absolute;
+            z-index: -1;
+            left: -27px;
+            top: -27px;
+            width: 100px;
+            height: 100px;
+            background-image: url('../img/decor-blur.png');
+            @include bg();
+            content: '';
+            transition: transform 1s ease, text-decoration 0.3s ease;
+        }
+
+        &:hover {
+            text-decoration-color: transparent;
+            &::before {
+                transform: scale(0);
+            }
+        }
+    }
+
+    &--download {
+        padding-left: 70px;
+        color: $accent;
+        text-decoration: underline;
+
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-image: url('../img/download-icon.svg');
+            content: '';
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

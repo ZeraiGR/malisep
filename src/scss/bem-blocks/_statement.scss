@@ -1,10 +1,27 @@
 .statement {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
 }
+
 .statement__info {
+    margin-right: 30px;
+    @extend %gilroy-600;
 }
+
 .statement__title {
+    margin-bottom: 70px;
+    max-width: 250px;
+    font-size: 24px;
 }
+
 .statement__link {
+    display: block;
+    max-width: 200px;
+    background-image: url('../img/follow-black.svg');
 }
+
 .statement__docs {
+    margin-right: 30px;
+    display: flex;
 }

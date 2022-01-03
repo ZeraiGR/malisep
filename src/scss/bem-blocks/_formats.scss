@@ -1,18 +1,91 @@
-.formats {
-}
-.formats__title {
-}
+.formats__title,
 .formats__subtitle {
+    padding-left: 35px;
 }
+
+.formats__title {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.formats__subtitle {
+    margin-bottom: 60px;
+    @extend %gilroy-500;
+    font-size: 14px;
+}
+
 .formats__list {
+    @extend %gilroy-500;
+    font-size: 14px;
 }
+
 .formats__item {
-}
-.formats__item--day {
-}
-.formats__item--evening {
-}
-.formats__item--day-distance {
-}
-.formats__item--evening-distance {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 85px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+    }
+
+    &::before {
+        transform: translateY(-12%);
+        left: 35px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &::after {
+        left: 0;
+        top: calc(-50px + 50%);
+        width: 100px;
+        height: 100px;
+        border: 1px solid #dadde0;
+        border-radius: 50%;
+        transition: border-color 0.3 ease;
+    }
+
+    &--day {
+        &::before {
+            background-image: url('../img/icon-day.png');
+        }
+
+        &:hover {
+            &::before {
+                background-image: url('../img/icon-day-hover.png');
+            }
+
+            &::after {
+                border-color: $green;
+            }
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--evening {
+        &::before {
+            background-image: url('../img/icon-night.png');
+        }
+
+        &:hover {
+            &::before {
+                background-image: url('../img/icon-night-hover.png');
+            }
+
+            &::after {
+                border-color: $accent;
+            }
+        }
+    }
 }

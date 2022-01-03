@@ -1,8 +1,23 @@
 .document {
+    max-width: 195px;
+    &:first-child {
+        margin-right: 20px;
+    }
 }
+
 .document__img {
+    margin-bottom: 20px;
+    width: 100%;
 }
-.document__name {
-}
+
+.document__name,
 .document__download {
+    display: block;
+}
+
+.document__name {
+    margin-bottom: 25px;
+    @extend %gilroy-500;
+    color: $grey;
+    font-size: 12px;
 }
