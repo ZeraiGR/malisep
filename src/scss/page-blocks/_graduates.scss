@@ -1,0 +1,102 @@
+.graduates {
+    position: relative;
+    background-color: #dcdfe2;
+
+    &::before {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 720px;
+        height: 100%;
+        background-image: url('../img/graduates-decor-1.jpg'),
+            url('../img/decor-icons/graduates-cover.svg');
+        background-repeat: no-repeat;
+        background-position: 51% bottom, left top;
+        background-size: 180px 230px, 100%;
+        content: '';
+    }
+}
+
+.graduates__inner {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0 45px;
+    display: flex;
+}
+
+.graduates__info {
+    margin-right: 65px;
+    max-width: 330px;
+    width: 100%;
+    background-image: url('../img/graduates-decor-2.jpg');
+    @include bg(280px 360px, left calc(100% - 280px));
+}
+
+.graduates__title {
+    margin-bottom: 30px;
+    max-width: 270px;
+    font-size: 24px;
+    @extend %gilroy-700;
+}
+
+.graduates__descr {
+    margin-bottom: 30px;
+    font-size: 18px;
+    @extend %gilroy-600;
+}
+
+.graduates__link,
+.graduates__text {
+    display: block;
+}
+
+.graduates__link {
+    margin-bottom: 20px;
+    padding: 15.5px 46px 15.5px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 90px;
+    @extend %montserrat-600;
+    background-color: $accent;
+    background-image: url('../img/decor-icons/star-icon.svg');
+    @include bg(20px, calc(100% - 20px) center);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.graduates__text {
+    padding-left: 20px;
+    color: $grey;
+    font-size: 12px;
+    @extend %gilroy-500;
+}
+
+.graduates__img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.graduates__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graduates__item {
+    margin-bottom: 25px;
+    padding-top: 65px;
+    max-width: 375px;
+    font-size: 14px;
+    @extend %gilroy-600;
+    background-image: url('../img/decor-icons/round-plus.svg');
+    @include bg(50px, left top);
+
+    &:nth-child(odd) {
+        margin-right: 20px;
+    }
+}
