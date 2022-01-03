@@ -1,5 +1,5 @@
 .blog-main {
-    padding: 90px 0 115px;
+    padding: 90px 0 68px;
 }
 
 .blog-main__content {
@@ -99,6 +99,7 @@
 .publication__title {
     margin-bottom: 5px;
     display: block;
+    @include cut-text(1);
 }
 
 .publication__excerpt {

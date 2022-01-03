@@ -254,6 +254,10 @@ document.addEventListener('DOMContentLoaded', () => {
             worksSlider.on('slideChange', function () {
                 changeSlide(worksSlider, worksBullets);
             });
+
+            blogSlider.on('slideChange', function () {
+                changeSlide(blogSlider, blogBullets);
+            });
         }
     };
 
