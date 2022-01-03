@@ -1,0 +1,22 @@
+.top {
+    margin: 0 auto 20px;
+    padding-bottom: 15px;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #c7cbd0;
+}
+
+.top__title {
+    line-height: 1;
+}
+
+.top__link {
+    margin-right: 28px;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

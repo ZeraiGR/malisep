@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcPaddingSliders = () => {
         const histories = document.querySelector('.success-history');
         const teachers = document.querySelector('.teachers-main');
+        const blogMain = document.querySelector('.blog-main__content');
 
         const calcPadding = (section) => {
             if (section) {
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         calcPadding(histories);
         calcPadding(teachers);
+        calcPadding(blogMain);
     };
 
     // custom scripts
@@ -149,6 +151,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.success-slide__next',
             prevEl: '.success-slide__prev',
+        },
+    });
+
+    const blogSlider = new Swiper('.blog-main__slider', {
+        slidesPerView: 4,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 20,
+        pagination: {
+            el: '.blog-main__slider-counter',
+            type: 'fraction',
         },
     });
 
@@ -184,46 +198,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // const bullet = document.querySelectorAll('.swiper-menu__item');
 
-    const worksSliderHandler = () => {
-        const bullets = document.querySelector('.works-slide__bullets'),
-            prevArrow = document.querySelector('.works-slide__prev'),
-            nextArrow = document.querySelector('.works-slide__next'),
-            bulletsList = bullets.querySelectorAll('.works-slide__bullet');
-        if (bullets) {
-            bullets.addEventListener('click', (e) => {
-                const target = e.target,
-                    index = target.getAttribute('data-index');
-                if (target.classList.contains('works-slide__bullet')) {
-                    bulletsList.forEach((el) => {
-                        el.classList.remove('active');
-                    });
+    const SlidersHandler = () => {
+        const worksBullets = document.querySelector('.works-slide__bullets'),
+            blogBullets = document.querySelector('.blog-main__bullets'),
+            genetalBullets = document.querySelectorAll('.slider-bullet');
 
-                    target.classList.add('active');
-                    worksSlider.slideTo(index);
+        if (genetalBullets) {
+            const changeSlide = (slider, bullets, event) => {
+                bullets = Array.from(bullets.children);
+
+                // Переключение слайдера для кастомных буллетов
+                if (event) {
+                    const target = event.target,
+                        index = target.getAttribute('data-index');
+
+                    console.log();
+
+                    if (
+                        target.matches(
+                            `.${bullets[0].className
+                                .replace('slider-bullet', '')
+                                .replace('active', '')
+                                .trim()}`
+                        )
+                    ) {
+                        bullets.forEach((el) => {
+                            el.classList.remove('active');
+                        });
+
+                        target.classList.add('active');
+                        slider.slideTo(index);
+                    }
                 }
-            });
 
-            const changeSlide = () => {
-                bulletsList.forEach((el) => {
+                // Подсветка активного буллета
+                bullets.forEach((el) => {
                     el.classList.remove('active');
                 });
-                const realIndex = worksSlider.realIndex;
-
-                console.log(bulletsList[realIndex]);
-                bulletsList[realIndex].classList.add('active');
+                const realIndex = slider.realIndex;
+                bullets[realIndex].classList.add('active');
             };
 
-            prevArrow.addEventListener('click', () => {
-                changeSlide();
-            });
+            if (worksBullets) {
+                worksBullets.addEventListener('click', (e) => {
+                    changeSlide(worksSlider, worksBullets, e);
+                });
+            }
 
-            nextArrow.addEventListener('click', () => {
-                changeSlide();
+            if (blogBullets) {
+                blogBullets.addEventListener('click', (e) => {
+                    changeSlide(blogSlider, blogBullets, e);
+                });
+            }
+
+            worksSlider.on('slideChange', function () {
+                changeSlide(worksSlider, worksBullets);
             });
         }
     };
 
-    worksSliderHandler();
+    SlidersHandler();
 
     // fancybox
 

@@ -1,0 +1,130 @@
+.blog-main {
+    padding: 90px 0 115px;
+}
+
+.blog-main__content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.blog-main__info {
+    max-width: 225px;
+    width: 100%;
+}
+
+.blog-main__heading {
+    margin-bottom: 135px;
+    @extend %gilroy-500;
+    font-size: 18px;
+}
+
+.blog-main__slider-nav {
+    display: flex;
+}
+
+.blog-main__slider-counter {
+    margin-right: 25px;
+    color: $grey;
+
+    .swiper-pagination-current {
+        color: $text;
+    }
+}
+
+.blog-main__bullets {
+    display: flex;
+    align-items: center;
+}
+
+.blog-main__bullet {
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.blog-main__slider {
+    min-width: 0;
+    max-width: 1183px;
+
+    &::after {
+        position: absolute;
+        top: 45%;
+        width: 74.6%;
+        height: 1px;
+        background-color: rgba(151, 159, 170, 0.5);
+        content: '';
+    }
+}
+
+.blog-main__list {
+    flex-direction: row !important;
+}
+
+.publication {
+    margin-top: 0 !important;
+    margin-bottom: 47px;
+    height: 180px;
+    transition: filter 0.3s ease;
+
+    &:hover {
+        .publication__img {
+            filter: grayscale(1);
+        }
+
+        .publication__title {
+            color: $accent;
+        }
+    }
+}
+
+.publication__cover {
+    display: block;
+}
+
+.publication__img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.publication__title,
+.publication__excerpt {
+    @extend %gilroy-500;
+    font-size: 14px;
+}
+
+.publication__title {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.publication__excerpt {
+    color: $grey;
+    @include cut-text(2);
+}
+
+.blog {
+}
+.container {
+}
+.blog__top {
+}
+.blog__title {
+}
+.blog__descr {
+}
+.blog__list {
+}
+.blog__item {
+}
+.blog__link {
+}
+.blog__img {
+}
+.blog__name {
+}
+.blog__excerpt {
+}

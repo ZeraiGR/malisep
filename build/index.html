@@ -640,11 +640,11 @@
 		<div class="works-slide__navigation">
 
 			<ul class="works-slide__bullets">
-				<li class="works-slide__bullet active" data-index="0"></li>
-				<li class="works-slide__bullet" data-index="1"></li>
-				<li class="works-slide__bullet" data-index="2"></li>
-				<li class="works-slide__bullet" data-index="3"></li>
-				<li class="works-slide__bullet" data-index="4"></li>
+				<li class="works-slide__bullet slider-bullet active" data-index="0"></li>
+				<li class="works-slide__bullet slider-bullet" data-index="1"></li>
+				<li class="works-slide__bullet slider-bullet" data-index="2"></li>
+				<li class="works-slide__bullet slider-bullet" data-index="3"></li>
+				<li class="works-slide__bullet slider-bullet" data-index="4"></li>
 			</ul>
 
 			<div class="works-slide__arrows">
@@ -860,48 +860,159 @@
 		</ul>
 	</div>
 </section>
-		<section class="blog">
+		<section class="blog-main">
+	<div class="top">
+		<h2 class="top__title title">
+			Публикации
+		</h2>
 
-	<div class="container">
-
-		<div class="blog__top">
-			<h1 class="blog__title">
-				Публикации
-			</h1>
-
-			<span class="blog__descr">
-				Открытия и результаты научных работ сделанные нашими преподавателями, и сучениками
-			</span>
-		</div>
-
-		<ul class="blog__list">
-			<li class="blog__item">
-				<a class="blog__link" href="#">
-					<img class="blog__img" src="img/project-1.jpg" alt="blog img">
-
-					<span class="blog__name">Заголовок</span>
-
-					<p class="blog__excerpt">
-						Цитата в две строки Цитата в две строки Цитата в две строки
-					</p>
-				</a>
-			</li>
-
-			<li class="blog__item">
-				<a class="blog__link" href="#">
-					<img class="blog__img" src="img/project-1.jpg" alt="blog img">
-
-					<span class="blog__name">Заголовок</span>
-
-					<p class="blog__excerpt">
-						Цитата в две строки Цитата в две строки Цитата в две строки
-					</p>
-				</a>
-			</li>
-		</ul>
-
+		<a class="top__link follow follow--accent" href="#">
+			смотреть все публикации
+		</a>
 	</div>
 
+	<div class="blog-main__content">
+		<div class="blog-main__info">
+			<h3 class="blog-main__heading">
+				Открытия и результаты научных работ
+			</h3>
+
+			<div class="blog-main__slider-nav">
+				<div class="blog-main__slider-counter slider-counter"></div>
+
+				<ul class="blog-main__bullets">
+					<li class="blog-main__bullet slider-bullet active" data-index="0"></li>
+					<li class="blog-main__bullet slider-bullet" data-index="1"></li>
+					<li class="blog-main__bullet slider-bullet" data-index="2"></li>
+					<li class="blog-main__bullet slider-bullet" data-index="3"></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="blog-main__slider swiper">
+			<ul class="blog-main__list swiper-wrapper">
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-1.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки цитата в две строки цитата в две строки цитата в две
+							строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-2.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-3.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-4.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-1.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки цитата в две строки цитата в две строки цитата в две
+							строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-2.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-3.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-4.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-1.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки цитата в две строки цитата в две строки цитата в две
+							строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-2.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-3.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-4.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-1.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки цитата в две строки цитата в две строки цитата в две
+							строки</p>
+					</a>
+				</li>
+
+				<li class="publication swiper-slide">
+					<a class="publication__cover" href="#">
+						<img class="publication__img" src="img/project-2.jpg" alt="image">
+						<span class="publication__title">Заголовок</span>
+						<p class="publication__excerpt">Цитата в две строки Цитата в две строки</p>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+	</div>
 </section>
 		<section class="partners">
 	<div class="container">

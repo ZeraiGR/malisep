@@ -268,5 +268,43 @@ body {
     transform: rotate(180deg);
 }
 
-.slider-next {
+.slider-bullet {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &::before,
+    &::after {
+        position: absolute;
+        background-color: #c7cbd0;
+        content: '';
+        transition: background-color 0.3s;
+    }
+
+    &::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+    }
+
+    &::after {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 100%;
+    }
+
+    &.active {
+        transform: rotate(45deg);
+
+        &::before,
+        &::after {
+            background-color: $green;
+        }
+    }
 }
