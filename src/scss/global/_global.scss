@@ -172,4 +172,12 @@ body {
         background-image: url('../img/decor-icons/plus-icon.svg');
         content: '';
     }
+
+    &--accent {
+        color: $accent;
+
+        &::after {
+            background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        }
+    }
 }

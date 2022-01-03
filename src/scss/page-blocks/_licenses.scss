@@ -1,59 +1,59 @@
-.licenses {
-    padding-top: 65px;
-}
-.container {
-}
 .licenses__inner {
+    margin-bottom: 80px;
+    padding: 65px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #c7cbd0;
 }
+
+.license__wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .license {
+    max-width: 377px;
+    width: 100%;
+    &--small {
+        max-width: 277px;
+    }
 }
+
 .license__img {
+    margin-bottom: 20px;
+    object-fit: cover;
 }
+
 .license__descr {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+    color: $grey;
+    @extend %gilroy-500;
 }
+
 .license__link {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
-.button {
-}
+
 .licenses__content {
+    margin-right: 40px;
+    max-width: 355px;
 }
+
 .licenses__title {
+    margin-bottom: 30px;
+    max-width: 270px;
+    font-size: 24px;
+    @extend %gilroy-600;
 }
+
 .licenses__descr {
-}
-.statement {
-}
-.statement__info {
-}
-.statement__title {
-}
-.statement__link {
-}
-.statement__docs {
-}
-.document {
-}
-.document__img {
-}
-.document__name {
-}
-.document__download {
-}
-.formats {
-}
-.formats__title {
-}
-.formats__subtitle {
-}
-.formats__list {
-}
-.formats__item {
-}
-.formats__item--day {
-}
-.formats__item--evening {
-}
-.formats__item--day-distance {
-}
-.formats__item--evening-distance {
+    font-size: 18px;
+    @extend %gilroy-500;
 }
