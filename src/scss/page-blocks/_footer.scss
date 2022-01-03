@@ -1,97 +1,246 @@
 .footer {
+    padding: 40px 0;
     background-color: $text;
     color: #ffffff;
+
+    .menu {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #585c63;
+    }
+
+    .menu__item {
+        margin-right: 60px;
+        font-size: 14px;
+        @extend %gilroy-500;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .menu__link {
+        padding: 0;
+        color: $grey;
+        white-space: nowrap;
+        transition: font-style 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            color: #ffffff;
+            background-color: transparent;
+        }
+    }
+
+    .login {
+        &::before {
+            border-color: #585c63;
+        }
+
+        &:hover {
+            color: $green;
+        }
+    }
 }
 
 .footer__top {
+    padding-bottom: 45px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #585c63;
 }
 
 .footer__logo {
+    margin-right: 90px;
+    max-width: 210px;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
 }
 
 .footer__nav {
 }
 
-.menu {
-}
-
-.menu__item {
-}
-
-.menu__link {
-}
-
 .footer__help {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer__programs {
+    max-width: 200px;
+    color: $accent;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 14px;
+    @extend %gilroy-600;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .footer__login {
 }
 
 .footer__middle {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    display: flex;
+    border-bottom: 1px solid #585c63;
 }
 
 .footer__col {
+    margin-right: 40px;
+
+    &:nth-child(2) {
+        margin-right: 0;
+    }
 }
 
 .footer__title {
+    margin-bottom: 10px;
+    display: block;
+    color: $grey;
+    font-size: 24px;
+    @extend %gilroy-600;
 }
 
 .footer__list {
 }
 
 .footer__item {
+    margin-bottom: 10px;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .footer__link {
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__contacts {
+    margin-left: auto;
+    max-width: 380px;
+    width: 100%;
 }
 
 .footer__city {
+    margin-bottom: 5px;
+    font-size: 18px;
+    @extend %gilroy-500;
+}
+
+.footer__phone,
+.footer__mail {
+    display: block;
+    font-size: 18px;
+    @extend %gilroy-500;
 }
 
 .footer__mail {
+    color: $green;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__phone {
+    margin-bottom: 20px;
+    font-size: 36px;
+    @extend %gilroy-500;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $accent;
+    }
 }
 
 .footer__call {
+    margin-bottom: 50px;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 14.5px 20px;
+    border-radius: 90px;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        background-color: $accent;
+        border-color: $accent;
+    }
 }
 
 .popup-link {
 }
 
 .footer__socials {
-}
-
-.footer__social {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    @extend %gilroy-500;
+    text-transform: uppercase;
 }
 
 .footer__social-link {
-}
+    transition: color 0.3s ease;
 
-.footer__bottom {
+    &:hover {
+        color: $accent;
+    }
 }
 
 .footer__cookie {
+    margin-bottom: 40px;
+    color: $grey;
+    font-size: 14px;
+    @extend %gilroy-400;
+    opacity: 0.5;
 }
 
 .footer__line {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer__copy {
+    max-width: 675px;
+    @extend %gilroy-400;
+    font-size: 14px;
+    color: $grey;
+
+    span {
+        @extend %gilroy-500;
+    }
 }
 
 .footer__menu {
+    display: flex;
 }
 
 .footer__menu-item {
+    margin-right: 40px;
+    max-width: 150px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .footer__menu-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    @extend %gilroy-600;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
