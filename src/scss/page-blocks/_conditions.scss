@@ -1,0 +1,175 @@
+.conditions {
+    padding: 40px 0 10px;
+}
+
+.conditions__top {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.conditions__title {
+    margin-right: 120px;
+    max-width: 475px;
+}
+
+.conditions__descr,
+.conditions__name {
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.conditions__descr {
+    color: $green;
+}
+
+.conditions__course {
+    margin-bottom: 125px;
+
+    &--short {
+        .conditions__text {
+            &:first-child {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #c7cbd0;
+            }
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.conditions__name {
+    margin-bottom: 50px;
+    color: $accent;
+    text-decoration: underline;
+}
+
+.conditions__main {
+    display: flex;
+}
+
+.conditions__info {
+    margin-right: auto;
+    max-width: 475px;
+}
+
+.conditions__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &--grey {
+        margin-bottom: 50px;
+        color: $grey;
+        font-size: 14px;
+    }
+
+    &--litle {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+}
+
+.conditions__questionnaire {
+    padding: 13.5px 100px 13.5px 20px;
+
+    &:hover {
+        background-image: url('../img/decor-icons/plus-icon-white.svg');
+    }
+}
+
+.conditions__requires {
+    max-width: 575px;
+    width: 100%;
+}
+
+.conditions__list {
+    margin-bottom: 50px;
+}
+
+.conditions__item {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border-bottom: 1px solid #c7cbd0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.conditions__label {
+    @extend %gilroy-600;
+}
+
+.conditions__date {
+    @extend %gilroy-500;
+}
+
+.conditions__docs-title {
+    margin-bottom: 20px;
+    display: block;
+    @extend %gilroy-600;
+    font-size: 24px;
+}
+
+.conditions__doc-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.conditions__doc {
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    max-width: 47%;
+    width: 100%;
+    font-size: 14px;
+    @extend %gilroy-500;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+
+        border: 1px solid #dadde0;
+        border-radius: 50%;
+        content: '';
+    }
+
+    &--quiz {
+        &::before {
+            background-image: url('../img/decor-icons/blank-icon.svg');
+            @include bg(17px 20px, center);
+        }
+    }
+
+    &--copy {
+        &::before {
+            background-image: url('../img/decor-icons/education-icon.svg');
+            @include bg(20px 16px, center);
+        }
+    }
+
+    &--photo {
+        &::before {
+            background-image: url('../img/decor-icons/avatar-icon.svg');
+            @include bg(18px, center);
+        }
+    }
+
+    &--pasport {
+        &::before {
+            background-image: url('../img/decor-icons/passport-icon.svg');
+            @include bg(17px 20px, center);
+        }
+    }
+}

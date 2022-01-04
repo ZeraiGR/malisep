@@ -155,6 +155,11 @@ body {
 
         @include bg(15px, calc(100% - 3px));
     }
+
+    &--more {
+        background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        @include bg(20px, calc(100% - 20px));
+    }
 }
 
 .follow {
