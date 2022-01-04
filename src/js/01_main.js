@@ -30,8 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         };
 
-        tabInit('partners__tabs');
-        tabInit('events-main__content');
+        if (document.querySelector('.partners__tabs')) {
+            tabInit('partners__tabs');
+        }
+
+        if (document.querySelector('.events-main__content')) {
+            tabInit('events-main__content');
+        }
     };
 
     const accordionManager = () => {
@@ -353,4 +358,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // fancybox
 
     Fancybox.bind('[data-fancybox="works-slide"]', {});
+
+    // jquery.marque
+
+    if (document.querySelector('.structure__runline')) {
+        $('.structure__runline').marquee({
+            duration: 10000,
+            startVisible: true,
+            duplicated: true,
+        });
+    }
 });

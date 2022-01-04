@@ -41,6 +41,7 @@
         "imagemin-jpeg-recompress": "^7.0.0",
         "imagemin-pngquant": "^9.0.2",
         "jquery": "^3.6.0",
+        "jquery.marquee": "^1.6.0",
         "require-dir": "^1.2.0",
         "swiper": "^7.4.1",
         "vinyl-ftp": "^0.6.1"
