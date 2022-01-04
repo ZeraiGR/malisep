@@ -1,0 +1,28 @@
+.field-box {
+    position: relative;
+    height: 40px;
+}
+
+.field-input {
+    background-color: transparent;
+    font-size: 14px;
+    height: 100%;
+    outline: transparent;
+    width: 100%;
+
+    &:focus ~ .field-label,
+    &:not(:placeholder-shown) ~ .field-label {
+        transform: translateY(-20px) scale(0.75);
+        color: $grey;
+    }
+}
+
+.field-label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    line-height: 14px;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+}

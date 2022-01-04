@@ -1,104 +1,407 @@
 <section class="events-main">
 	<div class="top">
-		<h2 class="top__title">
+		<h2 class="top__title title">
 			События
 		</h2>
 
-		<a class="top__link" href="#">
+		<a class="top__link follow follow--accent" href="#">
 			смотреть все события
 		</a>
 	</div>
 
-	<div class="tabs">
-		<ul class="tabs__list">
-			<li class="tabs__item"><button class="tabs__btn tabs__btn--active" data-tabs-path="main">Главная</button></li>
-			<li class="tabs__item"><button class="tabs__btn" data-tabs-path="archive">Архив</button></li>
-			<li class="tabs__item"><button class="tabs__btn" data-tabs-path="settings">Настройки</button></li>
+
+	<div class="tabs events-main__content">
+		<ul class="tabs__list events-main__categories">
+			<li class="tabs__item events-main__category">
+				<span class="events-main__total">10</span>
+				<button class="tabs__btn tabs__btn--active events-main__btn" data-tabs-path="exhibition">
+					Выставки, организуемые Академией
+				</button>
+			</li>
+
+			<li class="tabs__item events-main__category">
+				<span class="events-main__total">23</span>
+				<button class="tabs__btn events-main__btn" data-tabs-path="lectures">
+					Выездные лекции
+				</button>
+			</li>
+
+			<li class="tabs__item events-main__category">
+				<span class="events-main__total">14</span>
+				<button class="tabs__btn events-main__btn" data-tabs-path="announcement">
+					Анонсы Международных и Европейских мероприятий в мире садового искусства
+				</button>
+			</li>
+
+			<li class="tabs__item events-main__category">
+				<span class="events-main__total">26</span>
+				<button class="tabs__btn events-main__btn" data-tabs-path="achieve-teachers">
+					Достижения преподавателей
+				</button>
+			</li>
+
+			<li class="tabs__item events-main__category">
+				<span class="events-main__total">45</span>
+				<button class="tabs__btn events-main__btn" data-tabs-path="achieve-students">
+					Достижения студентов
+				</button>
+			</li>
 		</ul>
-		<div class="tabs__content tabs__content--active" data-tabs-target="main">
-			<div class="content">
-				<h2 class="content__title">Добро пожаловать!</h2>
-				<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-				<ul class="content__list">
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-							<span class="content__text">Занятия йогой</span>
+
+		<div class="events-main__sliders">
+			<div class="swiper events-main__slider tabs__content tabs__content--active" data-tabs-target="exhibition"
+				id="exhibition">
+
+				<ul class="swiper-wrapper events-main__wrapper">
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Выставки</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-							<span class="content__text">Кардио</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Выставки</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-							<span class="content__text">Силовые тренировки</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Выставки</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Выставки</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
 				</ul>
+
+				<div class="events-main__navigation">
+					<div class="events-main__prev slider-prev"></div>
+					<div class="events-main__counter slider-counter"></div>
+					<div class="events-main__next slider-next"></div>
+				</div>
+
 			</div>
-		</div>
-		<div class="tabs__content" data-tabs-target="archive">
-			<div class="content">
-				<h2 class="content__title">Добро пожаловать!2</h2>
-				<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-				<ul class="content__list">
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-							<span class="content__text">Занятия йогой</span>
+
+			<div class="swiper events-main__slider tabs__content" data-tabs-target="lectures" id="lectures">
+
+				<ul class="swiper-wrapper events-main__wrapper">
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Лекции</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-							<span class="content__text">Кардио</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Лекции</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-							<span class="content__text">Силовые тренировки</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Лекции</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Лекции</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
 				</ul>
+
+				<div class="events-main__navigation">
+					<div class="events-main__prev slider-prev"></div>
+					<div class="events-main__counter slider-counter"></div>
+					<div class="events-main__next slider-next"></div>
+				</div>
+
 			</div>
-		</div>
-		<div class="tabs__content" data-tabs-target="settings">
-			<div class="content">
-				<h2 class="content__title">Добро пожаловать!3</h2>
-				<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-				<ul class="content__list">
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-							<span class="content__text">Занятия йогой</span>
+
+			<div class="swiper events-main__slider tabs__content" data-tabs-target="announcement" id="announcement">
+
+				<ul class="swiper-wrapper events-main__wrapper">
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Анонсы</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-							<span class="content__text">Кардио</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Анонсы</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
-					<li class="content__item">
-						<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-							<span class="content__text">Силовые тренировки</span>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Анонсы</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
 						</a>
 					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Анонсы</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
 				</ul>
+
+				<div class="events-main__navigation">
+					<div class="events-main__prev slider-prev"></div>
+					<div class="events-main__counter slider-counter"></div>
+					<div class="events-main__next slider-next"></div>
+				</div>
+
 			</div>
+
+			<div class="swiper events-main__slider tabs__content" data-tabs-target="achieve-teachers" id="achieve-teachers">
+
+				<ul class="swiper-wrapper events-main__wrapper">
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения преподавателей</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения преподавателей</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения преподавателей</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения преподавателей</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+				</ul>
+
+				<div class="events-main__navigation">
+					<div class="events-main__prev slider-prev"></div>
+					<div class="events-main__counter slider-counter"></div>
+					<div class="events-main__next slider-next"></div>
+				</div>
+
+			</div>
+
+			<div class="swiper events-main__slider tabs__content" data-tabs-target="achieve-students" id="achieve-students">
+
+				<ul class="swiper-wrapper events-main__wrapper">
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения студентов</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения студентов</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения студентов</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+					<li class="swiper-slide events-main__slide">
+						<a class="events-main__hover" href="#">
+							<img class="events-main__img" src="img/project-1.jpg" alt="project">
+							<div class="events-main__info">
+								<span class="events-main__cat">Достижения студентов</span>
+								<span class="events-main__date">08 / 08 / 2021</span>
+							</div>
+							<h3 class="events-main__title">
+								Садово-парковое искусство в прошлом и настоящем
+							</h3>
+						</a>
+					</li>
+
+				</ul>
+
+				<div class="events-main__navigation">
+					<div class="events-main__prev slider-prev"></div>
+					<div class="events-main__counter slider-counter"></div>
+					<div class="events-main__next slider-next"></div>
+				</div>
+
+			</div>
+
 		</div>
+
 	</div>
 
 	<div class="subscribe">
-		<span class="subscribe__title">
-			Будьте в курсе событий
-		</span>
+		<div class="container">
+			<div class="subscribe__inner">
+				<span class="subscribe__title">
+					Будьте в курсе событий
+				</span>
 
-		<div class="subscribe__field">
-			<label class="subscribe__name" for="your-mail">Ваша электронная почта</label>
-			<input class="subscribe__input" id="your-mail" type="email">
+				<div class="subscribe__field field-box">
+					<input class="subscribe__input field-input" id="your-mail" type="email" placeholder=" ">
+					<label class="subscribe__name field-label" for="your-mail">Ваша электронная почта</label>
+				</div>
+
+				<button class="subscribe__btn" type="submit">
+					подписаться
+				</button>
+			</div>
+
 		</div>
-
-		<button class="subscribe__btn" type="submit">
-			подписаться
-		</button>
 	</div>
 
 </section>

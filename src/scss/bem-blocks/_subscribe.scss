@@ -1,0 +1,45 @@
+.subscribe {
+    padding: 50px 0;
+    background-color: $green;
+}
+
+.subscribe__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe__title {
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.subscribe__field {
+    max-width: 375px;
+    width: 100%;
+    @extend %gilroy-500;
+    border-bottom: 1px solid $text;
+
+    &:focus {
+        border-bottom: 2px solid $text;
+    }
+}
+
+.subscribe__btn {
+    padding: 15.5px 20px;
+    max-width: 375px;
+    width: 100%;
+    background-color: $text;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    @extend %gilroy-600;
+    border-radius: 90px;
+    background-image: url('../img/decor-icons/mail-icon.svg');
+    @include bg(18px 14px, calc(100% - 20px) center);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
