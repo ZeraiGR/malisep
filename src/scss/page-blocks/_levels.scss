@@ -1,0 +1,80 @@
+.levels {
+    padding: 100px 0 60px;
+}
+
+.levels__title {
+    margin-bottom: 50px;
+
+    span {
+        color: $green;
+    }
+}
+
+.levels__list {
+    margin-bottom: 70px;
+    padding-left: 100px;
+    display: flex;
+    counter-reset: levels;
+}
+
+.levels__item {
+    position: relative;
+    margin-right: 120px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    font-size: 14px;
+    @extend %gilroy-500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c7cbd0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        position: absolute;
+        left: -100px;
+        bottom: -10px;
+        counter-increment: levels;
+        content: '0' counter(levels);
+        font-size: 48px;
+        line-height: 1;
+        @extend %grotesk-400;
+    }
+}
+
+.levels__listing {
+    display: flex;
+}
+
+.levels__one {
+    margin-right: 20px;
+    max-width: 277px;
+    width: 100%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--big {
+        max-width: 575px;
+        width: 100%;
+    }
+}
+
+.levels__name {
+    margin-bottom: 20px;
+    max-width: 265px;
+    display: block;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+}
+
+.levels__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
