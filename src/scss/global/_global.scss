@@ -236,6 +236,32 @@ body {
             text-decoration: none;
         }
     }
+
+    &--arrow {
+        padding-left: 35px;
+        color: $accent;
+        text-decoration: underline;
+
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background-image: url('../img/follow.svg');
+            @include bg(15px);
+            content: '';
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .slider-prev,

@@ -99,12 +99,12 @@
 	<div class="container">
 		<div class="addmition__inner">
 			<div class="addmition__content">
-				<h1 class="addmition__title">
+				<h1 class="addmition__title title">
 					<span>Поступление</span> и обучение
 				</h1>
 
 				<ul class="addmition__items">
-					<li class="addmition__item">
+					<li class="addmition__item addmition__item--open">
 						<span class="addmition__name">Дни открытых дверей</span>
 
 						<p class="addmition__descr">
@@ -113,12 +113,36 @@
 							вас вопросы.
 						</p>
 
-						<a class="addmition__link" href="#">
-							узнать расписание
-						</a>
+						<div class="button-wrapper addmition__button-wrapper">
+							<a class="addmition__link button blob-btn" href="#">
+								узнать расписание
+								<span class="blob-btn__inner">
+									<span class="blob-btn__blobs">
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+									</span>
+								</span>
+							</a>
+							<br />
+							<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+								<defs>
+									<filter id="goo">
+										<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+										<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+											result="goo">
+										</fecolormatrix>
+										<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+									</filter>
+								</defs>
+							</svg>
+						</div>
+
+						<img class="addmition__img" src="img/admission-1.jpg" alt="images">
 					</li>
 
-					<li class="addmition__item">
+					<li class="addmition__item addmition__item--programs">
 						<span class="addmition__name">Образовательные программы</span>
 
 						<p class="addmition__descr">
@@ -127,9 +151,33 @@
 							повысить профессиональный уровень.
 						</p>
 
-						<a class="addmition__link" href="#">
-							смотреть программы
-						</a>
+						<div class="button-wrapper addmition__button-wrapper">
+							<a class="addmition__link button blob-btn" href="#">
+								смотреть программы
+								<span class="blob-btn__inner">
+									<span class="blob-btn__blobs">
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+										<span class="blob-btn__blob"></span>
+									</span>
+								</span>
+							</a>
+							<br />
+							<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+								<defs>
+									<filter id="goo">
+										<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+										<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+											result="goo">
+										</fecolormatrix>
+										<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+									</filter>
+								</defs>
+							</svg>
+						</div>
+
+						<img class="addmition__img" src="img/admission-2.jpg" alt="images">
 					</li>
 				</ul>
 
@@ -137,25 +185,25 @@
 			</div>
 
 			<div class="addmition__sidebar">
-				<a class="addmition__conditions" href="#">
+				<a class="addmition__conditions follow follow--blur" href="#">
 					Условия поступления
 				</a>
 
 				<ul class="addmition__list">
 					<li class="addmition__list-item">
-						<a class="addmition__list-link" href="#">
+						<a class="addmition__list-link follow follow--arrow" href="#">
 							Центр информационных ресурсов
 						</a>
 					</li>
 
 					<li class="addmition__list-item">
-						<a class="addmition__list-link" href="#">
+						<a class="addmition__list-link follow follow--arrow" href="#">
 							Cвязи с индустрией
 						</a>
 					</li>
 
 					<li class="addmition__list-item">
-						<a class="addmition__list-link" href="#">
+						<a class="addmition__list-link follow follow--arrow" href="#">
 							Государственная лицензия
 						</a>
 					</li>
