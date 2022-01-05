@@ -46,71 +46,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const accordionManager = () => {
-        var accordion = (function (element) {
-            var _getItem = function (elements, className) {
-                // функция для получения элемента с указанным классом
-                var element = undefined;
-                elements.forEach(function (item) {
-                    if (item.classList.contains(className)) {
-                        element = item;
-                    }
-                });
-                return element;
-            };
-            return function () {
-                var _mainElement = {}, // .accordion
-                    _items = {}, // .accordion-item
-                    _contents = {}; // .accordion-item-content
-                var _actionClick = function (e) {
-                        if (
-                            !e.target.classList.contains(
-                                'accordion-item-header'
-                            )
-                        ) {
-                            // прекращаем выполнение функции если кликнули не по заголовку
-                            return;
-                        }
-                        e.preventDefault(); // отменям стандартное действие
-                        // получаем необходимые данные
-                        var header = e.target,
-                            item = header.parentElement,
-                            itemActive = _getItem(_items, 'show');
-                        if (itemActive === undefined) {
-                            // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-                            item.classList.add('show');
-                        } else {
-                            // удаляем класс show у ткущего элемента
-                            itemActive.classList.remove('show');
-                            // если следующая вкладка не равна активной
-                            if (itemActive !== item) {
-                                // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-                                item.classList.add('show');
-                            }
-                        }
-                    },
-                    _setupListeners = function () {
-                        // добавим к элементу аккордиона обработчик события click
-                        _mainElement.addEventListener('click', _actionClick);
-                    };
+    const accordeonManager = () => {
+        function findElements(object, element) {
+            const instance = object;
+            instance.element = element;
+            instance.target = element.nextElementSibling;
+        }
 
-                return {
-                    init: function (element) {
-                        _mainElement =
-                            typeof element === 'string'
-                                ? document.querySelector(element)
-                                : element;
-                        _items =
-                            _mainElement.querySelectorAll('.accordion-item');
-                        _setupListeners();
-                    },
-                };
-            };
-        })();
+        function hideElement(object) {
+            const instance = object;
+            const { target } = instance;
+            target.style.height = null;
+            instance.isActive = false;
+        }
 
-        // инициализируем элемент с id="accordion" как аккордеон
-        var accordion1 = accordion();
-        accordion1.init('#accordion');
+        function showElement(object) {
+            const instance = object;
+            const { target, height } = instance;
+            target.style.height = `${height}px`;
+            instance.isActive = true;
+        }
+
+        function changeElementStatus(instance) {
+            if (instance.isActive) {
+                hideElement(instance);
+            } else {
+                showElement(instance);
+            }
+        }
+
+        function measureHeight(object) {
+            const instance = object;
+            instance.height = object.target.firstElementChild.clientHeight;
+        }
+
+        function subscribe(instance) {
+            instance.element.addEventListener('click', (event) => {
+                event.preventDefault();
+                changeElementStatus(instance);
+                instance.element.classList.toggle('active');
+            });
+            window.addEventListener('resize', () => measureHeight(instance));
+        }
+
+        function accordion(element) {
+            const instance = {};
+
+            function init() {
+                findElements(instance, element);
+                measureHeight(instance);
+                subscribe(instance);
+            }
+
+            init();
+        }
+
+        const elements = [...document.querySelectorAll('.js-accordion')];
+        elements.forEach(accordion);
     };
 
     const selectTabsHandler = () => {
@@ -220,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     calcPaddingSliders();
     selectTabsHandler();
     programToggle();
-    // accordionManager();
+    accordeonManager();
 
     // sliders
 

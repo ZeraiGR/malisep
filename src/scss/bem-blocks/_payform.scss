@@ -1,0 +1,108 @@
+.payform {
+    display: flex;
+}
+
+.payform__info {
+    margin-right: 120px;
+    max-width: 475px;
+    width: 100%;
+}
+
+.payform__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.payform__text {
+    margin-bottom: 35px;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--accent {
+        color: $accent;
+        @extend %gilroy-600;
+    }
+}
+
+.payform__accordion {
+    max-width: 475px;
+    width: 100%;
+}
+
+.payform__question {
+    margin-bottom: 30px;
+
+    &.active {
+        .payform__trigger {
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.payform__trigger {
+    position: relative;
+    padding: 0 0 20px 30px;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c7cbd0;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        @include bg();
+        content: '';
+        transition: transform 0.3s ease;
+    }
+
+    &--standart {
+        background-image: url('../img/decor-icons/money-icon.svg');
+        @include bg(20px 13px, left 3px);
+    }
+
+    &--mortgage {
+        padding-top: 20px;
+        background-image: url('../img/decor-icons/icon-procent.svg');
+        @include bg(17px, left center);
+    }
+}
+
+.payform__content-text {
+    margin-bottom: 25px;
+    font-size: 14px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--bold {
+        margin-bottom: 30px;
+        @extend %gilroy-600;
+    }
+
+    &--small {
+        font-size: 12px;
+    }
+}
+
+.question__trigger {
+    width: 100%;
+    text-align: left;
+}
+
+.answer {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s;
+}
