@@ -1,0 +1,90 @@
+.information {
+    padding: 70px 0 40px;
+}
+
+.information__title {
+    margin-bottom: 20px;
+}
+
+.information__descr {
+    margin-bottom: 70px;
+    max-width: 1000px;
+    font-size: 24px;
+    color: $accent;
+    @extend %gilroy-600;
+}
+
+.information__content {
+    display: flex;
+}
+
+.information__info {
+    margin-right: 20px;
+}
+
+.information__tasks {
+    margin-bottom: 90px;
+    max-width: 320px;
+}
+
+.information__task {
+    margin-bottom: 25px;
+    padding-top: 60px;
+    font-size: 14px;
+    @extend %gilroy-500;
+    background-image: url('../img/decor-icons/round-icon.svg');
+    @include bg(50px, top left);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.information__offer {
+    max-width: 375px;
+    width: 100%;
+    color: $green;
+}
+
+.information__main {
+    max-width: 770px;
+}
+
+.information__advantages {
+    margin-bottom: 59px;
+    display: flex;
+
+    .information__advantage {
+        &--library {
+            margin-right: 20px;
+            max-width: 275px;
+        }
+
+        &--books {
+            max-width: 475px;
+        }
+    }
+}
+
+.information__img {
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.information__text {
+    font-size: 14px;
+    color: $grey;
+    @extend %gilroy-500;
+}
+
+.information__footer {
+    padding-top: 10px;
+    border-top: 1px solid #c7cbd0;
+    @extend %gilroy-500;
+}
+
+.information__heading {
+    margin-bottom: 30px;
+    display: block;
+    font-size: 18px;
+}
