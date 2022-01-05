@@ -1,0 +1,70 @@
+.account {
+    padding: 110px 0;
+}
+
+.account__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account__promo {
+    max-width: 485px;
+    width: 100%;
+
+    .account__img {
+        max-width: 475px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+.account__title {
+    margin-bottom: 50px;
+}
+
+.account__info {
+    padding-top: 22px;
+    max-width: 575px;
+}
+
+.account__heading {
+    margin-bottom: 60px;
+    display: block;
+    font-size: 24px;
+    color: $accent;
+    @extend %gilroy-600;
+}
+
+.account__content {
+    margin-bottom: 50px;
+}
+
+.account__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.account__images {
+    display: flex;
+}
+
+.account__one {
+    margin-right: 20px;
+    max-width: 178px;
+
+    .account__img {
+        width: 100%;
+        height: 215px;
+        object-fit: cover;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
