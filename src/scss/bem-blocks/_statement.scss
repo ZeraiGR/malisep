@@ -2,6 +2,42 @@
     padding: 80px 0;
     display: flex;
     justify-content: space-between;
+
+    &--study {
+        .statement__info {
+            max-width: 345px;
+            width: 100%;
+        }
+
+        .statement__title {
+            margin-bottom: 40px;
+        }
+
+        .statement__text {
+            font-size: 18px;
+            @extend %gilroy-600;
+
+            &--grey {
+                margin-bottom: 35px;
+                font-size: 14px;
+                color: $grey;
+                @extend %gilroy-500;
+            }
+        }
+
+        .document__img {
+            margin-bottom: 10px;
+        }
+
+        .document__name {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.statement__inner {
+    display: flex;
+    justify-content: space-between;
 }
 
 .statement__info {
