@@ -214,7 +214,7 @@
 </section>
 		<section class="structure">
 
-	<div class="structure__runline">
+	<div class="structure__runline runline">
 		<span>Структурные подразделения МАЛИСЭП</span>
 		<span>Структурные подразделения МАЛИСЭП</span>
 		<span>Структурные подразделения МАЛИСЭП</span>
@@ -261,6 +261,7 @@
 		<div class="structure__decor-item">decor element</div>
 		<div class="structure__decor-item">decor element</div>
 	</div>
+
 </section>
 		<section class="levels">
 	<div class="container">
@@ -521,14 +522,14 @@
 	<div class="container">
 		<div class="programs__top">
 			<div class="programs__intro">
-				<h2 class="programs__title">
+				<h2 class="programs__title title">
 					Программы обучения
 				</h2>
 
-				<select class="programs__choose">
-					<option>выбрать программу</option>
-					<option>название программы 1</option>
-					<option>название программы 2</option>
+				<select class="programs__choose button ">
+					<option>Выбрать программу</option>
+					<option>Городская архитектура</option>
+					<option>Ландшафтный дизайнер</option>
 				</select>
 
 			</div>
@@ -545,33 +546,59 @@
 				</p>
 			</div>
 		</div>
+	</div>
 
-		<ul class="programs__list">
-			<li class="program">
-				<div class="program__runline"></div>
-				<div class="program__content">
+	<ul class="programs__list">
+		<li class="program active" id="program-1">
+
+			<div class="program__runline runline program__runline--garden">
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+				<span>Садовник профессионал</span>
+			</div>
+
+			<div class="program__content">
+				<div class="container">
 					<ul class="program__specifications">
-						<li class="program__feature">
-							<span class="program__name">Продолжительность</span>
-							<span class="program__descr">1 год</span>
-						</li>
 
 						<li class="program__feature">
 							<span class="program__name">Продолжительность</span>
-							<span class="program__descr">1 год</span>
+							<div class="program__descr">2 года</div>
 						</li>
 
 						<li class="program__feature">
-							<span class="program__name">Продолжительность</span>
-							<span class="program__descr">1 год</span>
+							<span class="program__name">Дата начала и окончания</span>
+							<div class="program__descr">30/08/22 - 30/08/23</div>
 						</li>
 
 						<li class="program__feature">
-							<span class="program__name">Продолжительность</span>
-							<span class="program__descr">1 год</span>
+							<span class="program__name">Форма обучения</span>
+							<span class="program__descr">
+								<select class="program__select" name="form-study" id="">
+									<option value="day-office">Дневное очное</option>
+									<option value="evening-office">Вечернее очное</option>
+									<option value="day-remote">Дневное заочное</option>
+									<option value="evening-remote">Вечернее очное</option>
+								</select>
+							</span>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Язык курса</span>
+							<div class="program__descr">
+								<img class="program__flag" src="img/flag-russian.png" alt="Флаг России">
+								RU
+							</div>
 						</li>
 					</ul>
+				</div>
 
+				<div class="container">
 					<div class="program__chars">
 						<div class="program__char">
 							<span class="program__char-name">Диплом по специальности:</span>
@@ -592,101 +619,108 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
+				<div class="container">
 					<div class="program__relevant">
 						<h3 class="program__heading">
 							Кому подойдет данная образовательная программа
 						</h3>
 
-						<div class="tabs">
-							<ul class="tabs__list">
-								<li class="tabs__item"><button class="tabs__btn tabs__btn--active"
-										data-tabs-path="main">Главная</button>
+						<div class="tabs program__tabs">
+							<ul class="tabs__list program__tabs-list">
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn tabs__btn--active program__tabs-btn" data-tabs-path="category-1">
+										Первая
+										категория
+									</button>
 								</li>
-								<li class="tabs__item"><button class="tabs__btn" data-tabs-path="archive">Архив</button></li>
-								<li class="tabs__item"><button class="tabs__btn" data-tabs-path="settings">Настройки</button></li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="category-2">
+										Вторая категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="category-3">
+										Третья категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="category-4">
+										Четыре категория
+									</button>
+								</li>
 							</ul>
-							<div class="tabs__content tabs__content--active" data-tabs-target="main">
-								<div class="content">
-									<h2 class="content__title">Добро пожаловать!</h2>
-									<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-									<ul class="content__list">
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-												<span class="content__text">Занятия йогой</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-												<span class="content__text">Кардио</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-												<span class="content__text">Силовые тренировки</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="tabs__content" data-tabs-target="archive">
-								<div class="content">
-									<h2 class="content__title">Добро пожаловать!2</h2>
-									<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-									<ul class="content__list">
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-												<span class="content__text">Занятия йогой</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-												<span class="content__text">Кардио</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-												<span class="content__text">Силовые тренировки</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="tabs__content" data-tabs-target="settings">
-								<div class="content">
-									<h2 class="content__title">Добро пожаловать!3</h2>
-									<p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-									<ul class="content__list">
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/1.png');">
-												<span class="content__text">Занятия йогой</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/2.png');">
-												<span class="content__text">Кардио</span>
-											</a>
-										</li>
-										<li class="content__item">
-											<a href="#" class="content__link" style="background-image: url('./img/3.png');">
-												<span class="content__text">Силовые тренировки</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
+
+
+							<ul class="program__tabs-contents">
+								<li class="tabs__content tabs__content--active" data-tabs-target="category-1">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 1)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="category-2">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 2)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="category-3">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 3)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="category-4">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 4)
+									</p>
+								</li>
+							</ul>
+
+
 						</div>
 					</div>
+				</div>
 
+				<div class="container">
 					<div class="program__teachers">
-						<h3 class="program__heading">
+						<h3 class="program__headline">
 							Преподаватели
 						</h3>
 
 						<ul class="program__list">
 							<li class="program__teacher">
 								<a class="program__follow" href="#">
-									<img class="program__portrait" src="" alt="Фото преподавателя">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
 									<span class="program__teacher-name">
 										Ерзин Иван Васильевич
 									</span>
@@ -698,7 +732,31 @@
 
 							<li class="program__teacher">
 								<a class="program__follow" href="#">
-									<img class="program__portrait" src="" alt="Фото преподавателя">
+									<img class="program__portrait" src="img/teachers/teacher-2.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-3.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
 									<span class="program__teacher-name">
 										Ерзин Иван Васильевич
 									</span>
@@ -709,29 +767,37 @@
 							</li>
 						</ul>
 
-						<button class="program__btn" type="button">
+						<button class="program__btn follow follow--accent" type="button">
 							показать еще
 						</button>
 					</div>
+				</div>
 
-					<div class="program__structure">
-						<div class="program__head">
-							<h3 class="program__heading">
-								Структура программы обучения
-							</h3>
 
-							<button class="program__close" type="button">
-								кнопка свернуть/развернуть программу обучения
-							</button>
+				<div class="program__structure">
+					<div class="program__head">
+						<div class="container">
+							<div class="program__head-inner">
+								<h3 class="program__structure-title">
+									Структура программы обучения
+								</h3>
+
+								<button class="program__close" type="button">
+									кнопка свернуть/развернуть программу обучения
+								</button>
+							</div>
 						</div>
 
+					</div>
+
+					<div class="container">
 						<ul class="program__steps">
 							<li class="program__step">
 								Теоретический блок
 							</li>
 
 							<li class="program__step">
-								Творческо-исследовательский блок
+								Творческо- <br> исследовательский блок
 							</li>
 
 							<li class="program__step">
@@ -743,7 +809,7 @@
 							</li>
 
 							<li class="program__step">
-								Инженерно-технологический блок
+								Инженерно-технологический <br> блок
 							</li>
 
 							<li class="program__step">
@@ -763,10 +829,582 @@
 							</li>
 						</ul>
 					</div>
+
 				</div>
-			</li>
-		</ul>
-	</div>
+			</div>
+
+		</li>
+
+		<li class="program" id="program-2">
+
+			<div class="program__runline runline program__runline--architect">
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+				<span>Городская архитектура</span>
+			</div>
+
+			<div class="program__content">
+				<div class="container">
+					<ul class="program__specifications">
+
+						<li class="program__feature">
+							<span class="program__name">Продолжительность</span>
+							<div class="program__descr">3 года</div>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Дата начала и окончания</span>
+							<div class="program__descr">30/08/22 - 30/08/23</div>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Форма обучения</span>
+							<span class="program__descr">
+								<select class="program__select" name="form-study" id="">
+									<option value="day-office">Дневное очное</option>
+									<option value="evening-office">Вечернее очное</option>
+									<option value="day-remote">Дневное заочное</option>
+									<option value="evening-remote">Вечернее очное</option>
+								</select>
+							</span>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Язык курса</span>
+							<div class="program__descr">
+								<img class="program__flag" src="img/flag-russian.png" alt="Флаг России">
+								RU
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="container">
+					<div class="program__chars">
+						<div class="program__char">
+							<span class="program__char-name">Диплом по специальности:</span>
+							<span class="program__char-descr">Описание</span>
+						</div>
+
+						<div class="program__char-box">
+							<div class="program__char">
+								<span class="program__char-name">Факультет:</span>
+								<span class="program__char-descr">Описание</span>
+							</div>
+
+							<div class="program__char">
+								<span class="program__char-name">
+									Осуществляется на базе образования:
+								</span>
+								<span class="program__char-descr">Описание</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="program__relevant">
+						<h3 class="program__heading">
+							Кому подойдет данная образовательная программа
+						</h3>
+
+						<div class="tabs program__tabs">
+							<ul class="tabs__list program__tabs-list">
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn tabs__btn--active program__tabs-btn" data-tabs-path="some-cat-1">
+										Первая
+										категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="some-cat-2">
+										Вторая категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="some-cat-3">
+										Третья категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="some-cat-4">
+										Четыре категория
+									</button>
+								</li>
+							</ul>
+
+
+							<ul class="program__tabs-contents">
+								<li class="tabs__content tabs__content--active" data-tabs-target="some-cat-1">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 1)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="some-cat-2">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 2)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="some-cat-3">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 3)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="some-cat-4">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 4)
+									</p>
+								</li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="program__teachers">
+						<h3 class="program__headline">
+							Преподаватели
+						</h3>
+
+						<ul class="program__list">
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-2.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-3.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+						</ul>
+
+						<button class="program__btn follow follow--accent" type="button">
+							показать еще
+						</button>
+					</div>
+				</div>
+
+
+				<div class="program__structure">
+					<div class="program__head">
+						<div class="container">
+							<div class="program__head-inner">
+								<h3 class="program__structure-title">
+									Структура программы обучения
+								</h3>
+
+								<button class="program__close" type="button">
+									кнопка свернуть/развернуть программу обучения
+								</button>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="container">
+						<ul class="program__steps">
+							<li class="program__step">
+								Теоретический блок
+							</li>
+
+							<li class="program__step">
+								Творческо- <br> исследовательский блок
+							</li>
+
+							<li class="program__step">
+								Графический блок
+							</li>
+
+							<li class="program__step">
+								Технологический блок
+							</li>
+
+							<li class="program__step">
+								Инженерно-технологический <br> блок
+							</li>
+
+							<li class="program__step">
+								Биологический блок
+							</li>
+
+							<li class="program__step">
+								Экономический блок
+							</li>
+
+							<li class="program__step">
+								Юридический блок
+							</li>
+
+							<li class="program__step">
+								Практический блок
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</li>
+
+		<li class="program" id="program-3">
+
+			<div class="program__runline runline program__runline--designer">
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+				<span>Ландшафтный дизайнер</span>
+			</div>
+
+			<div class="program__content">
+				<div class="container">
+					<ul class="program__specifications">
+
+						<li class="program__feature">
+							<span class="program__name">Продолжительность</span>
+							<div class="program__descr">1.5 года</div>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Дата начала и окончания</span>
+							<div class="program__descr">30/08/22 - 30/08/23</div>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Форма обучения</span>
+							<span class="program__descr">
+								<select class="program__select" name="form-study" id="">
+									<option value="day-office">Дневное очное</option>
+									<option value="evening-office">Вечернее очное</option>
+									<option value="day-remote">Дневное заочное</option>
+									<option value="evening-remote">Вечернее очное</option>
+								</select>
+							</span>
+						</li>
+
+						<li class="program__feature">
+							<span class="program__name">Язык курса</span>
+							<div class="program__descr">
+								<img class="program__flag" src="img/flag-russian.png" alt="Флаг России">
+								RU
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="container">
+					<div class="program__chars">
+						<div class="program__char">
+							<span class="program__char-name">Диплом по специальности:</span>
+							<span class="program__char-descr">Описание</span>
+						</div>
+
+						<div class="program__char-box">
+							<div class="program__char">
+								<span class="program__char-name">Факультет:</span>
+								<span class="program__char-descr">Описание</span>
+							</div>
+
+							<div class="program__char">
+								<span class="program__char-name">
+									Осуществляется на базе образования:
+								</span>
+								<span class="program__char-descr">Описание</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="program__relevant">
+						<h3 class="program__heading">
+							Кому подойдет данная образовательная программа
+						</h3>
+
+						<div class="tabs program__tabs">
+							<ul class="tabs__list program__tabs-list">
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn tabs__btn--active program__tabs-btn" data-tabs-path="cat-1">
+										Первая
+										категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="cat-2">
+										Вторая категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="cat-3">
+										Третья категория
+									</button>
+								</li>
+
+								<li class="tabs__item program__tabs-item">
+									<button class="tabs__btn program__tabs-btn" data-tabs-path="cat-4">
+										Четыре категория
+									</button>
+								</li>
+							</ul>
+
+
+							<ul class="program__tabs-contents">
+								<li class="tabs__content tabs__content--active" data-tabs-target="cat-1">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 1)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="cat-2">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 2)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="cat-3">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 3)
+									</p>
+								</li>
+
+								<li class="tabs__content" data-tabs-target="cat-4">
+									<p class="tabs__content-text">
+										А ещё стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
+										интересные
+										особенности
+										картины в целом, однако конкретные выводы, разумеется, смешаны с не уникальными данными до степени
+										совершенной
+										неузнаваемости, из-за чего возрастает их статус бесполезности.
+										(категория 4)
+									</p>
+								</li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="program__teachers">
+						<h3 class="program__headline">
+							Преподаватели
+						</h3>
+
+						<ul class="program__list">
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-2.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-3.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+
+							<li class="program__teacher">
+								<a class="program__follow" href="#">
+									<img class="program__portrait" src="img/teachers/teacher-1.jpg" alt="Фото преподавателя">
+									<span class="program__teacher-name">
+										Ерзин Иван Васильевич
+									</span>
+									<span class="program__teacher-status">
+										Hектор МАСИ
+									</span>
+								</a>
+							</li>
+						</ul>
+
+						<button class="program__btn follow follow--accent" type="button">
+							показать еще
+						</button>
+					</div>
+				</div>
+
+
+				<div class="program__structure">
+					<div class="program__head">
+						<div class="container">
+							<div class="program__head-inner">
+								<h3 class="program__structure-title">
+									Структура программы обучения
+								</h3>
+
+								<button class="program__close" type="button">
+									кнопка свернуть/развернуть программу обучения
+								</button>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="container">
+						<ul class="program__steps">
+							<li class="program__step">
+								Теоретический блок
+							</li>
+
+							<li class="program__step">
+								Творческо- <br> исследовательский блок
+							</li>
+
+							<li class="program__step">
+								Графический блок
+							</li>
+
+							<li class="program__step">
+								Технологический блок
+							</li>
+
+							<li class="program__step">
+								Инженерно-технологический <br> блок
+							</li>
+
+							<li class="program__step">
+								Биологический блок
+							</li>
+
+							<li class="program__step">
+								Экономический блок
+							</li>
+
+							<li class="program__step">
+								Юридический блок
+							</li>
+
+							<li class="program__step">
+								Практический блок
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</li>
+	</ul>
 </section>
 		<section class="price">
 	<div class="container">

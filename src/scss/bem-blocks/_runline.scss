@@ -1,0 +1,13 @@
+.runline {
+    padding-top: 4px;
+    height: 46px;
+    color: #ffffff;
+    background-color: $accent;
+    overflow: hidden;
+
+    span {
+        margin-right: 100px;
+        font-size: 24px;
+        @extend %gilroy-600;
+    }
+}

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tabsManager = () => {
         const tabInit = (tabSelector) => {
-            const tabs = document.querySelector(`.${tabSelector}`);
+            const tabs = document.querySelector(`${tabSelector}`);
             const tabsBtn = tabs.querySelectorAll('.tabs__btn');
             const tabsContent = tabs.querySelectorAll('.tabs__content');
 
@@ -31,11 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         if (document.querySelector('.partners__tabs')) {
-            tabInit('partners__tabs');
+            tabInit('.partners__tabs');
         }
 
         if (document.querySelector('.events-main__content')) {
-            tabInit('events-main__content');
+            tabInit('.events-main__content');
+        }
+
+        if (document.querySelector('.program')) {
+            const cycleTotal = document.querySelectorAll('.program').length;
+            for (let i = 0; i < cycleTotal; i++) {
+                tabInit(`#program-${i + 1} .program__tabs`);
+            }
         }
     };
 
@@ -104,14 +111,60 @@ document.addEventListener('DOMContentLoaded', () => {
         // инициализируем элемент с id="accordion" как аккордеон
         var accordion1 = accordion();
         accordion1.init('#accordion');
+    };
 
-        document
-            .querySelector('select')
-            .addEventListener('change', function () {
-                document.querySelectorAll('.tab').forEach((n, i) => {
-                    n.classList.toggle('active', i === this.selectedIndex);
-                });
+    const selectTabsHandler = () => {
+        const programSelect = '.programs__choose',
+            programSelectTabs = '.program',
+            programs = document.querySelectorAll(programSelectTabs);
+
+        const marqueeInit = (selector) => {
+            $(selector).marquee({
+                duration: 10000,
+                startVisible: true,
+                duplicated: true,
             });
+        };
+
+        const selectHandler = (selector, tabs) => {
+            document
+                .querySelector(selector)
+                .addEventListener('change', function () {
+                    document.querySelectorAll(tabs).forEach((n, i) => {
+                        n.classList.toggle('hide', i !== this.selectedIndex);
+                    });
+                });
+        };
+
+        const hidePrograms = (programs) => {
+            programs.forEach((el) => {
+                if (!el.classList.contains('active')) {
+                    el.classList.add('hide');
+                }
+            });
+        };
+
+        // инициализация бегущих строк для всех программ
+        programs.forEach((el) => {
+            marqueeInit(
+                `.${el.children[0].className
+                    .replace('program__runline', '')
+                    .replace('runline', '')
+                    .trim()}`
+            );
+        });
+
+        // скрытие лишнего контента
+        setTimeout(() => {
+            hidePrograms(programs);
+        }, 2000);
+
+        if (
+            document.querySelector(programSelect) &&
+            document.querySelector(programSelectTabs)
+        ) {
+            selectHandler(programSelect, programSelectTabs);
+        }
     };
 
     const scrollbarWidth = () => {
@@ -149,10 +202,24 @@ document.addEventListener('DOMContentLoaded', () => {
         calcPadding(eventsMain);
     };
 
+    const programToggle = () => {
+        const programContent = document.querySelector('.program__steps'),
+            programBtn = document.querySelector('.program__close');
+
+        if (programContent && programBtn) {
+            programBtn.addEventListener('click', function () {
+                programContent.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        }
+    };
+
     // custom scripts
 
     tabsManager();
     calcPaddingSliders();
+    selectTabsHandler();
+    programToggle();
     // accordionManager();
 
     // sliders

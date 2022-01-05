@@ -3,20 +3,6 @@
     background-color: #dcdfe2;
 }
 
-.structure__runline {
-    padding-top: 4px;
-    height: 46px;
-
-    color: #ffffff;
-    background-color: $accent;
-
-    span {
-        margin-right: 100px;
-        font-size: 24px;
-        @extend %gilroy-600;
-    }
-}
-
 .structure__list {
     padding: 50px 0 90px;
     display: flex;

@@ -1,0 +1,312 @@
+.program {
+    &.hide {
+        display: none;
+    }
+}
+
+.program__runline {
+    overflow: hidden;
+}
+
+.program__specifications {
+    display: flex;
+}
+
+.program__feature {
+    margin-bottom: 20px;
+    padding: 40px 0 10px 20px;
+    width: 25%;
+    border-bottom: 1px solid #dadde0;
+    border-right: 1px solid #dadde0;
+
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.program__name,
+.program__descr,
+.program__select {
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+}
+
+.program__name {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.program__descr,
+.program__select {
+    color: $grey;
+}
+
+.program__descr {
+    display: flex;
+    align-items: center;
+}
+
+.program__select {
+    margin-left: -5px;
+    padding-right: 20px;
+    padding-left: 5px;
+    border: none;
+    background-color: transparent;
+    white-space: inherit;
+    appearance: none;
+    outline: transparent;
+    cursor: pointer;
+    background-image: url('../img/decor-icons/flag-arrow-icon.svg');
+    @include bg(16px 9px, right center);
+}
+
+.program__flag {
+    margin-right: 10px;
+}
+
+.program__chars {
+    margin-bottom: 50px;
+}
+
+.program__char-box {
+    display: flex;
+
+    .program__char {
+        margin-bottom: 0;
+        padding-left: 20px;
+        width: 50%;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+.program__char {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadde0;
+    font-size: 14px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.program__char-descr {
+    color: $grey;
+}
+
+.program__relevant {
+    margin-bottom: 50px;
+    padding: 100px 100px 0;
+    background-color: #dcdfe2;
+}
+
+.program__heading {
+    padding-bottom: 20px;
+    display: block;
+    font-size: 24px;
+    @extend %gilroy-600;
+    border-bottom: 1px solid #babfc6;
+}
+
+.program__tabs {
+    display: flex;
+}
+
+.program__tabs-list {
+    padding: 50px 0 70px;
+    width: 50%;
+    border-right: 1px solid #babfc6;
+}
+
+.program__tabs-item {
+    margin-bottom: 30px;
+}
+
+.program__tabs-contents {
+    padding: 50px 0 0 20px;
+    width: 50%;
+}
+
+.program__tabs-btn {
+    position: relative;
+    padding: 0 20px 0 100px;
+    height: 50px;
+    font-size: 18px;
+    text-align: left;
+    @extend %gilroy-500;
+    @include cut-text(2);
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(25, 25, 28, 0.1);
+        border-radius: 50%;
+        background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        @include bg(18px, center);
+    }
+
+    &.tabs__btn--active {
+        &::before {
+            background-color: $accent;
+            border-color: $accent;
+            background-image: url('../img/decor-icons/plus-icon-white.svg');
+        }
+    }
+}
+
+.tabs__content-text {
+    @extend %gilroy-500;
+    font-size: 18px;
+}
+
+.program__teachers {
+    margin-bottom: 50px;
+    text-align: center;
+
+    .program__btn {
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            right: -33px;
+        }
+    }
+}
+
+.program__headline {
+    margin-bottom: 50px;
+    @extend %gilroy-600;
+    font-size: 24px;
+    text-align: left;
+}
+
+.program__list {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.program__teacher {
+    max-width: 176px;
+    width: 100%;
+    text-align: left;
+}
+
+.program__portrait {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.program__teacher-name {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    @extend %gilroy-500;
+}
+
+.program__teacher-status {
+    @extend %gilroy-500;
+    font-size: 12px;
+    color: $grey;
+}
+
+.program__head {
+    margin-bottom: 20px;
+    background-color: $green;
+}
+
+.program__head-inner {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.program__close {
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    background-image: url('../img/close-icon.svg');
+    transition: transform 0.3s;
+
+    &.active {
+        transform: rotate(45deg);
+    }
+}
+
+.program__steps {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: steps;
+    border-bottom: 1px solid #c7cbd0;
+
+    &.active {
+        display: none;
+    }
+}
+
+.program__step {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 23px 0 20px 20px;
+    max-width: 25%;
+    width: 100%;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c7cbd0;
+    border-right: 1px solid #c7cbd0;
+
+    &:nth-child(4n + 1) {
+        padding-left: 0;
+
+        &::before {
+            left: 0;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 40px;
+        border-bottom: 0;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        counter-increment: steps;
+        content: '0' counter(steps) '/';
+        color: $grey;
+    }
+
+    &::after {
+        position: absolute;
+        top: 23px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+        background-image: url('../img/decor-icons/plus-icon-accent.svg');
+        content: '';
+    }
+}
