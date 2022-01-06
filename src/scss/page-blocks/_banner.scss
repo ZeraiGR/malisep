@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0 80px;
+
+    .container {
+        max-width: 1566px;
+    }
+}
+
+.banner__content {
+    padding-top: 29px;
+    padding: 29px 0 120px;
+    background-image: url('../img/banner-decor-3.jpg'),
+        url('../img/banner-decor-1.jpg'), url('../img/banner-decor-2.jpg'),
+        url('../img/decor-icons/banner-circles.svg');
+    background-repeat: no-repeat;
+    background-position: right top, 0 64px, 40% bottom, left 29px;
+    background-size: 278px 359px, 278px 359px, 179px 191px, 1484px 365px;
+}
+
+.banner__text {
+    margin: 0 auto;
+    padding: 130px 10px;
+    max-width: 760px;
+    color: #ffffff;
+    font-size: 24px;
+    @extend %gilroy-600;
+    text-align: center;
+}
