@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const programToggle = (selectorBtn, selectorContent) => {
+        const programContent = document.querySelector(selectorContent),
+            programBtn = document.querySelector(selectorBtn);
+
+        if (programContent && programBtn) {
+            programBtn.addEventListener('click', function () {
+                programContent.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        }
+    };
+
     const tabsManager = () => {
         const tabInit = (tabSelector) => {
             const tabs = document.querySelector(`${tabSelector}`);
@@ -42,6 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const cycleTotal = document.querySelectorAll('.program').length;
             for (let i = 0; i < cycleTotal; i++) {
                 tabInit(`#program-${i + 1} .program__tabs`);
+                programToggle(
+                    `#program-${i + 1} .program__close`,
+                    `#program-${i + 1} .program__steps`
+                );
             }
         }
     };
@@ -192,18 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         calcPadding(teachers);
         calcPadding(blogMain);
         calcPadding(eventsMain);
-    };
-
-    const programToggle = () => {
-        const programContent = document.querySelector('.program__steps'),
-            programBtn = document.querySelector('.program__close');
-
-        if (programContent && programBtn) {
-            programBtn.addEventListener('click', function () {
-                programContent.classList.toggle('active');
-                this.classList.toggle('active');
-            });
-        }
     };
 
     // custom scripts

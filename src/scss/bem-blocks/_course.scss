@@ -1,0 +1,135 @@
+.course {
+    padding: 20px;
+    min-height: 280px;
+    display: flex;
+    background-color: #dcdfe2;
+    overflow: hidden;
+
+    &:nth-child(1) {
+        grid-area: a;
+    }
+
+    &:nth-child(2) {
+        grid-area: b;
+    }
+
+    &:nth-child(3) {
+        grid-area: c;
+    }
+    &:nth-child(4) {
+        grid-area: d;
+    }
+
+    &:nth-child(5) {
+        grid-area: e;
+    }
+
+    &:nth-child(6) {
+        grid-area: f;
+    }
+
+    &--black {
+        background-color: $text;
+        color: #ffffff;
+    }
+
+    &--accent {
+        background-color: $accent;
+        color: #ffffff;
+
+        .course__faculty-name {
+            color: #ffffff;
+        }
+    }
+
+    &--green {
+        background-color: $green;
+
+        .course__faculty-name {
+            color: $text;
+        }
+    }
+
+    &--round {
+        position: relative;
+
+        .course__image {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.course__descr {
+    display: flex;
+    flex-direction: column;
+}
+
+.course__name,
+.course__status {
+    @extend %gilroy-600;
+    text-transform: uppercase;
+}
+
+.course__name {
+    margin-bottom: 25px;
+    display: block;
+    font-size: 14px;
+}
+
+.course__status {
+    margin-bottom: 30px;
+    color: $accent;
+    font-size: 12px;
+}
+
+.course__faculty {
+    margin-bottom: auto;
+}
+
+.course__faculty,
+.course__duration {
+    @extend %gilroy-700;
+    font-size: 12px;
+}
+
+.course__faculty-name {
+    display: block;
+    @extend %gilroy-500;
+    color: $grey;
+}
+
+.course__duration {
+    margin-top: auto;
+}
+
+.course__month {
+    display: block;
+    @extend %gilroy-500;
+}
+
+.course__image {
+    position: relative;
+    width: 50%;
+    height: calc(100% + 20px);
+    @include bg(100%);
+    font-size: 0;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        background-color: $green;
+        content: '';
+    }
+}

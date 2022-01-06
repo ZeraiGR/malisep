@@ -52,13 +52,3 @@ $green: #8bc540;
         transform: translateY(100%);
     }
 }
-
-@keyframes marqueeX {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(100%);
-    }
-}
