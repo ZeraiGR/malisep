@@ -1,0 +1,44 @@
+.breadcrumbs {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-end;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        padding-left: 15px;
+        position: relative;
+        @extend %gilroy-600;
+        font-size: 14px;
+
+        &::before {
+            position: absolute;
+            left: 4px;
+            content: '/';
+        }
+
+        &:first-child {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            color: $grey;
+            @extend %gilroy-500;
+        }
+    }
+}
+
+.breadcrumbs__prev {
+    margin-right: 75px;
+    font-size: 0;
+    width: 29px;
+    height: 27px;
+    background-image: url('../img/decor-icons/icon-back.svg');
+    @include bg();
+}
