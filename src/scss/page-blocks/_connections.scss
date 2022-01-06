@@ -1,0 +1,77 @@
+.connections {
+    position: relative;
+    padding: 50px 0 175px;
+    background-image: url('../img/decor-icons/decor-connections.jpg');
+    @include bg(275px 150px, left calc(100% - 67px));
+}
+
+.connections__title {
+    margin-bottom: 50px;
+}
+
+.connections__content {
+    display: flex;
+}
+
+.connections__half {
+    &:first-child {
+        margin-right: auto;
+        max-width: 530px;
+    }
+
+    &:last-child {
+        max-width: 575px;
+    }
+}
+
+.connections__text {
+    margin-bottom: 20px;
+    @extend %gilroy-500;
+    font-size: 18px;
+
+    &--accent,
+    &--green {
+        font-size: 24px;
+        @extend %gilroy-600;
+    }
+
+    &--accent {
+        color: $accent;
+    }
+
+    &--green {
+        color: $green;
+    }
+
+    &--grey {
+        color: $grey;
+        font-size: 14px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.connections-decor {
+    position: absolute;
+    left: calc(50% + 10px);
+    bottom: 67px;
+    right: 0;
+    padding: 25px 0;
+    display: flex;
+    background-color: $accent;
+}
+
+.connections-decor-item {
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+    background-image: url('../img/decor-icons/decor-cross-white.svg');
+    cursor: pointer;
+
+    &:hover {
+        background-image: url('../img/decor-icons/decor-cross-green.svg');
+    }
+}
