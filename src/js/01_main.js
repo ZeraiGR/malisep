@@ -444,4 +444,12 @@ document.addEventListener('DOMContentLoaded', () => {
             duplicated: true,
         });
     }
+
+    if (document.querySelector('.big-banner__runline')) {
+        $('.big-banner__runline').marquee({
+            duration: 10000,
+            startVisible: true,
+            duplicated: true,
+        });
+    }
 });

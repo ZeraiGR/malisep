@@ -1,0 +1,129 @@
+.big-banner {
+    padding: 100px 0 50px;
+    background-color: $accent;
+    color: #ffffff;
+    background-image: url('../img/decor-icons/circle-left.svg'),
+        url('../img/decor-icons/circle-right.svg');
+    background-repeat: no-repeat;
+    background-position: left 57%, right 57%;
+}
+
+.big-banner__title {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 40px;
+}
+
+.big-banner__title-accent {
+    color: $green;
+}
+
+.big-banner__descr {
+    padding-bottom: 12px;
+    max-width: 580px;
+    font-size: 17px;
+    @extend %gilroy-500;
+}
+
+.big-banner__runline-decor {
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.big-banner__runline {
+    position: relative;
+    padding-top: 10px;
+    height: 150px;
+    background-color: $green;
+    font-size: 80px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 19%;
+        z-index: 2;
+        width: 1170px;
+        height: 400px;
+        background-image: url('../img/banner-img.jpg');
+        @include bg();
+        content: '';
+    }
+
+    &--small {
+        margin-bottom: 50px;
+        padding-top: 6px;
+        height: 50px;
+        font-size: 24px;
+        @extend %gilroy-600;
+        color: $text;
+
+        &::before {
+            display: none;
+        }
+
+        span {
+            margin-right: 100px;
+        }
+    }
+}
+
+.big-banner__offers {
+    margin-bottom: 105px;
+    padding-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.big-banner__offer {
+    &:first-child {
+        margin-right: auto;
+        max-width: 485px;
+    }
+
+    &:last-child {
+        max-width: 575px;
+        color: $green;
+    }
+}
+
+.big-banner__content {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.big-banner__text {
+    padding: 66px 0 0 300px;
+    max-width: 790px;
+    font-size: 14px;
+    @extend %gilroy-500;
+    background-image: url('../img/banner-mini-decor.jpg');
+    @include bg(280px 150px, left bottom);
+}
+
+.big-banner__add-text {
+    max-width: 650px;
+    font-size: 18px;
+    @extend %gilroy-600;
+
+    span {
+        @extend %gilroy-500;
+    }
+}
+
+.big-banner__follow {
+    margin-bottom: 30px;
+    max-width: 130px;
+    @extend %gilroy-500;
+    background-image: url('../img/follow-white.svg');
+
+    &:before {
+        z-index: 0;
+    }
+}
