@@ -1,7 +1,7 @@
 <section class="opendoors">
 	<div class="container">
 		<div class="opendoors__top">
-			<h2 class="opendoors__title">
+			<h2 class="opendoors__title title">
 				Дни открытых дверей
 			</h2>
 
@@ -13,17 +13,40 @@
 		</div>
 
 		<div class="opendoors__content">
-			<a class="opendoors__follow" href="#">
-				узнать расписание
-			</a>
+			<div class="opendoors__link-wrap">
+				<div class="button-wrapper opendoors__button-wrapper">
+					<a class="opendoors__follow button blob-btn follow--arrow" href="#">
+						узнать расписание
+						<span class="blob-btn__inner">
+							<span class="blob-btn__blobs">
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+							</span>
+						</span>
+					</a>
+					<br />
+					<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<defs>
+							<filter>
+								<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+								<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+								</fecolormatrix>
+								<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+							</filter>
+						</defs>
+					</svg>
+				</div>
+			</div>
 
 			<div class="opendoors__info">
 				<p class="opendoors__text">
 					День открытых дверей проходит в формате большой встречи в стенах Академии с будущими абитуриентами, а также в
 					режиме с
-					он-лайн встреч
+					онлайн встреч
 				</p>
-				<p class="opendoors__text">
+				<p class="opendoors__text opendoors__text--gray">
 					Педагогический состав проводит презентацию обновленных образовательных программ и рассказывает о
 					форматах
 					и преимуществах обучения

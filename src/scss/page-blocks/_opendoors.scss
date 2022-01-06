@@ -1,0 +1,81 @@
+.opendoors {
+    padding: 20px 0 110px;
+}
+
+.opendoors__top {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.opendoors__title {
+    line-height: 1.4;
+}
+
+.opendoors__descr {
+    max-width: 675px;
+    width: 100%;
+    font-size: 24px;
+    color: $green;
+    @extend %gilroy-500;
+}
+
+.opendoors__content {
+    display: flex;
+}
+
+.opendoors__link-wrap {
+    margin-right: auto;
+    max-width: 377px;
+    width: 100%;
+    background-image: url('../img/opendoors-decor-3.jpg');
+    @include bg(100% 225px, left bottom);
+}
+
+.opendoors__follow {
+    padding: 13.5px 87px 13.5px 20px;
+    text-decoration: none;
+
+    &::before {
+        left: calc(100% - 35px);
+        width: 18px;
+        height: 18px;
+        background-size: 13px;
+    }
+
+    &:hover {
+        &::before {
+            background-image: url('../img/follow-white.svg');
+        }
+    }
+}
+
+.opendoors__info {
+    padding: 0 0 200px 296px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 772px;
+    width: 100%;
+    background-image: url('../img/graduates-decor-2.jpg'),
+        url('../img/opendoors-decor-1.jpg'), url('../img/opendoors-decor-2.jpg');
+    background-repeat: no-repeat;
+    background-position: left top, right bottom, 296px bottom;
+    background-size: 277px 376px, 277px 165px, 178px 165px;
+}
+
+.opendoors__text {
+    margin-bottom: 30px;
+    max-width: 475px;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--gray {
+        font-size: 14px;
+        color: $grey;
+    }
+}
