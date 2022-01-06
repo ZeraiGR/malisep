@@ -206,6 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // const styleBar = () => {
+    //     new SimpleBar(document.querySelector('myElement'));
+    // };
+
     // custom scripts
 
     tabsManager();

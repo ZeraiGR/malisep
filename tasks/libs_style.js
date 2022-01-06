@@ -1,6 +1,7 @@
 const plugins = [
     'node_modules/swiper/swiper-bundle.css',
     'node_modules/@fancyapps/ui/dist/fancybox.css',
+    'node_modules/simplebar/dist/simplebar.css',
 ];
 
 const { src, dest } = require('gulp');

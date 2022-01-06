@@ -2,6 +2,7 @@ const plugins = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/jquery.marquee/jquery.marquee.min.js',
+    'node_modules/simplebar/dist/simplebar.min.js',
 ];
 const { src, dest } = require('gulp');
 const uglify = require('gulp-uglify-es').default;
