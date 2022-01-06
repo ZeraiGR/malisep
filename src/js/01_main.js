@@ -206,10 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // const styleBar = () => {
-    //     new SimpleBar(document.querySelector('myElement'));
-    // };
-
     // custom scripts
 
     tabsManager();
@@ -226,6 +222,19 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.success-slide__next',
             prevEl: '.success-slide__prev',
+        },
+    });
+
+    const eventsSlider = new Swiper('.slider-events', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.slider-events__next',
+            prevEl: '.slider-events__prev',
+        },
+        pagination: {
+            el: '.slider-events__counter',
+            type: 'fraction',
         },
     });
 
