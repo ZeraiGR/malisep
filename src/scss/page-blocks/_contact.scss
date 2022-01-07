@@ -1,0 +1,131 @@
+.contacts__inner {
+    padding-bottom: 95px;
+}
+
+.contacts__content {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.contacts__left {
+    margin-right: auto;
+}
+
+.contacts__title {
+    margin-bottom: 5px;
+}
+
+.contacts__phone {
+    margin-bottom: 50px;
+    display: block;
+    font-size: 36px;
+    color: $green;
+}
+
+.contacts__middle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__email {
+    color: $accent;
+    font-size: 24px;
+    @extend %gilroy-500;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.contacts__heading {
+    font-size: 24px;
+    @extend %gilroy-600;
+}
+
+.contacts__text {
+    margin-bottom: 20px;
+    color: $grey;
+    font-size: 18px;
+    @extend %gilroy-500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__press {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #979faa;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__socials {
+    display: flex;
+}
+
+.contacts__social {
+    margin-right: 70px;
+    @extend %grotesk-400;
+    text-transform: uppercase;
+    font-size: 24px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.contacts__link {
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+.contacts__info {
+    display: flex;
+}
+
+.contacts__questions {
+    margin-right: 25px;
+    max-width: 370px;
+    width: 100%;
+    font-size: 14px;
+    @extend %gilroy-500;
+}
+
+.contacts__connection {
+    margin-right: auto;
+    font-size: 24px;
+    @extend %gilroy-600;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contacts__mail {
+    margin-top: 3px;
+    font-size: 14px;
+
+    a {
+        color: $accent;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.contacts__logo {
+    margin: 0 auto;
+    max-width: 160px;
+    width: 100%;
+    object-fit: cover;
+}
