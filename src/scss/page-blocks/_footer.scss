@@ -7,6 +7,29 @@
         margin-bottom: 20px;
         padding-bottom: 20px;
         border-bottom: 1px solid #585c63;
+
+        @include _1440 {
+            order: 2;
+        }
+
+        &--desktop {
+            @include _1440 {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include _1440 {
+                display: flex;
+            }
+
+            @include _979 {
+                margin-bottom: 30px;
+                width: 979px;
+            }
+        }
     }
 
     .menu__item {
@@ -39,6 +62,20 @@
         &:hover {
             color: $green;
         }
+
+        @include _768 {
+            margin-right: 60px;
+            white-space: nowrap;
+        }
+
+        @include _414 {
+            margin-right: 20px;
+            white-space: normal;
+        }
+    }
+
+    @include _768 {
+        padding: 20px 0 45px;
     }
 }
 
@@ -47,6 +84,14 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #585c63;
+
+    @include _1440 {
+        border: none;
+    }
+
+    @include _768 {
+        align-items: flex-start;
+    }
 }
 
 .footer__logo {
@@ -55,12 +100,40 @@
     font-size: 14px;
     @extend %gilroy-600;
     text-transform: uppercase;
+
+    @include _768 {
+        margin-right: 0;
+        font-size: 12px;
+    }
+
+    @include _414 {
+        margin-right: 20px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+
+    @include _1440 {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .footer__help {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include _1440 {
+        order: 1;
+    }
+
+    @include _768 {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
 .footer__programs {
@@ -74,6 +147,16 @@
     &:hover {
         text-decoration: none;
     }
+
+    @include _768 {
+        margin-bottom: 40px;
+        font-size: 12px;
+    }
+}
+
+.footer__mobile {
+    margin-right: -15px;
+    overflow-x: auto;
 }
 
 .footer__middle {
@@ -81,13 +164,18 @@
     padding: 20px 0;
     display: flex;
     border-bottom: 1px solid #585c63;
+
+    @include _768 {
+        flex-direction: column;
+    }
 }
 
 .footer__col {
     margin-right: 40px;
 
-    &:nth-child(2) {
+    @include _768 {
         margin-right: 0;
+        margin-bottom: 50px;
     }
 }
 
@@ -119,6 +207,10 @@
     margin-left: auto;
     max-width: 380px;
     width: 100%;
+
+    @include _768 {
+        margin-left: 0;
+    }
 }
 
 .footer__city {
@@ -168,6 +260,10 @@
         background-color: $accent;
         border-color: $accent;
     }
+
+    @include _768 {
+        display: none;
+    }
 }
 
 .footer__socials {
@@ -192,14 +288,23 @@
     font-size: 14px;
     @extend %gilroy-400;
     opacity: 0.5;
+
+    @include _768 {
+        margin-bottom: 20px;
+    }
 }
 
 .footer__line {
     display: flex;
     justify-content: space-between;
+
+    @include _768 {
+        flex-direction: column;
+    }
 }
 
 .footer__copy {
+    margin-right: 50px;
     max-width: 675px;
     @extend %gilroy-400;
     font-size: 14px;
@@ -208,27 +313,51 @@
     span {
         @extend %gilroy-500;
     }
+
+    @include _768 {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
 }
 
 .footer__menu {
     display: flex;
-}
 
-.footer__menu-item {
-    margin-right: 40px;
-    max-width: 150px;
+    li {
+        margin-right: 40px;
+        max-width: 150px;
 
-    &:last-child {
-        margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+
+            @include _414 {
+                margin-left: auto;
+            }
+        }
+
+        &:nth-child(2) {
+            @include _414 {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
     }
-}
 
-.footer__menu-link {
-    font-size: 14px;
-    text-transform: uppercase;
-    @extend %gilroy-600;
+    a {
+        font-size: 14px;
+        text-transform: uppercase;
+        @extend %gilroy-600;
 
-    &:hover {
-        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include _768 {
+        color: $grey;
+    }
+
+    @include _414 {
+        flex-wrap: wrap;
     }
 }

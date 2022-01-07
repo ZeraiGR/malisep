@@ -67,6 +67,14 @@
     margin-right: 4rem;
     max-width: 12.875rem;
     text-transform: uppercase;
+
+    @include _768 {
+        margin-right: 30px;
+    }
+
+    @include _414 {
+        margin-right: 0;
+    }
 }
 
 .header__menu-btn {
@@ -117,6 +125,10 @@
 
     @include _1440 {
         margin-right: auto;
+    }
+
+    @include _414 {
+        display: none;
     }
 }
 
@@ -170,11 +182,6 @@
 
 .menu {
     display: flex;
-
-    @include _1440 {
-        order: 2;
-        flex-direction: column;
-    }
 }
 
 .menu a {
