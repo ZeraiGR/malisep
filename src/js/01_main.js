@@ -11,6 +11,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    function layoutHandler(e) {
+        const burger = document.querySelector('.header__burger'),
+            menu = document.querySelector('.header__mobile'),
+            target = e.target;
+
+        if (
+            target.closest('.header__mobile') == null &&
+            !target.classList.contains('header__burger')
+        ) {
+            menu.classList.remove('active');
+        }
+    }
+
+    function menuBurgerHandler() {
+        const burger = document.querySelector('.header__burger'),
+            menu = document.querySelector('.header__mobile'),
+            closer = document.querySelector('.header__close');
+
+        burger.addEventListener('click', function () {
+            menu.classList.toggle('active');
+
+            if (menu.classList.contains('active')) {
+                window.addEventListener('click', layoutHandler);
+            } else {
+                window.removeEventListener('click', layoutHandler);
+            }
+        });
+
+        closer.addEventListener('click', function () {
+            menu.classList.remove('active');
+        });
+    }
+
     const tabsManager = () => {
         const tabInit = (tabSelector) => {
             const tabs = document.querySelector(`${tabSelector}`);
@@ -228,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectTabsHandler();
     programToggle();
     accordeonManager();
+    menuBurgerHandler();
 
     // sliders
 

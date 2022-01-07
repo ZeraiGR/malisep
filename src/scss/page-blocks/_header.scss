@@ -1,8 +1,51 @@
 .header {
+    position: relative;
     margin-bottom: 5.625rem;
     padding-top: 1.875rem;
     color: $black;
     font-size: 14px;
+
+    @include _1440 {
+        padding: 20px 0;
+        background-color: $green;
+    }
+
+    .login {
+        @include _1440 {
+            margin-left: 0;
+            margin-right: auto;
+            margin-bottom: 40px;
+            padding-left: 35px;
+            order: 1;
+
+            &::before {
+                width: 25px;
+                height: 25px;
+                border: none;
+                background-image: url('../img/door.svg');
+            }
+        }
+    }
+
+    .menu {
+        @include _1440 {
+            order: 3;
+            flex-direction: column;
+
+            & li {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            & a {
+                padding: 0;
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 .header .container {
@@ -12,6 +55,12 @@
 .header__nav {
     display: flex;
     align-items: center;
+
+    @include _1440 {
+        padding: 0 20px 0 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .logo {
@@ -23,6 +72,36 @@
 .header__menu-btn {
     margin-right: 2.2rem;
     font-size: 0;
+
+    @include _1440 {
+        display: none;
+    }
+}
+
+.header__mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include _1440 {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        height: 100vh;
+        padding: 103px 60px 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $green;
+        width: 50%;
+        overflow-y: auto;
+        transition: right 0.5s;
+
+        &.active {
+            right: 0;
+        }
+    }
 }
 
 .header__lang {
@@ -35,22 +114,67 @@
     cursor: pointer;
     background-color: transparent;
     appearance: none;
+
+    @include _1440 {
+        margin-right: auto;
+    }
 }
 
 .header__burger {
     display: none;
+    font-size: 0;
+
+    @include _1440 {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-image: url('../img/decor-icons/burger.svg');
+        @include bg(25px);
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+.header__close {
+    display: none;
+    font-size: 0;
+
+    @include _1440 {
+        position: absolute;
+        top: 40px;
+        right: 35px;
+        z-index: 3;
+        width: 25px;
+        height: 25px;
+        display: block;
+        background-image: url('../img/decor-icons/close-icon-black.svg');
+        @include bg(25px);
+    }
 }
 
 .header__programs {
-    margin-right: 7rem;
+    margin-right: auto;
     max-width: 10rem;
     color: $grey;
     @extend %gilroy-600;
     text-transform: uppercase;
+
+    @include _1440 {
+        order: 2;
+        margin-bottom: 35px;
+        color: $text;
+    }
 }
 
 .menu {
     display: flex;
+
+    @include _1440 {
+        order: 2;
+        flex-direction: column;
+    }
 }
 
 .menu a {
