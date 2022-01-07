@@ -98,7 +98,7 @@
 		<section class="success">
 	<div class="container">
 		<div class="success__top">
-			<h1 class="success__title">
+			<h1 class="success__title title">
 				<span>Истории успеха</span>
 				выпускников
 			</h1>
@@ -112,9 +112,9 @@
 		</div>
 
 		<ul class="success__list">
-			<li class="success__one">
+			<li class="success__one" id="success-1">
 				<div class="success__head">
-					<img class="success__avatar" src="img/avatar-darina.jpg" alt="avatar darina">
+					<img class="success__avatar" src="img/avatar-darina.png" alt="avatar darina">
 					<div class="success__resume">
 						<span class="success__name">Дарина Вонголевская</span>
 						<span class="success__age">24 года, Москва</span>
@@ -122,62 +122,85 @@
 				</div>
 
 				<div class="success__body">
-					<div class="success__excerpt">
-						С искусством ландшафтной архитектуры я начала знакомиться в университете. Мне близка идея создания
-						пространства на [...]
-					</div>
-					<div class="success__full">
-						(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда все-таки
-						решилась,
-						пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить), перечитала
-						кучу отзывов и
-						в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
-						содержание курса. С
-						первых занятий меня затянуло с головой! И материал, и подача мне пришлись по душе. Боялась, что что-то не
-						получится, но
-						в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у меня
-						произошли
-						некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
-						осталось. Но, к
-						счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз, благодаря
-						чему я
-						смогла-таки пройти курс до конца! Честно сказать, даже грустно, что все закончилось. Мне очень понравился
-						преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше времени,
-						запишусь еще
-						на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
-						Профессиональный
-						курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо! P.S.
-						нужны будут
-						стажеры для работы, буду вам рада :)
-					</div>
-					<button class="success__open" type="button">
-						смотреть полностью
-					</button>
-					<button class="success__close" type="button">
-						Скрыть
-					</button>
+					<dl class="success__cover">
+						<dd class="success__answer answer">
+							<div class="answer__content success__content">
+								<p>(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда
+									все-таки
+									решилась,
+									пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить),
+									перечитала
+									кучу отзывов и
+									в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
+									содержание курса. С
+									первых занятий меня затянуло с головой!
+								</p>
+
+								<p>
+									И материал, и подача мне пришлись по душе. Боялась, что что-то
+									не получится, но
+									в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у
+									меня произошли
+									некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
+									осталось.
+								</p>
+
+								<p>
+									Но, к
+									счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз,
+									благодаря
+									чему я
+									смогла-таки пройти курс до конца!
+								</p>
+
+								<p>
+									Честно сказать, даже грустно, что все закончилось. Мне очень
+									понравился
+									преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше
+									времени, запишусь еще
+									на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
+									Профессиональный
+									курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо!
+									P.S. нужны будут
+									стажеры для работы, буду вам рада :)
+								</p>
+
+							</div>
+						</dd>
+
+						<dt class="success__question question js-accordion">
+							<button class="question__trigger success__trigger" type="button">
+								Cмотреть полностью
+							</button>
+						</dt>
+					</dl>
 				</div>
 
 				<div class="success__portfolio">
 					<span class="success__heading">Примеры работ:</span>
 
-					<div class="success__slider">
-						<div class="success__slider-wrapper">
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-1.jpg" alt="slider image">
-							</div>
+					<div class="portfolio__slider swiper">
+						<ul class="portfolio__slider-wrapper swiper-wrapper">
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-3.jpg" alt="slider image">
-							</div>
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-3.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-2.jpg" alt="slider image">
-							</div>
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-2.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-1.jpg" alt="slider image">
-							</div>
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+						</ul>
+
+						<div class="portfolio__slider-nav">
+							<div class="slider-prev portfolio__slider-prev"></div>
+							<div class="slider-next portfolio__slider-next"></div>
 						</div>
 					</div>
 
@@ -196,9 +219,9 @@
 				</ul>
 			</li>
 
-			<li class="success__one">
+			<li class="success__one" id="success-2">
 				<div class="success__head">
-					<img class="success__avatar" src="img/avatar-darina.jpg" alt="avatar darina">
+					<img class="success__avatar" src="img/avatar-darina.png" alt="avatar darina">
 					<div class="success__resume">
 						<span class="success__name">Дарина Вонголевская</span>
 						<span class="success__age">24 года, Москва</span>
@@ -206,62 +229,303 @@
 				</div>
 
 				<div class="success__body">
-					<div class="success__excerpt">
-						С искусством ландшафтной архитектуры я начала знакомиться в университете. Мне близка идея создания
-						пространства на [...]
-					</div>
-					<div class="success__full">
-						(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда все-таки
-						решилась,
-						пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить), перечитала
-						кучу отзывов и
-						в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
-						содержание курса. С
-						первых занятий меня затянуло с головой! И материал, и подача мне пришлись по душе. Боялась, что что-то не
-						получится, но
-						в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у меня
-						произошли
-						некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
-						осталось. Но, к
-						счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз, благодаря
-						чему я
-						смогла-таки пройти курс до конца! Честно сказать, даже грустно, что все закончилось. Мне очень понравился
-						преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше времени,
-						запишусь еще
-						на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
-						Профессиональный
-						курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо! P.S.
-						нужны будут
-						стажеры для работы, буду вам рада :)
-					</div>
-					<button class="success__open" type="button">
-						смотреть полностью
-					</button>
-					<button class="success__close" type="button">
-						Скрыть
-					</button>
+					<dl class="success__cover">
+						<dd class="success__answer answer">
+							<div class="answer__content success__content">
+								<p>(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда
+									все-таки
+									решилась,
+									пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить),
+									перечитала
+									кучу отзывов и
+									в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
+									содержание курса. С
+									первых занятий меня затянуло с головой!
+								</p>
+
+								<p>
+									И материал, и подача мне пришлись по душе. Боялась, что что-то
+									не получится, но
+									в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у
+									меня произошли
+									некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
+									осталось.
+								</p>
+
+								<p>
+									Но, к
+									счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз,
+									благодаря
+									чему я
+									смогла-таки пройти курс до конца!
+								</p>
+
+								<p>
+									Честно сказать, даже грустно, что все закончилось. Мне очень
+									понравился
+									преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше
+									времени, запишусь еще
+									на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
+									Профессиональный
+									курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо!
+									P.S. нужны будут
+									стажеры для работы, буду вам рада :)
+								</p>
+
+							</div>
+						</dd>
+
+						<dt class="success__question question js-accordion">
+							<button class="question__trigger success__trigger" type="button">
+								Cмотреть полностью
+							</button>
+						</dt>
+					</dl>
 				</div>
 
 				<div class="success__portfolio">
 					<span class="success__heading">Примеры работ:</span>
 
-					<div class="success__slider">
-						<div class="success__slider-wrapper">
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-1.jpg" alt="slider image">
-							</div>
+					<div class="portfolio__slider swiper">
+						<ul class="portfolio__slider-wrapper swiper-wrapper">
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-3.jpg" alt="slider image">
-							</div>
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-2.jpg" alt="slider image">
-							</div>
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-3.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
 
-							<div class="success__slider-item">
-								<img class="success__slider-img" src="img/project-1.jpg" alt="slider image">
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-2.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+						</ul>
+
+						<div class="portfolio__slider-nav">
+							<div class="slider-prev portfolio__slider-prev"></div>
+							<div class="slider-next portfolio__slider-next"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<ul class="success__current">
+					<li class="success__experiense">
+						Программа:
+						<span>«Садовое искусство. Постдипломный курс»</span>
+					</li>
+
+					<li class="success__experiense">
+						Место работы:
+						<span>Название и тд</span>
+					</li>
+				</ul>
+			</li>
+
+			<li class="success__one" id="success-3">
+				<div class="success__head">
+					<img class="success__avatar" src="img/avatar-darina.png" alt="avatar darina">
+					<div class="success__resume">
+						<span class="success__name">Дарина Вонголевская</span>
+						<span class="success__age">24 года, Москва</span>
+					</div>
+				</div>
+
+				<div class="success__body">
+					<dl class="success__cover">
+						<dd class="success__answer answer">
+							<div class="answer__content success__content">
+								<p>(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда
+									все-таки
+									решилась,
+									пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить),
+									перечитала
+									кучу отзывов и
+									в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
+									содержание курса. С
+									первых занятий меня затянуло с головой!
+								</p>
+
+								<p>
+									И материал, и подача мне пришлись по душе. Боялась, что что-то
+									не получится, но
+									в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у
+									меня произошли
+									некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
+									осталось.
+								</p>
+
+								<p>
+									Но, к
+									счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз,
+									благодаря
+									чему я
+									смогла-таки пройти курс до конца!
+								</p>
+
+								<p>
+									Честно сказать, даже грустно, что все закончилось. Мне очень
+									понравился
+									преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше
+									времени, запишусь еще
+									на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
+									Профессиональный
+									курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо!
+									P.S. нужны будут
+									стажеры для работы, буду вам рада :)
+								</p>
+
 							</div>
+						</dd>
+
+						<dt class="success__question question js-accordion">
+							<button class="question__trigger success__trigger" type="button">
+								Cмотреть полностью
+							</button>
+						</dt>
+					</dl>
+				</div>
+
+				<div class="success__portfolio">
+					<span class="success__heading">Примеры работ:</span>
+
+					<div class="portfolio__slider swiper">
+						<ul class="portfolio__slider-wrapper swiper-wrapper">
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-3.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-2.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+						</ul>
+
+						<div class="portfolio__slider-nav">
+							<div class="slider-prev portfolio__slider-prev"></div>
+							<div class="slider-next portfolio__slider-next"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<ul class="success__current">
+					<li class="success__experiense">
+						Программа:
+						<span>«Садовое искусство. Постдипломный курс»</span>
+					</li>
+
+					<li class="success__experiense">
+						Место работы:
+						<span>Название и тд</span>
+					</li>
+				</ul>
+			</li>
+
+			<li class="success__one" id="success-4">
+				<div class="success__head">
+					<img class="success__avatar" src="img/avatar-darina.png" alt="avatar darina">
+					<div class="success__resume">
+						<span class="success__name">Дарина Вонголевская</span>
+						<span class="success__age">24 года, Москва</span>
+					</div>
+				</div>
+
+				<div class="success__body">
+					<dl class="success__cover">
+						<dd class="success__answer answer">
+							<div class="answer__content success__content">
+								<p>(Пример отзыва) Очень давно мечтала обучиться дизайну, хотелось себя в этом попробовать. Когда
+									все-таки
+									решилась,
+									пересмотрела кучу вариантов дистанционного обучения (поскольку очное не могу себе позволить),
+									перечитала
+									кучу отзывов и
+									в итоге остановилась на Penta School, поскольку для меня оптимально сошлись цена, время обучения и
+									содержание курса. С
+									первых занятий меня затянуло с головой!
+								</p>
+
+								<p>
+									И материал, и подача мне пришлись по душе. Боялась, что что-то
+									не получится, но
+									в итоге оказалось не так страшно :) Преподаватели дружелюбные, всегда на связи. В процессе обучения у
+									меня произошли
+									некоторые изменения жизненные, и изначально запланированного времени на обучение у меня практически не
+									осталось.
+								</p>
+
+								<p>
+									Но, к
+									счастью, и чему я безмерно благодарна, мне пошли на встречу и продлили обучение и даже не раз,
+									благодаря
+									чему я
+									смогла-таки пройти курс до конца!
+								</p>
+
+								<p>
+									Честно сказать, даже грустно, что все закончилось. Мне очень
+									понравился
+									преподавательский коллектив и само обучение, буду скучать! Возможно, чуть позже, как будет больше
+									времени, запишусь еще
+									на какой-нибудь более узконаправленный курс. В общем мне все понравилось, по курсу «Дизайн интерьера.
+									Профессиональный
+									курс» узнала много нового, создала проект для своей дачи :) Теперь будем воплощать в жизнь :) Спасибо!
+									P.S. нужны будут
+									стажеры для работы, буду вам рада :)
+								</p>
+
+							</div>
+						</dd>
+
+						<dt class="success__question question js-accordion">
+							<button class="question__trigger success__trigger" type="button">
+								Cмотреть полностью
+							</button>
+						</dt>
+					</dl>
+				</div>
+
+				<div class="success__portfolio">
+					<span class="success__heading">Примеры работ:</span>
+
+					<div class="portfolio__slider swiper">
+						<ul class="portfolio__slider-wrapper swiper-wrapper">
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-3.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-2.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+
+							<li class="portfolio__slider-item swiper-slide">
+								<img class="portfolio__slider-img" src="img/project-1.jpg" alt="slider image" data-fancybox="gallery">
+							</li>
+						</ul>
+
+						<div class="portfolio__slider-nav">
+							<div class="slider-prev portfolio__slider-prev"></div>
+							<div class="slider-next portfolio__slider-next"></div>
 						</div>
 					</div>
 
@@ -281,7 +545,30 @@
 			</li>
 		</ul>
 
-		<button class="success__btn" type="button">показать еще отзывы</button>
+		<div class="button-wrapper success__button-wrapper">
+			<a class="success__btn button button--follow blob-btn" href="#">
+				показать еще отзывы
+				<span class="blob-btn__inner">
+					<span class="blob-btn__blobs">
+						<span class="blob-btn__blob"></span>
+						<span class="blob-btn__blob"></span>
+						<span class="blob-btn__blob"></span>
+						<span class="blob-btn__blob"></span>
+					</span>
+				</span>
+			</a>
+			<br />
+			<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<defs>
+					<filter id="goo">
+						<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+						<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+						</fecolormatrix>
+						<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+					</filter>
+				</defs>
+			</svg>
+		</div>
 	</div>
 </section>
 		<section class="licenses">

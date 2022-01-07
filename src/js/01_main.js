@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         function findElements(object, element) {
             const instance = object;
             instance.element = element;
-            instance.target = element.nextElementSibling;
+            instance.target =
+                element.nextElementSibling || element.previousElementSibling;
         }
 
         function hideElement(object) {
@@ -101,6 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 changeElementStatus(instance);
                 instance.element.classList.toggle('active');
+
+                if (instance.element.classList.contains('success__question')) {
+                    const button =
+                        instance.element.querySelector('.success__trigger');
+                    if (instance.element.classList.contains('active')) {
+                        button.textContent = 'Скрыть';
+                    } else {
+                        button.textContent = 'Смотреть полностью';
+                    }
+                }
             });
             window.addEventListener('resize', () => measureHeight(instance));
         }
@@ -363,6 +374,31 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'fraction',
         },
     });
+
+    const portfolioSliderHandler = () => {
+        if (document.querySelector('.success__list')) {
+            const portfolioTotal =
+                document.querySelector('.success__list').children.length;
+
+            for (let i = 0; i < portfolioTotal; i++) {
+                const portfolioSlider = new Swiper(
+                    `#success-${i + 1} .portfolio__slider`,
+                    {
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                        navigation: {
+                            nextEl: `#success-${i + 1} .portfolio__slider-next`,
+                            prevEl: `#success-${i + 1} .portfolio__slider-prev`,
+                        },
+                    }
+                );
+
+                Fancybox.bind(`#success-${i + 1} .portfolio__slider-img`, {});
+            }
+        }
+    };
+
+    portfolioSliderHandler();
 
     // const bullet = document.querySelectorAll('.swiper-menu__item');
 
