@@ -1,0 +1,127 @@
+.blog-one {
+    padding-bottom: 60px;
+}
+
+.blog-one__top {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.blog-one__title {
+    margin-right: auto;
+    max-width: 475px;
+    width: 100%;
+    @extend %gilroy-600;
+    font-size: 36px;
+}
+
+.blog-one__quote {
+    max-width: 575px;
+    font-size: 14px;
+    @extend %gilroy-500;
+
+    span {
+        @extend %gilroy-700;
+    }
+}
+
+.blog-one__main {
+    display: flex;
+}
+
+.blog-one__content {
+    margin-right: auto;
+    max-width: 500px;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 18px;
+        @extend %gilroy-600;
+    }
+
+    p {
+        margin: 20px 0;
+        font-size: 14px;
+        @extend %gilroy-500;
+    }
+}
+
+.blog-one__info {
+    max-width: 575px;
+    width: 100%;
+}
+
+.blog-one__line {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.blog-one__author {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.blog-one__avatar {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.blog-one__resume {
+    max-width: 150px;
+    @extend %gilroy-600;
+    text-transform: uppercase;
+}
+
+.blog-one__name {
+    display: block;
+    @extend %gilroy-500;
+    text-transform: none;
+}
+
+.blog-one__date {
+    font-size: 14px;
+    @extend %gilroy-500;
+    color: $grey;
+}
+
+.blog-one__img {
+    margin-bottom: 60px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-one__navigations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-one__next {
+    text-transform: uppercase;
+    color: $accent;
+    font-size: 14px;
+    @extend %gilroy-600;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.blog-one__counter {
+    font-size: 24px;
+    @extend %gilroy-600;
+
+    span {
+        margin-left: 5px;
+        font-size: 14px;
+        color: $grey;
+    }
+}
