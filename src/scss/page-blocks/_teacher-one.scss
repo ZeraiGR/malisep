@@ -1,0 +1,111 @@
+.teacher-one {
+    padding-bottom: 110px;
+}
+
+.teacher-one__suptitle {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+    @extend %gilroy-600;
+    color: $accent;
+    text-transform: uppercase;
+}
+
+.teacher-one__title {
+    margin-bottom: 20px;
+
+    span {
+        color: $green;
+    }
+}
+
+.teacher-one__status {
+    margin-bottom: 3px;
+    display: block;
+    font-size: 18px;
+    @extend %gilroy-500;
+    color: $grey;
+}
+
+.teacher-one__content {
+    display: flex;
+}
+
+.teacher-one__info {
+    margin-right: auto;
+    padding-top: 50px;
+    max-width: 535px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-one__list {
+    margin-bottom: auto;
+}
+
+.teacher-one__item {
+    margin-bottom: 10px;
+    @extend %gilroy-700;
+    font-size: 14px;
+
+    span {
+        @extend %gilroy-500;
+        color: $grey;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+}
+
+.teacher-one__navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-arrows {
+    max-width: 275px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-prev,
+.slider-next {
+    background-image: url('../img/decor-icons/slider-arrow.svg');
+}
+
+.teacher-one__counter {
+    font-size: 24px;
+    @extend %gilroy-600;
+
+    span {
+        font-size: 14px;
+        color: $grey;
+    }
+}
+
+.teacher-one__next {
+    max-width: 140px;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &::after {
+        right: auto;
+        left: 0;
+        top: -20px;
+    }
+}
+
+.teacher-one__img {
+    max-width: 575px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
