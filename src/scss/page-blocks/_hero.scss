@@ -8,25 +8,71 @@
     @include _1440 {
         background-image: none;
     }
+
+    @include _768 {
+        .button-wrapper {
+            text-align: center;
+        }
+    }
 }
 
 .hero__inner {
     background-image: url('../img/hero-decor-2.png');
     @include bg(475px 351px, right 92px);
+
+    @include _979 {
+        padding-bottom: 110px;
+        @include bg(425px 310px, right 135px);
+    }
+
+    @include _768 {
+        padding-bottom: 50px;
+        background-image: none;
+    }
+
+    @include _630 {
+        // @include bg(327px 163px, center 90px);
+    }
 }
 
-.hero .title {
+.hero__title {
     margin-bottom: 35px;
     font-size: 40px;
+
+    @include _979 {
+        font-size: 32px;
+    }
+
+    @include _768 {
+        margin-bottom: 0;
+        padding-bottom: 116px;
+        text-align: center;
+        font-size: 24px;
+        background-image: url('../img/hero-mobile.jpg');
+        @include bg(327px 163px, center 60px);
+    }
+
+    @include _630 {
+        padding-bottom: 80px;
+    }
+
+    @include _414 {
+        font-size: 18px;
+    }
 }
 
 .hero__content {
     display: flex;
     justify-content: space-between;
+
+    @include _979 {
+        flex-direction: column-reverse;
+    }
 }
 
 .hero__decor {
     position: relative;
+    margin-right: 20px;
     padding-top: 40px;
     padding-bottom: 312px;
     max-width: 673px;
@@ -54,19 +100,58 @@
         height: 5px;
         background-color: #8bc540;
     }
+
+    @include _979 {
+        padding: 0;
+        background-image: none;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    @include _768 {
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
 
 .hero__link {
     padding: 13.5px 106px;
+
+    @include _1366 {
+        padding: 13.5px 50px 13.5px 20px;
+    }
+
+    @include _768 {
+        max-width: 327px;
+        width: 100%;
+    }
 }
 
 .hero__descr-wrapper {
     max-width: 475px;
     width: 100%;
+
+    @include _768 {
+        max-width: 100%;
+    }
 }
 
 .hero__descr {
     padding-top: 255px;
     @extend %gilroy-500;
     max-width: 385px;
+
+    @include _979 {
+        margin-bottom: 50px;
+        padding-top: 30px;
+    }
+
+    @include _768 {
+        margin: 0 auto 50px;
+        padding-top: 20px;
+        max-width: 327px;
+    }
 }

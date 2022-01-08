@@ -46,6 +46,10 @@
             }
         }
     }
+
+    @include _768 {
+        margin-bottom: 50px;
+    }
 }
 
 .header .container {
@@ -109,6 +113,11 @@
         &.active {
             right: 0;
         }
+    }
+
+    @include _768 {
+        width: 100%;
+        padding: 50px 20px;
     }
 }
 
