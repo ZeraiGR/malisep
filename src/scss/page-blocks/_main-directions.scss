@@ -1,20 +1,50 @@
 .main-directions__inner {
     padding: 100px 0;
+
+    @include _979 {
+        padding: 50px 0;
+    }
 }
 
 .main-directions__title {
     margin-bottom: 50px;
+
+    @include _979 {
+        margin-bottom: 35px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
 }
 
 .main-directions__content {
     display: flex;
     justify-content: space-between;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .main-directions__offer {
     max-width: 575px;
-    margin-right: 15px;
+    margin-right: 45px;
     counter-reset: directions;
+
+    @include _979 {
+        margin-right: 0;
+
+        .main-directions__descr {
+            margin-bottom: 50px;
+        }
+    }
+
+    @include _768 {
+        max-width: 100%;
+    }
 }
 
 .main-directions__heading,
@@ -23,11 +53,23 @@
     max-width: 495px;
     font-size: 24px;
     @extend %gilroy-600;
+
+    @include _768 {
+        max-width: 100%;
+    }
 }
 
 .main-directions__name {
     margin-bottom: 56px;
     color: $green;
+
+    @include _979 {
+        margin-bottom: 35px;
+    }
+
+    @include _630 {
+        font-size: 18px;
+    }
 }
 
 .main-directions__list {
@@ -35,6 +77,13 @@
     padding-bottom: 20px;
     display: flex;
     border-bottom: 1px solid #dadde0;
+
+    @include _630 {
+        margin-bottom: 20px;
+        flex-direction: column;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
 }
 
 .main-directions__item {
@@ -44,6 +93,17 @@
     align-items: center;
     font-size: 14px;
     @extend %gilroy-500;
+
+    @include _630 {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        max-width: 100%;
+        border-bottom: 1px solid #dadde0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     &:first-child {
         padding-right: 15px;
@@ -55,11 +115,19 @@
             height: 90px;
             background-color: #dadde0;
             content: '';
+
+            @include _630 {
+                display: none;
+            }
         }
     }
 
     &:last-child {
         padding-left: 15px;
+
+        @include _630 {
+            padding-left: 0;
+        }
     }
 
     &::before {
@@ -85,15 +153,27 @@
 
 .main-directions__info {
     max-width: 572px;
+
+    @include _979 {
+        max-width: 100%;
+    }
 }
 
 .main-directions__heading {
     margin-bottom: 30px;
     color: $accent;
+
+    @include _630 {
+        font-size: 18px;
+    }
 }
 
 .main-directions__text {
     margin-bottom: 20px;
     @extend %gilroy-500;
     font-size: 18px;
+
+    @include _630 {
+        font-size: 16px;
+    }
 }
