@@ -1,16 +1,34 @@
 .form-question-wrapper {
     padding: 60px 0 70px;
     background-color: #dcdfe2;
+
+    @include _979 {
+        padding: 50px 0 40px;
+    }
 }
 
 .form-question {
     display: flex;
     align-items: center;
+
+    @include _630 {
+        flex-direction: column;
+    }
 }
 
 .form-question__intro {
     margin-right: 65px;
     max-width: 330px;
+
+    @include _768 {
+        margin-right: 30px;
+    }
+
+    @include _630 {
+        margin-right: 0;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
 }
 
 .form-question__title {
@@ -18,24 +36,60 @@
     display: block;
     font-size: 24px;
     @extend %gilroy-600;
+
+    @include _630 {
+        margin-bottom: 20px;
+    }
 }
 
 .form-question__appeal {
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _630 {
+        font-size: 16px;
+
+        span {
+            display: block;
+            font-weight: 700;
+        }
+    }
 }
 
 .form-question__cols {
     display: flex;
     flex-grow: 1;
+
+    @include _979 {
+        flex-direction: column;
+    }
+
+    @include _630 {
+        width: 100%;
+    }
+}
+
+.form-question__list {
+    @include _979 {
+        margin-bottom: 30px;
+    }
 }
 
 .form-question__col {
     max-width: 375px;
     width: 100%;
+
     flex-grow: 1;
     &:first-child {
         margin-right: 20px;
+
+        @include _630 {
+            margin-right: 0;
+        }
+    }
+
+    @include _630 {
+        max-width: 100%;
     }
 }
 
@@ -58,6 +112,10 @@
 .form-question__btn {
     margin-bottom: 10px;
     text-decoration: underline;
+
+    @include _979 {
+        margin-bottom: 15px;
+    }
 
     &:hover {
         text-decoration: none;
