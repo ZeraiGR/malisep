@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    function layoutHandler(e) {
+    const layoutHandler = (e) => {
         const burger = document.querySelector('.header__burger'),
             menu = document.querySelector('.header__mobile'),
             target = e.target;
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ) {
             menu.classList.remove('active');
         }
-    }
+    };
 
-    function menuBurgerHandler() {
+    const menuBurgerHandler = () => {
         const burger = document.querySelector('.header__burger'),
             menu = document.querySelector('.header__mobile'),
             closer = document.querySelector('.header__close');
@@ -42,7 +42,42 @@ document.addEventListener('DOMContentLoaded', () => {
         closer.addEventListener('click', function () {
             menu.classList.remove('active');
         });
-    }
+    };
+
+    const mobileListener = () => {
+        const isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function () {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function () {
+                return (
+                    isMobile.Android() ||
+                    isMobile.BlackBerry() ||
+                    isMobile.iOS() ||
+                    isMobile.Opera() ||
+                    isMobile.Windows()
+                );
+            },
+        };
+
+        if (isMobile.any()) {
+            document.body.classList.add('touch');
+        } else {
+            document.body.classList.add('pc');
+        }
+    };
 
     const tabsManager = () => {
         const tabInit = (tabSelector) => {
@@ -262,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     programToggle();
     accordeonManager();
     menuBurgerHandler();
+    mobileListener();
 
     // sliders
 
@@ -271,6 +307,30 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.success-slide__next',
             prevEl: '.success-slide__prev',
+        },
+        pagination: {
+            el: '.success-slide__counter',
+            type: 'fraction',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.3,
+            },
+            525: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1366: {
+                slidesPerView: 4,
+            },
         },
     });
 

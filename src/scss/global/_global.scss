@@ -117,6 +117,22 @@ body {
     font-weight: 600;
     background-color: #f7f7f7;
     cursor: url('../img/decor-icons/plus-icon-accent.svg'), pointer;
+
+    &.touch {
+        .success-slide__link {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-slide__avatar-box {
+            border-color: $accent;
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 }
 
 .container {

@@ -1,6 +1,14 @@
 .success-history {
     display: flex;
     padding: 100px 0;
+
+    @include _1024 {
+        padding: 55px 15px 100px;
+    }
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .success-history__info {
@@ -9,6 +17,16 @@
     max-width: 375px;
     width: 100%;
     border-right: 1px solid #c7cbd0;
+
+    @include _979 {
+        padding-right: 0;
+        max-width: 100%;
+        border: 0;
+
+        .button-wrapper {
+            display: none;
+        }
+    }
 }
 
 .success-history__title {
@@ -20,20 +38,57 @@
     span {
         color: $green;
     }
+
+    @include _979 {
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
 }
 
 .success-history__text {
     margin-bottom: 60px;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _979 {
+        margin-bottom: 50px;
+    }
+
+    @include _768 {
+        font-size: 16px;
+    }
 }
 
 .success-history__link {
     padding: 13.5px 55px 13.5px 37px;
+
+    @include _768 {
+        max-width: 320px;
+        width: 100%;
+    }
 }
 
 .success-slider {
     min-width: 0;
+
+    @include _979 {
+        width: 100%;
+    }
+
+    .button-wrapper {
+        display: none;
+
+        @include _979 {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.success-slider__wrapper {
+    @include _979 {
+        margin-bottom: 50px;
+    }
 }
 
 .success-slide {
@@ -96,6 +151,10 @@
     @include cut-text(3);
     @extend %gilroy-500;
     color: $grey;
+
+    @include _768 {
+        font-size: 14px;
+    }
 }
 
 .success-slide__program {
@@ -103,6 +162,10 @@
     max-width: 160px;
     font-size: 14px;
     @extend %gilroy-500;
+
+    @include _768 {
+        margin-bottom: 20px;
+    }
 }
 
 .success-slide__heading {
@@ -118,6 +181,35 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
+
+    @include _768 {
+        text-transform: none;
+        font-size: 14px;
+    }
+}
+
+.success-slider__nav {
+    @include _979 {
+        margin: 0 auto 50px;
+        max-width: 320px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.success-slide__counter {
+    display: none;
+    color: $grey;
+
+    & .swiper-pagination-current {
+        color: $text;
+    }
+
+    @include _979 {
+        display: block;
+    }
 }
 
 .success-slide__prev,
@@ -126,6 +218,10 @@
     z-index: 10;
     top: calc(100% - 21px);
     background-image: url('../img/decor-icons/slider-arrow.svg');
+
+    @include _979 {
+        position: static;
+    }
 }
 
 .success-slide__prev {
