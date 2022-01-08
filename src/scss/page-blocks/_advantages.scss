@@ -3,7 +3,7 @@
     background-color: #dcdfe2;
 
     @include _979 {
-        padding: 30px 0 40px;
+        padding: 30px 0 90px;
     }
 
     @include _630 {
@@ -39,6 +39,7 @@
     font-size: 24px;
     @extend %gilroy-600;
     background-image: url('../img/advantage-decor.svg');
+    background-repeat: no-repeat;
 
     @include _1366 {
         max-width: 325px;

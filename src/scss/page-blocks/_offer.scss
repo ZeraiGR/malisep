@@ -20,6 +20,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include _979 {
+        padding: 30px 0;
+    }
 }
 
 .offer__text {
@@ -32,6 +36,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include _979 {
+        font-size: 20px;
+    }
+
+    @include _768 {
+        font-size: 16px;
+    }
 }
 
 .offer__text span {
@@ -41,4 +53,8 @@
 .offer__logo {
     display: inline;
     vertical-align: middle;
+
+    @include _768 {
+        display: none;
+    }
 }
