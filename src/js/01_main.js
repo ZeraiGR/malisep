@@ -387,6 +387,23 @@ document.addEventListener('DOMContentLoaded', () => {
             enabled: true,
             onlyInViewport: false,
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.3,
+            },
+            525: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1366: {
+                slidesPerView: 2,
+            },
+            1800: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const exhibitionSlider = new Swiper('#exhibition', {
