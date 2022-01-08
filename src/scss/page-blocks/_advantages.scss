@@ -1,6 +1,14 @@
 .advantages {
     padding-bottom: 46px;
     background-color: #dcdfe2;
+
+    @include _979 {
+        padding: 30px 0 40px;
+    }
+
+    @include _630 {
+        overflow: hidden;
+    }
 }
 
 .advantages .container {
@@ -11,6 +19,14 @@
     display: flex;
     align-items: center;
     max-height: 445px;
+
+    @include _979 {
+        max-height: initial;
+    }
+
+    @include _768 {
+        flex-direction: column;
+    }
 }
 
 .advantages__decor {
@@ -23,6 +39,38 @@
     font-size: 24px;
     @extend %gilroy-600;
     background-image: url('../img/advantage-decor.svg');
+
+    @include _1366 {
+        max-width: 325px;
+        height: 325px;
+        @include bg(325px);
+    }
+
+    @include _768 {
+        position: relative;
+        margin: 0 auto 20px;
+        padding-bottom: 150px;
+        max-width: 330px;
+        height: 330px;
+        @include bg(330px);
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 80px;
+            font-family: 'QuadratGroteskNew', sans-serif;
+            font-weight: 400;
+            content: 'МАЛИСЭП';
+        }
+    }
+
+    @include _414 {
+        max-width: 100%;
+        width: 90%;
+        height: 345px;
+        @include bg(100%);
+    }
 }
 
 .advantages__runline {
@@ -35,6 +83,14 @@
     overflow: hidden;
     white-space: nowrap;
     height: 100%;
+
+    @include _979 {
+        height: auto;
+    }
+
+    @include _768 {
+        display: none;
+    }
 }
 
 .advantages__runline-text {
@@ -46,6 +102,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .advantage {
@@ -60,6 +120,10 @@
     color: #434343;
     @extend %gilroy-500;
     white-space: nowrap;
+
+    @include _1366 {
+        max-width: 50%;
+    }
 
     &:before {
         position: absolute;
