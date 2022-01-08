@@ -4,16 +4,47 @@
     color: #ffffff;
     background-image: url('../img/add-directions-bg.jpg');
     @include bg(1400px 400px, center 100px);
+
+    @include _1366 {
+        padding: 500px 0 75px;
+        @include bg(calc(100% - 30px), center 100px);
+    }
+
+    @include _1024 {
+        padding: 330px 0 75px;
+        @include bg(calc(100% - 30px), center 30px);
+    }
+
+    @include _768 {
+        padding: 270px 0 30px;
+    }
+
+    @include _630 {
+        padding: 240px 0 30px;
+        @include bg(calc(100% - 30px), center 30px);
+    }
+
+    @include _414 {
+        padding: 160px 0 30px;
+    }
 }
 
 .add-directions__inner {
     display: flex;
     justify-content: space-between;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .add-directions__offer {
     margin-right: auto;
     max-width: 385px;
+
+    @include _768 {
+        max-width: 100%;
+    }
 }
 
 .add-directions__title,
@@ -25,6 +56,10 @@
 
 .add-directions__title {
     font-size: 24px;
+
+    @include _768 {
+        margin-bottom: 20px;
+    }
 }
 
 .add-directions__intro,
@@ -32,8 +67,22 @@
     @extend %gilroy-500;
 }
 
+.add-directions__intro {
+    @include _979 {
+        margin-bottom: 35px;
+    }
+}
+
 .add-directions__content {
     max-width: 575px;
+
+    @include _1366 {
+        max-width: 475px;
+    }
+
+    @include _768 {
+        max-width: 100%;
+    }
 }
 
 .add-directions__link {
@@ -42,6 +91,10 @@
     max-width: 260px;
     background-image: url('../img/follow-white.svg');
     text-decoration-color: #ffffff;
+
+    @include _979 {
+        margin-left: 20px;
+    }
 
     &::before {
         z-index: 1;
