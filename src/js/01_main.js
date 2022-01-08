@@ -357,7 +357,49 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.blog-main__slider-counter',
             type: 'fraction',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                rows: 3,
+            },
+            414: {
+                slidesPerView: 2,
+                rows: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
     });
+
+    const worksSliderHandler = () => {
+        if (blogSlider) {
+            if (document.documentElement.clientWidth < 1024) {
+                const slides = document.querySelectorAll('.publication ');
+
+                slides[0].remove();
+                slides[1].remove();
+                blogSlider.update();
+
+                if (document.documentElement.clientWidth < 768) {
+                    slides[2].remove();
+                    slides[3].remove();
+                    blogSlider.update();
+
+                    if (document.documentElement.clientWidth < 414) {
+                        slides[4].remove();
+                        slides[5].remove();
+                        blogSlider.update();
+                    }
+                }
+            }
+        }
+    };
+
+    worksSliderHandler();
 
     const teacherSlider = new Swiper('.teachers-slider', {
         slidesPerView: 4,
@@ -369,6 +411,20 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.teachers-main__slider-counter',
             type: 'fraction',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.3,
+            },
+            530: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
         },
     });
 

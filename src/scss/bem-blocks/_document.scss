@@ -1,19 +1,51 @@
 .document {
     max-width: 195px;
+
     &:first-child {
         margin-right: 20px;
+
+        @include _630 {
+            margin-right: 0;
+        }
+    }
+
+    &:last-child {
+        @include _630 {
+            margin-right: 20px;
+        }
+    }
+
+    @include _414 {
+        .document__download {
+            padding-left: 0;
+            padding-top: 60px;
+            max-width: 60%;
+
+            &::before {
+                top: 0;
+                transform: translateY(0);
+            }
+        }
     }
 }
 
 .document__img {
     margin-bottom: 20px;
     width: 100%;
-    object-fit: cover;
+    height: 250px;
+    object-fit: contain;
+    object-position: center bottom;
 }
 
 .document__name,
 .document__download {
     display: block;
+}
+
+.document__download {
+    &::after {
+        display: none;
+    }
 }
 
 .document__name {

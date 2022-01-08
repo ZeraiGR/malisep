@@ -7,12 +7,12 @@
 
     @include _1366 {
         padding: 500px 0 75px;
-        @include bg(calc(100% - 30px), center 100px);
+        @include bg(calc(100% - 50px), center 100px);
     }
 
     @include _1024 {
         padding: 330px 0 75px;
-        @include bg(calc(100% - 30px), center 30px);
+        @include bg(calc(100% - 50px), center 30px);
     }
 
     @include _768 {
@@ -21,7 +21,7 @@
 
     @include _630 {
         padding: 240px 0 30px;
-        @include bg(calc(100% - 30px), center 30px);
+        @include bg(calc(100% - 50px), center 30px);
     }
 
     @include _414 {
@@ -98,6 +98,10 @@
 
     &::before {
         z-index: 1;
+    }
+
+    &::after {
+        display: none;
     }
 }
 

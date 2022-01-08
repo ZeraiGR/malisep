@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
 
+    @include _979 {
+        padding: 60px 0 90px;
+        flex-direction: column;
+    }
+
     &--study {
         .statement__info {
             max-width: 345px;
@@ -43,21 +48,62 @@
 .statement__info {
     margin-right: 30px;
     @extend %gilroy-600;
+
+    @include _979 {
+        margin-right: 0;
+        margin-bottom: 70px;
+    }
+
+    @include _630 {
+        display: flex;
+        align-items: center;
+    }
+
+    @include _414 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .statement__title {
     margin-bottom: 70px;
     max-width: 250px;
     font-size: 24px;
+
+    @include _979 {
+        margin-bottom: 35px;
+    }
+
+    @include _630 {
+        margin-bottom: 0;
+    }
+
+    @include _414 {
+        margin-bottom: 30px;
+    }
 }
 
 .statement__link {
     display: block;
     max-width: 200px;
     background-image: url('../img/follow-black.svg');
+
+    &::after {
+        display: none;
+    }
 }
 
 .statement__docs {
     margin-right: 30px;
     display: flex;
+
+    @include _979 {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    @include _630 {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
 }

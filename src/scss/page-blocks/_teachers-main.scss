@@ -3,12 +3,28 @@
     display: flex;
     background-color: $text;
     color: #ffffff;
+    min-width: 0;
+
+    @include _1024 {
+        padding: 50px 0 50px 25px;
+    }
+
+    @include _768 {
+        padding: 50px 0 130px 25px;
+        position: relative;
+        flex-direction: column;
+    }
 }
 
 .teachers-main__info {
     margin-right: 120px;
     max-width: 275px;
     width: 100%;
+
+    @include _768 {
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
 
 .teachers-main__title {
@@ -26,6 +42,11 @@
     font-size: 18px;
     @extend %gilroy-500;
     color: $grey;
+
+    @include _768 {
+        margin-bottom: 50px;
+        font-size: 16px;
+    }
 }
 
 .teachers-main__slider-nav {
@@ -33,6 +54,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _768 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    @include _414 {
+        left: 25px;
+        transform: translateX(0);
+        max-width: 85%;
+    }
 }
 
 .teachers-main__slider-prev,
@@ -46,6 +82,12 @@
     .swiper-pagination-current {
         font-size: 24px;
         color: #ffffff;
+    }
+}
+
+.teachers-slider {
+    @include _768 {
+        width: 100%;
     }
 }
 

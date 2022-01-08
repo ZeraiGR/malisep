@@ -1,6 +1,10 @@
 .formats__title,
 .formats__subtitle {
     padding-left: 35px;
+
+    @include _979 {
+        padding-left: 0;
+    }
 }
 
 .formats__title {
