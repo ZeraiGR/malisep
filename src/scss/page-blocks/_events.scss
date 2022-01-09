@@ -2,11 +2,23 @@
     &--study {
         padding: 80px 0 70px;
 
+        @include _1024 {
+            padding: 50px 0;
+        }
+
         .events__title {
             margin-bottom: 20px;
             font-size: 24px;
             @extend %gilroy-600;
             text-align: left;
+
+            @include _1024 {
+                font-size: 18px;
+            }
+
+            @include _979 {
+                margin-bottom: 30px;
+            }
         }
 
         .container {
@@ -21,6 +33,10 @@
 
         .slider-events__wrapper {
             margin-bottom: 50px;
+
+            @include _630 {
+                margin-bottom: 30px;
+            }
         }
 
         .slider-events__nav {
@@ -211,6 +227,10 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
+
+    @include _979 {
+        height: auto;
+    }
 }
 
 .slide-events__descr {

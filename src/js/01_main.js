@@ -350,6 +350,17 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.slider-events__counter',
             type: 'fraction',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.3,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const blogSlider = new Swiper('.blog-main__slider', {
