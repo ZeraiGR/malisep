@@ -1,16 +1,36 @@
 .conditions {
-    padding: 40px 0 10px;
+    padding: 40px 0 50px;
+
+    @include _1024 {
+        padding: 10px 0 50px;
+    }
 }
 
 .conditions__top {
     margin-bottom: 60px;
     display: flex;
     align-items: center;
+
+    @include _630 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .conditions__title {
     margin-right: 120px;
     max-width: 475px;
+
+    @include _1024 {
+        margin-right: 80px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        margin-bottom: 30px;
+        margin-right: 0;
+        font-size: 24px;
+    }
 }
 
 .conditions__descr,
@@ -21,10 +41,18 @@
 
 .conditions__descr {
     color: $green;
+
+    @include _768 {
+        font-size: 18px;
+    }
 }
 
 .conditions__course {
     margin-bottom: 125px;
+
+    @include _1366 {
+        margin-bottom: 75px;
+    }
 
     &--short {
         .conditions__text {
@@ -45,15 +73,32 @@
     margin-bottom: 50px;
     color: $accent;
     text-decoration: underline;
+
+    @include _768 {
+        margin-bottom: 30px;
+    }
 }
 
 .conditions__main {
     display: flex;
+
+    @include _979 {
+        flex-direction: column-reverse;
+    }
 }
 
 .conditions__info {
     margin-right: auto;
     max-width: 475px;
+
+    @include _1366 {
+        margin-right: 50px;
+    }
+
+    @include _979 {
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
 
 .conditions__text {
@@ -61,10 +106,18 @@
     font-size: 18px;
     @extend %gilroy-500;
 
+    @include _630 {
+        font-size: 16px;
+    }
+
     &--grey {
         margin-bottom: 50px;
         color: $grey;
         font-size: 14px;
+
+        @include _979 {
+            margin-bottom: 40px;
+        }
     }
 
     &--litle {
@@ -76,6 +129,11 @@
 .conditions__questionnaire {
     padding: 13.5px 100px 13.5px 20px;
 
+    @include _414 {
+        width: 100%;
+        padding: 13.5px 20px;
+    }
+
     &:hover {
         background-image: url('../img/decor-icons/plus-icon-white.svg');
     }
@@ -84,10 +142,19 @@
 .conditions__requires {
     max-width: 575px;
     width: 100%;
+
+    @include _979 {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
 }
 
 .conditions__list {
     margin-bottom: 50px;
+
+    @include _979 {
+        margin-bottom: 40px;
+    }
 }
 
 .conditions__item {
@@ -105,10 +172,27 @@
 
 .conditions__label {
     @extend %gilroy-600;
+
+    @include _1366 {
+        margin-right: 25px;
+    }
+
+    @include _630 {
+        font-size: 16px;
+    }
 }
 
 .conditions__date {
     @extend %gilroy-500;
+
+    @include _1366 {
+        width: max-content;
+        text-align: right;
+    }
+
+    @include _630 {
+        font-size: 16px;
+    }
 }
 
 .conditions__docs-title {
@@ -132,6 +216,22 @@
     width: 100%;
     font-size: 14px;
     @extend %gilroy-500;
+
+    @include _768 {
+        max-width: 100%;
+    }
+
+    @include _630 {
+        padding-top: 0;
+        padding-left: 60px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &::before {
         position: absolute;
