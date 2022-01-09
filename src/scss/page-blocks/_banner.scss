@@ -3,6 +3,10 @@
     z-index: 2;
     padding: 70px 0 80px;
 
+    @include _1024 {
+        padding: 50px 0;
+    }
+
     .container {
         max-width: 1566px;
     }
@@ -17,6 +21,17 @@
     background-repeat: no-repeat;
     background-position: right top, 0 64px, 40% bottom, left 29px;
     background-size: 278px 359px, 278px 359px, 179px 191px, 1484px 365px;
+
+    @include _1366 {
+        background-image: url('../img/decor-icons/banner-circles.svg');
+        background-position: left 29px;
+        background-size: 1484px 365px;
+    }
+
+    @include _1024 {
+        padding: 0;
+        background-image: none;
+    }
 }
 
 .banner__text {
@@ -27,4 +42,14 @@
     font-size: 24px;
     @extend %gilroy-600;
     text-align: center;
+
+    @include _1024 {
+        padding: 0;
+        color: $text;
+    }
+
+    @include _630 {
+        font-size: 18px;
+        text-align: left;
+    }
 }

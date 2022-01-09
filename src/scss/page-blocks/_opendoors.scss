@@ -1,15 +1,42 @@
 .opendoors {
     padding: 20px 0 110px;
+
+    @include _1024 {
+        padding: 50px 0;
+    }
 }
 
 .opendoors__top {
     margin-bottom: 50px;
     display: flex;
     align-items: center;
+
+    @include _1024 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @include _630 {
+        margin-bottom: 30px;
+    }
 }
 
 .opendoors__title {
     line-height: 1.4;
+
+    @include _1366 {
+        font-size: 32px;
+        margin-right: 50px;
+    }
+
+    @include _1024 {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .opendoors__descr {
@@ -18,23 +45,44 @@
     font-size: 24px;
     color: $green;
     @extend %gilroy-500;
+
+    @include _1024 {
+        font-size: 18px;
+    }
 }
 
 .opendoors__content {
     display: flex;
+
+    @include _630 {
+        flex-direction: column-reverse;
+    }
 }
 
 .opendoors__link-wrap {
-    margin-right: auto;
+    margin-right: 20px;
     max-width: 377px;
     width: 100%;
     background-image: url('../img/opendoors-decor-3.jpg');
     @include bg(100% 225px, left bottom);
+
+    @include _979 {
+        @include bg(100% 225px, left 100px);
+    }
+
+    @include _630 {
+        background-image: none;
+    }
 }
 
 .opendoors__follow {
     padding: 13.5px 87px 13.5px 20px;
     text-decoration: none;
+
+    @include _414 {
+        padding: 13.5px 20px;
+        width: 100%;
+    }
 
     &::before {
         left: calc(100% - 35px);
@@ -61,7 +109,24 @@
         url('../img/opendoors-decor-1.jpg'), url('../img/opendoors-decor-2.jpg');
     background-repeat: no-repeat;
     background-position: left top, right bottom, 296px bottom;
-    background-size: 277px 376px, 277px 165px, 178px 165px;
+    background-size: 277px 376px, 265px 165px, 178px 165px;
+
+    @include _1366 {
+        background-image: url('../img/graduates-decor-2.jpg'),
+            url('../img/opendoors-decor-1.jpg');
+    }
+
+    @include _1024 {
+        padding: 0 0 200px;
+        background-image: url('../img/opendoors-decor-1.jpg');
+        background-position: right bottom;
+        background-size: 265px 165px;
+    }
+
+    @include _630 {
+        margin-bottom: 30px;
+        background-position: left bottom;
+    }
 }
 
 .opendoors__text {
@@ -69,6 +134,11 @@
     max-width: 475px;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _630 {
+        max-width: 100%;
+        font-size: 16px;
+    }
 
     &:last-child {
         margin-bottom: 0;
