@@ -78,6 +78,10 @@
     @include _1024 {
         margin-bottom: 30px;
     }
+
+    @include _630 {
+        margin-bottom: 0;
+    }
 }
 
 .account__text {
