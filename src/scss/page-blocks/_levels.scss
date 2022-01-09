@@ -1,9 +1,21 @@
 .levels {
     padding: 100px 0 60px;
+
+    @include _1024 {
+        padding: 75px 0;
+    }
 }
 
 .levels__title {
     margin-bottom: 50px;
+
+    @include _1024 {
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 
     span {
         color: $green;
@@ -15,6 +27,15 @@
     padding-left: 100px;
     display: flex;
     counter-reset: levels;
+
+    @include _979 {
+        flex-direction: column;
+    }
+
+    @include _768 {
+        margin-bottom: 60px;
+        padding-left: 75px;
+    }
 }
 
 .levels__item {
@@ -29,6 +50,14 @@
     text-transform: uppercase;
     border-bottom: 1px solid #c7cbd0;
 
+    @include _979 {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &:last-child {
         margin-right: 0;
     }
@@ -42,17 +71,36 @@
         font-size: 48px;
         line-height: 1;
         @extend %grotesk-400;
+
+        @include _768 {
+            font-size: 32px;
+            bottom: 0;
+            left: -75px;
+        }
     }
 }
 
 .levels__listing {
     display: flex;
+
+    @include _768 {
+        flex-direction: column;
+    }
 }
 
 .levels__one {
     margin-right: 20px;
     max-width: 277px;
     width: 100%;
+
+    @include _768 {
+        margin-bottom: 50px;
+        margin-right: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     &:last-child {
         margin-right: 0;
