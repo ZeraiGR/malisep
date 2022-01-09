@@ -1,11 +1,20 @@
 .payform {
     display: flex;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .payform__info {
     margin-right: 120px;
     max-width: 475px;
     width: 100%;
+
+    @include _979 {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 
 .payform__title {
@@ -32,6 +41,10 @@
 .payform__accordion {
     max-width: 475px;
     width: 100%;
+
+    @include _630 {
+        max-width: 100%;
+    }
 }
 
 .payform__question {

@@ -8,6 +8,15 @@
     span {
         color: $green;
     }
+
+    @include _1024 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .price__list {
@@ -24,6 +33,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include _630 {
+        flex-wrap: wrap;
+    }
 }
 
 .price__name,
@@ -37,17 +50,51 @@
     max-width: 400px;
     display: block;
     font-size: 14px;
+
+    @include _979 {
+        max-width: 250px;
+    }
+
+    @include _630 {
+        max-width: 45%;
+    }
+
+    @include _414 {
+        margin-bottom: 25px;
+        max-width: 100%;
+    }
 }
 
 .price__total {
     max-width: 190px;
     font-size: 24px;
+
+    @include _768 {
+        max-width: 150px;
+        font-size: 18px;
+    }
+
+    @include _630 {
+        max-width: 45%;
+        width: 100%;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    @include _414 {
+        max-width: 100%;
+        text-align: left;
+    }
 }
 
 .price__follow {
     padding-left: 0;
     padding-right: 25px;
     @extend %gilroy-600;
+
+    @include _630 {
+        margin-top: 25px;
+    }
 
     &:before {
         top: 48%;
@@ -60,4 +107,8 @@
     font-size: 14px;
     @extend %gilroy-500;
     color: $grey;
+
+    @include _630 {
+        margin-top: 25px;
+    }
 }
