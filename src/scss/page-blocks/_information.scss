@@ -1,9 +1,22 @@
 .information {
     padding: 70px 0 40px;
+
+    @include _1024 {
+        padding: 50px 0 40px;
+    }
 }
 
 .information__title {
     margin-bottom: 20px;
+
+    @include _1024 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .information__descr {
@@ -12,19 +25,41 @@
     font-size: 24px;
     color: $accent;
     @extend %gilroy-600;
+
+    @include _1024 {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
 }
 
 .information__content {
     display: flex;
+
+    @include _979 {
+        flex-direction: column-reverse;
+    }
 }
 
 .information__info {
-    margin-right: 20px;
+    margin-right: 40px;
+
+    @include _979 {
+        margin-right: 0;
+    }
 }
 
 .information__tasks {
     margin-bottom: 90px;
     max-width: 320px;
+
+    @include _979 {
+        margin-bottom: 60px;
+        max-width: 100%;
+    }
+
+    @include _630 {
+        margin-bottom: 40px;
+    }
 }
 
 .information__task {
@@ -45,20 +80,45 @@
     width: 100%;
     color: $green;
     @extend %gilroy-600;
+
+    @include _979 {
+        max-width: 100%;
+    }
+
+    @include _630 {
+        font-size: 14px;
+    }
 }
 
 .information__main {
     max-width: 770px;
+
+    @include _979 {
+        margin-bottom: 40px;
+    }
 }
 
 .information__advantages {
     margin-bottom: 59px;
     display: flex;
 
+    @include _1024 {
+        margin-bottom: 30px;
+    }
+
+    @include _414 {
+        flex-direction: column;
+    }
+
     .information__advantage {
         &--library {
             margin-right: 20px;
             max-width: 275px;
+
+            @include _414 {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
         }
 
         &--books {
