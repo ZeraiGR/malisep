@@ -1,13 +1,29 @@
 .addmition {
     padding-bottom: 110px;
+
+    @include _1024 {
+        padding-bottom: 75px;
+    }
+
+    @include _630 {
+        padding-bottom: 50px;
+    }
 }
 
 .addmition__inner {
     display: flex;
+
+    @include _630 {
+        flex-direction: column;
+    }
 }
 
 .addmition__content {
     margin-right: auto;
+
+    @include _1366 {
+        margin-right: 20px;
+    }
 }
 
 .addmition__title {
@@ -16,10 +32,24 @@
     span {
         color: $accent;
     }
+
+    @include _1024 {
+        margin-bottom: 50px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        margin-bottom: 35px;
+        font-size: 24px;
+    }
 }
 
 .addmition__items {
     display: flex;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .addmition__item {
@@ -28,6 +58,23 @@
     &--open {
         margin-right: 20px;
         max-width: 375px;
+
+        @include _979 {
+            margin-bottom: 50px;
+            margin-right: 0;
+            max-width: 100%;
+
+            .addmition__img {
+                display: none;
+            }
+        }
+
+        @include _630 {
+            .addmition__img {
+                width: 100%;
+                display: block;
+            }
+        }
 
         .addmition__descr {
             &::after {
@@ -38,24 +85,45 @@
                 height: 100px;
                 background-color: #c7cbd0;
                 content: '';
+
+                @include _979 {
+                    display: none;
+                }
             }
         }
 
         .addmition__link {
             padding: 13.5px 54px;
+            @include _630 {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 
     &--programs {
         max-width: 475px;
 
+        @include _979 {
+            max-width: 100%;
+        }
+
         .addmition__descr {
             margin-left: -20px;
             padding-left: 20px;
+
+            @include _979 {
+                margin-left: 0;
+                padding-left: 0;
+            }
         }
 
         .addmition__link {
             padding: 13.5px 40px;
+            @include _630 {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }
@@ -75,10 +143,18 @@
     @extend %gilroy-500;
     color: $grey;
     border-top: 1px solid #c7cbd0;
+
+    @include _630 {
+        margin-bottom: 30px;
+    }
 }
 
 .addmition__button-wrapper {
     margin-bottom: 85px;
+
+    @include _979 {
+        margin-bottom: 30px;
+    }
 }
 
 .addmition__img {
@@ -90,6 +166,10 @@
     padding: 15px 0 40px;
     display: flex;
     flex-direction: column;
+
+    @include _979 {
+        padding: 50px 0px 10px;
+    }
 }
 
 .addmition__conditions {
@@ -97,6 +177,10 @@
     max-width: 150px;
     display: inline-block;
     background-image: url('../img/decor-icons/eye-icon.svg');
+
+    @include _630 {
+        margin-bottom: 40px;
+    }
 }
 
 .addmition__list-item {
