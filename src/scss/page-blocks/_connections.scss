@@ -3,24 +3,52 @@
     padding: 50px 0 175px;
     background-image: url('../img/decor-icons/decor-connections.jpg');
     @include bg(275px 150px, left calc(100% - 67px));
+
+    @include _1366 {
+        padding: 50px 0;
+        background-image: none;
+    }
 }
 
 .connections__title {
     margin-bottom: 50px;
+
+    @include _1024 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .connections__content {
     display: flex;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .connections__half {
     &:first-child {
-        margin-right: auto;
+        margin-right: 40px;
         max-width: 530px;
+
+        @include _979 {
+            margin-bottom: 50px;
+            margin-right: 0;
+            max-width: 100%;
+        }
     }
 
     &:last-child {
         max-width: 575px;
+
+        @include _979 {
+            max-width: 100%;
+        }
     }
 }
 
@@ -29,10 +57,18 @@
     @extend %gilroy-500;
     font-size: 18px;
 
+    @include _1024 {
+        font-size: 16px;
+    }
+
     &--accent,
     &--green {
         font-size: 24px;
         @extend %gilroy-600;
+
+        @include _1024 {
+            font-size: 18px;
+        }
     }
 
     &--accent {
@@ -61,6 +97,10 @@
     padding: 25px 0;
     display: flex;
     background-color: $accent;
+
+    @include _1366 {
+        display: none;
+    }
 }
 
 .connections-decor-item {
