@@ -476,6 +476,20 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.events-main__counter',
             type: 'fraction',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1524: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const lecturesSlider = new Swiper('#lectures', {
@@ -491,6 +505,20 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.events-main__counter',
             type: 'fraction',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1524: {
+                slidesPerView: 3,
+            },
         },
     });
 
@@ -508,6 +536,20 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.events-main__counter',
             type: 'fraction',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1524: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const achieveTeacherSlider = new Swiper('#achieve-teachers', {
@@ -524,6 +566,20 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.events-main__counter',
             type: 'fraction',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1524: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const achieveStudentSlider = new Swiper('#achieve-students', {
@@ -539,6 +595,20 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.events-main__counter',
             type: 'fraction',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            630: {
+                slidesPerView: 2,
+            },
+            979: {
+                slidesPerView: 2,
+            },
+            1524: {
+                slidesPerView: 3,
+            },
         },
     });
 
