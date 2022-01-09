@@ -35,7 +35,7 @@
     }
 
     @include _1024 {
-        padding: 55px 25px 50px;
+        padding: 55px 0 50px 25px;
     }
 }
 
@@ -211,7 +211,8 @@
     align-items: center;
 
     @include _414 {
-        max-width: 100%;
+        margin-right: 25px;
+        max-width: calc(100% - 25px);
         width: 100%;
         justify-content: space-between;
     }

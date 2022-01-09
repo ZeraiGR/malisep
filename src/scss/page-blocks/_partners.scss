@@ -1,12 +1,22 @@
 .partners {
     background-color: $text;
     color: #ffffff;
+
+    @include _979 {
+        background-image: url('../img/decor-icons/partners-decor.svg');
+        @include bg(200px, right -200px);
+    }
 }
 
 .partners__inner {
     padding: 100px 0;
     background-image: url('../img/partners-decor.svg');
     @include bg(396px 320px, 178px top);
+
+    @include _979 {
+        padding: 50px 0;
+        background-image: none;
+    }
 }
 
 .partners__title {
@@ -19,6 +29,11 @@
 .partners__top {
     margin-bottom: 85px;
     display: flex;
+
+    @include _979 {
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
 }
 
 .partners__descr,
@@ -31,11 +46,28 @@
     margin-right: 100px;
     max-width: 300px;
     color: $grey;
+
+    @include _979 {
+        margin-bottom: 50px;
+    }
+
+    @include _768 {
+        font-size: 16px;
+    }
+
+    @include _630 {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .partners__text {
     max-width: 600px;
     color: $green;
+
+    @include _768 {
+        font-size: 14px;
+    }
 }
 
 .partners__buttons {
@@ -44,14 +76,59 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #585c63;
+
+    @include _979 {
+        margin-bottom: 0;
+    }
+
+    @include _414 {
+        justify-content: flex-start;
+    }
+}
+
+.partners__box {
+    overflow-x: auto;
+}
+
+.partners__buttons {
+    @include _979 {
+        width: 979px;
+    }
+
+    @include _768 {
+        width: 768px;
+    }
+
+    @include _630 {
+        width: 630px;
+    }
+
+    @include _414 {
+        width: 414px;
+    }
+}
+
+.partners__tab {
+    @include _1366 {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .partners__btn {
     font-size: 14px;
     color: $grey;
     text-transform: uppercase;
+
     &.tabs__btn--active {
         color: $accent;
+    }
+
+    @include _979 {
+        text-align: left;
     }
 }
 
@@ -64,11 +141,26 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include _414 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .partners__logo {
     margin-right: 50px;
     max-width: 180px;
+
+    @include _630 {
+        min-width: 75px;
+        width: 100%;
+    }
+
+    @include _414 {
+        margin-bottom: 20px;
+        max-width: 120px;
+    }
 }
 
 .partners__logo-img {

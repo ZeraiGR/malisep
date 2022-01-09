@@ -3,7 +3,7 @@
     padding: 100px 0;
 
     @include _1024 {
-        padding: 55px 25px 100px;
+        padding: 55px 0 100px 25px;
     }
 
     @include _979 {
@@ -20,7 +20,7 @@
 
     @include _979 {
         padding-right: 0;
-        max-width: 100%;
+        max-width: calc(100% - 25px);
         border: 0;
 
         .button-wrapper {
@@ -191,7 +191,8 @@
 .success-slider__nav {
     @include _979 {
         margin: 0 auto 50px;
-        max-width: 320px;
+        margin-right: 25px;
+        max-width: calc(100% - 25px);
         width: 100%;
         display: flex;
         align-items: center;
