@@ -10,9 +10,15 @@
     span {
         color: $green;
     }
-}
 
-.schedule__list {
+    @include _1024 {
+        margin-bottom: 45px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .schedule__item {
@@ -24,6 +30,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include _979 {
+        padding: 0 0 10px 0;
+    }
+
+    @include _630 {
+        flex-wrap: wrap;
+    }
 }
 
 .schedule__duration {
@@ -32,12 +46,23 @@
     display: flex;
     align-items: center;
 
+    @include _630 {
+        justify-content: space-between;
+        color: $grey;
+    }
+
     .schedule__label {
         margin-right: 0;
         display: block;
         margin-left: auto;
         max-width: 230px;
         width: 100%;
+
+        @include _630 {
+            margin-bottom: 0;
+            margin-left: 0;
+            font-size: 14px;
+        }
     }
 }
 
@@ -46,10 +71,34 @@
     font-size: 14px;
     @extend %gilroy-600;
     text-transform: uppercase;
+
+    @include _979 {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    @include _630 {
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
 }
 
 .schedule__total {
     font-size: 24px;
     @extend %gilroy-600;
     text-transform: uppercase;
+
+    @include _979 {
+        max-width: 190px;
+        width: 100%;
+    }
+
+    @include _768 {
+        max-width: 150px;
+        font-size: 18px;
+    }
+
+    @include _630 {
+        font-size: 14px;
+    }
 }
