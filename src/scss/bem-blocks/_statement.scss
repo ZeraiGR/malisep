@@ -9,9 +9,26 @@
     }
 
     &--study {
+        @include _1024 {
+            .statement__inner {
+                flex-direction: column;
+            }
+        }
+
         .statement__info {
             max-width: 345px;
             width: 100%;
+
+            @include _1024 {
+                margin-right: 0;
+                margin-bottom: 70px;
+            }
+
+            @include _630 {
+                margin-bottom: 40px;
+                max-width: 100%;
+                display: block;
+            }
         }
 
         .statement__title {
@@ -22,6 +39,10 @@
             font-size: 18px;
             @extend %gilroy-600;
 
+            @include _768 {
+                font-size: 16px;
+            }
+
             &--grey {
                 margin-bottom: 35px;
                 font-size: 14px;
@@ -30,8 +51,19 @@
             }
         }
 
+        .statement__docs {
+            @include _1024 {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+
         .document__img {
             margin-bottom: 10px;
+
+            @include _414 {
+                height: auto;
+            }
         }
 
         .document__name {
