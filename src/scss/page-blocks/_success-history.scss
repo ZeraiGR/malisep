@@ -72,13 +72,14 @@
     min-width: 0;
 
     @include _979 {
-        width: 100%;
+        max-width: calc(100% - 25px);
     }
 
     .button-wrapper {
         display: none;
 
         @include _979 {
+            margin-right: 25px;
             display: block;
             text-align: center;
         }

@@ -331,6 +331,7 @@
             margin-right: 0;
 
             @include _414 {
+                padding-left: 15px;
                 margin-left: auto;
             }
         }

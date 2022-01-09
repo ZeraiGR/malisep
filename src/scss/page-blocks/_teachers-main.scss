@@ -5,7 +5,7 @@
     color: #ffffff;
     min-width: 0;
 
-    @include _1024 {
+    @include _1366 {
         padding: 50px 0 50px 25px;
     }
 
@@ -22,7 +22,7 @@
     width: 100%;
 
     @include _768 {
-        margin-right: 0;
+        margin-right: 25px;
         max-width: 100%;
     }
 }
@@ -34,6 +34,10 @@
 
     span {
         color: $green;
+    }
+
+    @include _1366 {
+        margin-right: 25px;
     }
 }
 

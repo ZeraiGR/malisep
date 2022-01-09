@@ -1,11 +1,25 @@
 .loyalty__inner {
     padding: 100px 0;
     display: flex;
+
+    @include _1024 {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    @include _768 {
+        padding: 50px 0 10px;
+    }
 }
 
 .loyalty__info {
     margin-right: 55px;
     max-width: 340px;
+
+    @include _1024 {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
 }
 
 .loyalty__title {
@@ -19,6 +33,10 @@
     margin-bottom: 20px;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _630 {
+        font-size: 16px;
+    }
 }
 
 .loyalty__text {
@@ -31,12 +49,28 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+
+    @include _768 {
+        flex-wrap: wrap;
+    }
 }
 
 .loyalty__item {
+    margin-right: 10px;
     max-width: 180px;
     width: 100%;
     cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include _768 {
+        margin-bottom: 40px;
+        margin-right: 0;
+        max-width: 47%;
+        width: 100%;
+    }
 
     &:hover {
         .loyalty__offer {

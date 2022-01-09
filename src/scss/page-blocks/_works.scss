@@ -34,7 +34,7 @@
         background-color: #dcdfe2;
     }
 
-    @include _1024 {
+    @include _1366 {
         padding: 55px 0 50px 25px;
     }
 }
@@ -44,6 +44,10 @@
     z-index: 2;
     max-width: 1110px;
     margin: 0 auto 40px;
+
+    @include _1366 {
+        margin-right: 25px;
+    }
 
     span {
         color: $accent;

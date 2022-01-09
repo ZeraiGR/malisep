@@ -3,9 +3,15 @@
 .blog-main {
     padding: 90px 0 68px;
 
-    @include _1024 {
+    @include _1366 {
         padding: 50px 0 75px 25px;
 
+        .top {
+            margin-right: 25px;
+        }
+    }
+
+    @include _1024 {
         .top__title {
             font-size: 32px;
         }
@@ -18,6 +24,10 @@
     @include _630 {
         position: relative;
         padding: 50px 25px 115px;
+
+        .top {
+            margin-right: 0;
+        }
 
         .top__title {
             font-size: 24px;

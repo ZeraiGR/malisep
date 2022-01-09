@@ -15,6 +15,20 @@
         background-position: 51% bottom, left top;
         background-size: 180px 230px, 120%;
         content: '';
+
+        @include _979 {
+            width: 100%;
+            background-image: url('../img/graduates-decor-1.jpg'),
+                url('../img/graduates-decor-2.jpg');
+            background-position: calc(100% - 25px) calc(100% - 20px),
+                calc(27px) calc(100% - 79px);
+            background-size: 116px 146px, 184px 238px;
+        }
+
+        @include _414 {
+            background-image: url('../img/graduates-decor-2.jpg');
+            @include bg(184px 238px, calc(27px) calc(100% - 79px));
+        }
     }
 }
 
@@ -23,6 +37,11 @@
     z-index: 1;
     padding: 100px 0 45px;
     display: flex;
+
+    @include _979 {
+        padding: 50px 0 365px;
+        flex-direction: column;
+    }
 }
 
 .graduates__info {
@@ -31,6 +50,24 @@
     width: 100%;
     background-image: url('../img/graduates-decor-2.jpg');
     @include bg(280px 360px, left calc(100% - 280px));
+
+    @include _979 {
+        margin-right: 0;
+        margin-bottom: 50px;
+        max-width: 50%;
+        background-image: none;
+    }
+
+    @include _768 {
+        padding-top: 15px;
+        max-width: 100%;
+        background-image: url('../img/graduates-mobile.jpg');
+        @include bg(140px 86px, right top);
+    }
+
+    @include _414 {
+        background-image: none;
+    }
 }
 
 .graduates__title {
@@ -44,6 +81,10 @@
     margin-bottom: 30px;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _630 {
+        font-size: 16px;
+    }
 }
 
 .graduates__link,
@@ -62,9 +103,15 @@
     background-color: $accent;
     background-image: url('../img/decor-icons/star-icon.svg');
     @include bg(20px, calc(100% - 20px) center);
+    white-space: nowrap;
 
     &:hover {
         text-decoration: underline;
+    }
+
+    @include _414 {
+        font-size: 12px;
+        white-space: normal;
     }
 }
 
@@ -80,6 +127,10 @@
     height: 300px;
     object-fit: cover;
     margin-bottom: 50px;
+
+    @include _979 {
+        display: none;
+    }
 }
 
 .graduates__list {
@@ -98,5 +149,13 @@
 
     &:nth-child(odd) {
         margin-right: 20px;
+
+        @include _630 {
+            margin-right: 0;
+        }
+    }
+
+    @include _630 {
+        max-width: 100%;
     }
 }

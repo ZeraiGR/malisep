@@ -152,8 +152,17 @@
     margin-right: 50px;
     max-width: 180px;
 
+    @include _1024 {
+        max-width: 120px;
+    }
+
+    @include _768 {
+        max-width: 90px;
+    }
+
     @include _630 {
         min-width: 75px;
+        max-width: 75px;
         width: 100%;
     }
 

@@ -14,23 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const layoutHandler = (e) => {
         const burger = document.querySelector('.header__burger'),
             menu = document.querySelector('.header__mobile'),
-            target = e.target;
+            target = e.target,
+            body = document.body;
 
         if (
             target.closest('.header__mobile') == null &&
             !target.classList.contains('header__burger')
         ) {
             menu.classList.remove('active');
+            body.classList.remove('lock');
         }
     };
 
     const menuBurgerHandler = () => {
         const burger = document.querySelector('.header__burger'),
             menu = document.querySelector('.header__mobile'),
-            closer = document.querySelector('.header__close');
+            closer = document.querySelector('.header__close'),
+            body = document.body;
 
         burger.addEventListener('click', function () {
             menu.classList.toggle('active');
+            body.classList.toggle('lock');
 
             if (menu.classList.contains('active')) {
                 window.addEventListener('click', layoutHandler);
@@ -41,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         closer.addEventListener('click', function () {
             menu.classList.remove('active');
+            body.classList.remove('lock');
         });
     };
 

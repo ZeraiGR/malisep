@@ -133,6 +133,10 @@ body {
             }
         }
     }
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {
