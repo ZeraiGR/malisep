@@ -8,6 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     counter-reset: structure;
+
+    @include _979 {
+        padding: 50px 0;
+    }
 }
 
 .structure__item {
@@ -23,6 +27,18 @@
     text-transform: uppercase;
     border-bottom: 1px solid #babfc6;
 
+    @include _1366 {
+        padding: 25px 80px 20px 0;
+    }
+
+    @include _979 {
+        max-width: 48%;
+    }
+
+    @include _630 {
+        max-width: 100%;
+    }
+
     &::before {
         position: absolute;
         top: 0;
@@ -36,6 +52,10 @@
     &--one {
         &::before {
             top: 20px;
+
+            @include _979 {
+                top: 0;
+            }
         }
     }
 
@@ -48,6 +68,18 @@
         transform: rotate(45deg);
         background-image: url('../img/follow.svg');
         content: '';
+
+        @include _1366 {
+            right: 80px;
+        }
+
+        @include _979 {
+            right: 40px;
+        }
+
+        @include _630 {
+            right: 20px;
+        }
     }
 }
 
@@ -57,6 +89,10 @@
     right: 3%;
     display: flex;
     font-size: 0;
+
+    @include _1366 {
+        display: none;
+    }
 }
 
 .structure__decor-item {
