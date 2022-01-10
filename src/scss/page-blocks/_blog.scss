@@ -209,6 +209,10 @@
 
 .blog {
     padding-bottom: 45px;
+
+    @include _768 {
+        padding-bottom: 15px;
+    }
 }
 
 .blog__top {
@@ -217,10 +221,27 @@
     display: flex;
     align-items: flex-end;
     border-bottom: 1px solid #c7cbd0;
+
+    @include _979 {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 .blog__title {
     margin-right: auto;
+
+    @include _1024 {
+        font-size: 32px;
+    }
+
+    @include _979 {
+        margin-bottom: 20px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .blog__descr {
@@ -229,6 +250,14 @@
     width: 100%;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _979 {
+        max-width: 100%;
+    }
+
+    @include _768 {
+        font-size: 16px;
+    }
 }
 
 .blog__list {
@@ -241,6 +270,18 @@
     margin-bottom: 45px;
     max-width: calc(25% - 15px);
     width: 100%;
+
+    @include _979 {
+        max-width: calc(33% - 15px);
+    }
+
+    @include _768 {
+        max-width: calc(50% - 15px);
+    }
+
+    @include _630 {
+        max-width: 100%;
+    }
 
     &:hover {
         .blog__name {
