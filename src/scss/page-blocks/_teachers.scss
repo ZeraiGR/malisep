@@ -1,5 +1,9 @@
 .teachers {
     padding-bottom: 70px;
+
+    @include _768 {
+        padding-bottom: 15px;
+    }
 }
 
 .teachers__title {
@@ -10,6 +14,16 @@
     span {
         color: $accent;
     }
+
+    @include _1024 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
 }
 
 .teachers__descr {
@@ -17,12 +31,26 @@
     max-width: 800px;
     font-size: 24px;
     @extend %gilroy-500;
+
+    @include _979 {
+        margin-bottom: 35px;
+        max-width: 100%;
+        font-size: 18px;
+    }
 }
 
 .managment__list {
     margin-bottom: 70px;
     display: flex;
     justify-content: space-between;
+
+    @include _768 {
+        margin-bottom: 45px;
+    }
+
+    @include _630 {
+        flex-direction: column;
+    }
 }
 
 .managment__item {
@@ -30,11 +58,20 @@
 
     &:first-child {
         margin-right: 20px;
+
+        @include _630 {
+            margin-bottom: 45px;
+            margin-right: 0;
+        }
     }
 }
 
 .managment__img {
     margin-bottom: 20px;
+
+    @include _630 {
+        margin-bottom: 15px;
+    }
 }
 
 .managment__status,
@@ -67,6 +104,19 @@
 .teachers__item {
     margin-bottom: 70px;
     max-width: calc(25% - 15px);
+
+    @include _979 {
+        max-width: calc(33% - 15px);
+    }
+
+    @include _768 {
+        margin-bottom: 45px;
+        max-width: calc(50% - 15px);
+    }
+
+    @include _630 {
+        max-width: 100%;
+    }
 }
 
 .teachers__link {
