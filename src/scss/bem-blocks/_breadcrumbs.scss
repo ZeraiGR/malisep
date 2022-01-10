@@ -3,8 +3,16 @@
     display: flex;
     align-items: flex-end;
 
+    @include _979 {
+        margin-bottom: 45px;
+    }
+
     ul {
         display: flex;
+
+        @include _630 {
+            flex-wrap: wrap;
+        }
     }
 
     li {
@@ -41,4 +49,8 @@
     height: 27px;
     background-image: url('../img/decor-icons/icon-back.svg');
     @include bg();
+
+    @include _979 {
+        margin-right: 45px;
+    }
 }
