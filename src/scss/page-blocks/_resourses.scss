@@ -1,18 +1,42 @@
 .resourses {
-    padding: 100px 0 70px;
+    padding: 60px 0 40px;
+
+    @include _1024 {
+        padding: 50px 0;
+    }
+
+    & + .events-main {
+        padding: 50px 0;
+
+        @include _1366 {
+            padding: 55px 25px 0;
+        }
+    }
 }
 
 .resourses__inner {
     display: flex;
+
+    @include _979 {
+        flex-direction: column;
+    }
 }
 
 .resourses__title {
     font-size: 24px;
     @extend %gilroy-600;
+
+    @include _979 {
+        margin-bottom: 30px;
+    }
 }
 
 .resourses__content {
     margin-left: auto;
+
+    @include _979 {
+        margin-left: 0;
+    }
 }
 
 .resourses__descr {
@@ -20,6 +44,12 @@
     max-width: 560px;
     font-size: 18px;
     @extend %gilroy-500;
+
+    @include _979 {
+        margin-bottom: 30px;
+        max-width: 100%;
+        font-size: 16px;
+    }
 }
 
 .resourses__list {
@@ -27,6 +57,10 @@
     margin-left: -70px;
     display: flex;
     flex-wrap: wrap;
+
+    @include _979 {
+        margin-left: 0;
+    }
 }
 
 .resourses__item {
@@ -39,6 +73,18 @@
     min-height: 50px;
     font-size: 14px;
     @extend %gilroy-500;
+
+    @include _768 {
+        max-width: 50%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include _630 {
+        max-width: 100%;
+    }
 
     &::before {
         position: absolute;
@@ -65,6 +111,10 @@
     &:nth-child(4) {
         &::after {
             width: 76%;
+
+            @include _979 {
+                width: 100%;
+            }
         }
     }
 
@@ -73,12 +123,20 @@
         &::after {
             left: 0;
             width: 50%;
+
+            @include _979 {
+                width: 100%;
+            }
         }
     }
 
     &:last-child {
         &::after {
             display: none;
+
+            @include _979 {
+                display: block;
+            }
         }
     }
 }

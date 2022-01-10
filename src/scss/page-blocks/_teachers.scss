@@ -105,6 +105,16 @@
     margin-bottom: 70px;
     max-width: calc(25% - 15px);
 
+    &:hover {
+        .teachers__name {
+            color: $accent;
+        }
+
+        .teachers__img {
+            filter: grayscale(1);
+        }
+    }
+
     @include _979 {
         max-width: calc(33% - 15px);
     }

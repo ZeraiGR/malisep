@@ -41,6 +41,7 @@
     background-image: url('../img/decor-icons/choosen-icon.svg');
     @include bg(20px 14px, calc(100% - 20px));
     cursor: pointer;
+    background-color: transparent;
 
     @include _414 {
         padding: 13px 20px;

@@ -366,9 +366,9 @@
     padding-top: 17px;
     max-width: 280px;
     width: 100%;
-    overflow-x: auto;
 
     @include _979 {
+        overflow-x: auto;
         max-width: 100%;
     }
 }
