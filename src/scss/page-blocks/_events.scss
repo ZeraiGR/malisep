@@ -74,11 +74,31 @@
 
 .events__title {
     margin-bottom: 50px;
+
+    @include _1024 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    @include _630 {
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
 }
 
 .events__main {
     padding-bottom: 75px;
     text-align: center;
+
+    @include _1024 {
+        padding-bottom: 50px;
+    }
+}
+
+.events__categories-box {
+    @include _979 {
+        overflow-x: auto;
+    }
 }
 
 .events__categories {
@@ -87,6 +107,10 @@
     border-bottom: 1px solid #c7cbd0;
     display: flex;
     text-align: left;
+
+    @include _979 {
+        width: 979px;
+    }
 }
 
 .events__category {
@@ -97,6 +121,10 @@
     @extend %gilroy-600;
     text-transform: uppercase;
     color: $grey;
+
+    @include _768 {
+        margin-right: 45px;
+    }
 
     &::after {
         position: absolute;
@@ -131,6 +159,10 @@
     top: -20px;
     left: -35px;
     @extend %gilroy-500;
+
+    @include _1366 {
+        left: -20px;
+    }
 }
 
 .events__content {
@@ -138,6 +170,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include _979 {
+        margin-bottom: 20px;
+    }
 }
 
 // event
@@ -147,29 +183,70 @@
     max-width: calc(33% - 40px / 3);
     text-align: left;
 
+    @include _768 {
+        margin-bottom: 30px;
+        max-width: calc(50% - 40px / 2);
+    }
+
+    @include _414 {
+        max-width: 100%;
+    }
+
     &:first-child {
         max-width: 100%;
 
         .event__link {
             display: flex;
+
+            @include _768 {
+                flex-direction: column;
+            }
         }
 
         .event__img {
             margin: 0 20px 0 0;
+
+            @include _1366 {
+                max-width: 60%;
+            }
+
+            @include _768 {
+                margin-bottom: 10px;
+                margin-right: 0;
+                max-width: 100%;
+                width: 100%;
+            }
         }
 
         .event__top {
             margin-bottom: 30px;
+
+            @include _768 {
+                margin-bottom: 10px;
+            }
         }
 
         .event__title {
             margin-bottom: 20px;
             font-size: 24px;
             @extend %gilroy-600;
+
+            @include _768 {
+                margin-bottom: 15px;
+            }
+
+            @include _414 {
+                margin-bottom: 0;
+                font-size: 16px;
+            }
         }
 
         .event__excerpt {
             display: block;
+
+            @include _414 {
+                display: none;
+            }
         }
     }
 
@@ -206,6 +283,10 @@
     font-size: 18px;
     @extend %gilroy-600;
     transition: color 0.3s ease;
+
+    @include _768 {
+        font-size: 16px;
+    }
 }
 
 .event__excerpt {
