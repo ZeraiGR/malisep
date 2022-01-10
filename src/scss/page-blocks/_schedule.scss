@@ -2,6 +2,10 @@
     padding: 50px 0 95px;
     background-color: $text;
     color: #ffffff;
+
+    @include _1024 {
+        padding: 50px 0 75px;
+    }
 }
 
 .schedule__title {

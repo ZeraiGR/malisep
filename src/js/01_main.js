@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const worksSliderHandler = () => {
-        if (blogSlider) {
+        if (document.querySelector('.blog-main__slider')) {
             if (document.documentElement.clientWidth < 1024) {
                 const slides = document.querySelectorAll('.publication ');
 
