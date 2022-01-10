@@ -1,11 +1,20 @@
 .blog-one {
     padding-bottom: 60px;
+
+    @include _1024 {
+        padding-bottom: 50px;
+    }
 }
 
 .blog-one__top {
     margin-bottom: 35px;
     display: flex;
     align-items: center;
+
+    @include _1024 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .blog-one__title {
@@ -14,12 +23,40 @@
     width: 100%;
     @extend %gilroy-600;
     font-size: 36px;
+
+    @include _1366 {
+        margin-right: 25px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    @include _1024 {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    @include _768 {
+        margin-bottom: 35px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .blog-one__quote {
     max-width: 575px;
     font-size: 14px;
     @extend %gilroy-500;
+
+    @include _1366 {
+        margin-left: auto;
+    }
+
+    @include _1024 {
+        margin-left: 0;
+        max-width: 100%;
+    }
 
     span {
         @extend %gilroy-700;
@@ -28,12 +65,25 @@
 
 .blog-one__main {
     display: flex;
+
+    @include _1024 {
+        flex-direction: column-reverse;
+    }
 }
 
 .blog-one__content {
     margin-right: auto;
     max-width: 500px;
     width: 100%;
+
+    @include _1366 {
+        margin-right: 25px;
+    }
+
+    @include _1024 {
+        margin-right: 0;
+        max-width: 100%;
+    }
 
     h2 {
         margin-bottom: 20px;
@@ -51,6 +101,15 @@
 .blog-one__info {
     max-width: 575px;
     width: 100%;
+
+    @include _1366 {
+        margin-left: auto;
+    }
+
+    @include _1024 {
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
 }
 
 .blog-one__line {
@@ -58,12 +117,21 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include _414 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .blog-one__author {
     display: flex;
     align-items: center;
     font-size: 14px;
+
+    @include _414 {
+        margin-bottom: 15px;
+    }
 }
 
 .blog-one__avatar {
@@ -89,12 +157,20 @@
     font-size: 14px;
     @extend %gilroy-500;
     color: $grey;
+
+    @include _414 {
+        margin-left: 60px;
+    }
 }
 
 .blog-one__img {
     margin-bottom: 60px;
     width: 100%;
     object-fit: cover;
+
+    @include _1024 {
+        margin-bottom: 30px;
+    }
 }
 
 .blog-one__navigations {
