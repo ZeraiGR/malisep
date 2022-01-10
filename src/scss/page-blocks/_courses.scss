@@ -1,10 +1,22 @@
 .courses {
     padding-bottom: 100px;
+
+    @include _630 {
+        padding-bottom: 50px;
+    }
 }
 
 .courses__title {
     margin-bottom: 50px;
     font-size: 47px;
+
+    @include _1024 {
+        font-size: 32px;
+    }
+
+    @include _630 {
+        font-size: 24px;
+    }
 }
 
 .courses__list {
@@ -14,6 +26,16 @@
     grid-template-areas:
         'a b c c'
         'd d e f';
+
+    @include _1024 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include _630 {
+        margin-bottom: 50px;
+    }
 }
 
 .extra-courses__title {
@@ -24,6 +46,10 @@
 
 .extra-courses__list {
     margin-bottom: 50px;
+
+    @include _630 {
+        margin-bottom: 35px;
+    }
 }
 
 .extra-course {
@@ -31,6 +57,11 @@
     padding-top: 20px;
     display: flex;
     border-top: 1px solid #c7cbd0;
+
+    @include _630 {
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -43,6 +74,10 @@
     width: 100%;
     font-size: 12px;
     @extend %gilroy-700;
+
+    @include _630 {
+        margin-bottom: 30px;
+    }
 }
 
 .extra-course__total {
@@ -74,6 +109,12 @@
     max-width: 280px;
     width: 100%;
     font-size: 12px;
+
+    @include _630 {
+        margin: 0;
+        margin-top: 30px;
+        max-width: 100%;
+    }
 }
 
 .extra-course__title {
@@ -100,8 +141,17 @@
     width: 100%;
     height: 160px;
     object-fit: cover;
+
+    @include _979 {
+        display: none;
+    }
 }
 
 .extra-course__btn {
     padding: 13.5px 56px 13.5px 20px;
+
+    @include _414 {
+        padding: 13.5px 20px;
+        width: 100%;
+    }
 }

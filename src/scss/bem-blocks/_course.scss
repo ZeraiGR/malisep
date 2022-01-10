@@ -5,6 +5,15 @@
     background-color: #dcdfe2;
     overflow: hidden;
 
+    @include _1024 {
+        max-width: 48%;
+        width: 100%;
+    }
+
+    @include _630 {
+        max-width: 100%;
+    }
+
     &:nth-child(1) {
         grid-area: a;
     }
@@ -123,6 +132,10 @@
     @include bg(100%);
     font-size: 0;
 
+    @include _979 {
+        display: none;
+    }
+
     &::after {
         position: absolute;
         top: 0;
@@ -131,5 +144,9 @@
         height: 30px;
         background-color: $green;
         content: '';
+
+        @include _1366 {
+            display: none;
+        }
     }
 }
