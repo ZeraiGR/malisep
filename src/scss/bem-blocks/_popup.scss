@@ -1,0 +1,131 @@
+.popup {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    background-color: #ffffff;
+    color: #000;
+    max-width: 470px;
+    padding: 67px 75px 80px;
+    position: relative;
+    transform: translate(0px, -100%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.popup__close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+.popup__close-icon {
+    width: 20px;
+    fill: #9e9e9e;
+    transition: fill 0.3s;
+}
+
+.popup__close-icon:hover {
+    fill: #000;
+    transition: fill 0.3s;
+}
+
+.popup__title {
+    font-size: 24px;
+    margin: 0px 0px 10px 0px;
+}
+
+.popup__descr {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: $grey;
+    @extend %gilroy-400;
+}
+
+.popup__button-wrapper {
+    margin-bottom: 20px;
+}
+
+.popup__field-box {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c7cbd0;
+}
+
+.popup__field {
+    font-size: 18px;
+    color: $grey;
+    @extend %gilroy-600;
+}
+
+.popup__link {
+    width: 100%;
+    padding: 13.5px 20px;
+    text-align: left;
+}
+
+.popup__access {
+    display: flex;
+}
+
+.popup__checkbox {
+    @extend %checkbox-hidden;
+
+    &:checked + .popup__checkbox-decor {
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 7px;
+            height: 7px;
+            background-color: $green;
+
+            content: '';
+        }
+    }
+}
+
+.popup__checkbox-decor {
+    position: relative;
+    margin-right: 14px;
+    font-size: 0;
+    min-width: 17px;
+    height: 17px;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+}
+
+.popup__checkbox-descr {
+    font-size: 10px;
+    @extend %gilroy-400;
+}

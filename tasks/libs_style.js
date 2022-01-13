@@ -2,6 +2,7 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.css',
     'node_modules/@fancyapps/ui/dist/fancybox.css',
     'node_modules/simplebar/dist/simplebar.css',
+    'node_modules/intl-tel-input/build/css/intlTelInput.css',
 ];
 
 const { src, dest } = require('gulp');

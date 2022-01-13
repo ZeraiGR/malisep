@@ -32,7 +32,7 @@
         }
     }
 
-    .menu__item {
+    .menu li {
         margin-right: 60px;
         font-size: 14px;
         @extend %gilroy-500;
@@ -42,7 +42,7 @@
         }
     }
 
-    .menu__link {
+    .menu a {
         padding: 0;
         color: $grey;
         white-space: nowrap;
@@ -187,13 +187,15 @@
     @extend %gilroy-600;
 }
 
-.footer__item {
-    margin-bottom: 10px;
-    font-size: 18px;
-    @extend %gilroy-500;
+.footer__list {
+    li {
+        margin-bottom: 10px;
+        font-size: 18px;
+        @extend %gilroy-500;
 
-    &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

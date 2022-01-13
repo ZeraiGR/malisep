@@ -40,6 +40,7 @@
         "gulp-webp": "^4.0.1",
         "imagemin-jpeg-recompress": "^7.0.0",
         "imagemin-pngquant": "^9.0.2",
+        "intl-tel-input": "^17.0.15",
         "jquery": "^3.6.0",
         "jquery.marquee": "^1.6.0",
         "require-dir": "^1.2.0",

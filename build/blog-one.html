@@ -198,7 +198,67 @@
 </section>
 
 	</main>
-	<footer class="footer">
+	<div id="popup-order" class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a href="#" class="popup__close close-popup">
+				<svg class="popup__close-icon" width="20" height="20" viewbox="0 0 20 20" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+						d="M20 2.01429L17.9857 0L10 7.98571L2.01429 0L0 2.01429L7.98571 10L0 17.9857L2.01429 20L10 12.0143L17.9857 20L20 17.9857L12.0143 10L20 2.01429Z"
+						fill="#A2A9AD" />
+				</svg>
+			</a>
+			<h2 class="popup__title">Заказать звонок</h2>
+			<form class="popup__info">
+				<p class="popup__descr">
+					Введите ваш телефон, мы перезвоним в ближайшее время и ответим на вопросы
+				</p>
+				<div class="popup__field-box field-box">
+					<input class="popup__field field-input" id="user-tel" name="user-phone" type="phone"
+						placeholder="+7 (ХХХ) ХХХ ХХХХ">
+				</div>
+
+				<div class="button-wrapper popup__button-wrapper">
+					<button class="popup__link button button--follow blob-btn" type="submit">
+						Заказать звонок
+						<span class="blob-btn__inner">
+							<span class="blob-btn__blobs">
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+							</span>
+						</span>
+					</button>
+					<br />
+					<svg class="blob-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<defs>
+							<filter>
+								<fegaussianblur in="SourceGraphic" result="blur" stddeviation="10"></fegaussianblur>
+								<fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+								</fecolormatrix>
+								<feblend in2="goo" in="SourceGraphic" result="mix"></feblend>
+							</filter>
+						</defs>
+					</svg>
+				</div>
+
+				<label class="popup__access">
+					<input class="popup__checkbox" type="checkbox" name="access" checked>
+					<div class="popup__checkbox-decor">Decorate checkbox</div>
+					<span class="popup__checkbox-descr">
+						Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь Политикой
+						конфиденциальности
+					</span>
+				</label>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
 
 	<div class="container">
 		<div class="footer__top">
@@ -396,7 +456,7 @@
 					8 800 000 88 88
 				</a>
 
-				<a class="footer__call popup-link" href="#">
+				<a class="footer__call popup-link" href="#popup-order">
 					Заказать звонок
 				</a>
 

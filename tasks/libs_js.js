@@ -3,6 +3,7 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/jquery.marquee/jquery.marquee.min.js',
     'node_modules/simplebar/dist/simplebar.min.js',
+    'node_modules/intl-tel-input/build/js/intlTelInput.js',
 ];
 const { src, dest } = require('gulp');
 const uglify = require('gulp-uglify-es').default;
