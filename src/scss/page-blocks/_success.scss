@@ -1,10 +1,4 @@
 .success {
-    padding-bottom: 70px;
-
-    @include _768 {
-        padding-bottom: 50px;
-    }
-
     .container {
         max-width: 1070px;
         text-align: center;

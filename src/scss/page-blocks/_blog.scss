@@ -187,7 +187,7 @@
 }
 
 .publication__title,
-.publication__excerpt {
+.publication p {
     @extend %gilroy-500;
     font-size: 14px;
 }
@@ -200,7 +200,8 @@
 }
 
 .publication__excerpt,
-.blog__excerpt {
+.blog__item p,
+.publication p {
     color: $grey;
     @include cut-text(2);
 }
@@ -308,7 +309,7 @@
 }
 
 .blog__name,
-.blog__excerpt {
+.blog__item p {
     font-size: 14px;
     @extend %gilroy-500;
 }

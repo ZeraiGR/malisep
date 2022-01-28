@@ -1,9 +1,9 @@
 .loyalty__inner {
-    padding: 100px 0;
+    padding: 100px 0 70px;
     display: flex;
 
     @include _1024 {
-        padding: 50px 0;
+        padding: 50px 0 20px;
         flex-direction: column;
     }
 
@@ -48,15 +48,12 @@
 .loyalty__list {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
-
-    @include _768 {
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
 }
 
 .loyalty__item {
     margin-right: 10px;
+    margin-bottom: 30px;
     max-width: 180px;
     width: 100%;
     cursor: pointer;

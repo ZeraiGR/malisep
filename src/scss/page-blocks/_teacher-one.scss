@@ -80,8 +80,29 @@
 .teacher-one__list {
     margin-bottom: auto;
 
+    &--graduates {
+        margin-bottom: 20px;
+    }
+
     @include _1024 {
         margin-bottom: 55px;
+    }
+}
+
+.teacher-one__admin {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin: 20px 0;
+        font-size: 14px;
+        @extend %gilroy-500;
     }
 }
 

@@ -48,6 +48,10 @@
 .contacts__title {
     margin-bottom: 5px;
 
+    &--thanks {
+        font-size: 32px;
+    }
+
     @include _1024 {
         font-size: 32px;
     }

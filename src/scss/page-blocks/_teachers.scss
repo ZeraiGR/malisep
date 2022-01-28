@@ -55,6 +55,7 @@
 
 .managment__item {
     max-width: 574px;
+    width: 100%;
 
     &:first-child {
         margin-right: 20px;
@@ -68,6 +69,8 @@
 
 .managment__img {
     margin-bottom: 20px;
+    object-fit: cover;
+    width: 100%;
 
     @include _630 {
         margin-bottom: 15px;

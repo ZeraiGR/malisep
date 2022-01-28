@@ -258,6 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
             tabInit('.events-main__content');
         }
 
+        if (document.querySelector('.events__categories-box')) {
+            tabInit('.events__categories-box');
+        }
+
         if (document.querySelector('.program')) {
             const cycleTotal = document.querySelectorAll('.program').length;
             for (let i = 0; i < cycleTotal; i++) {
@@ -429,6 +433,26 @@ document.addEventListener('DOMContentLoaded', () => {
         calcPadding(eventsMain);
     };
 
+    const smoothScroll = () => {
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+
+        scrollLinks.forEach((el) => {
+            if (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const anchor = el.getAttribute('href').replace('#', '');
+                    const targerSection = document.getElementById(anchor);
+                    const scrollLenght = targerSection.offsetTop;
+                    console.log(scrollLenght);
+                    window.scrollTo({
+                        top: scrollLenght,
+                        behavior: 'smooth',
+                    });
+                });
+            }
+        });
+    };
+
     // custom scripts
 
     tabsManager();
@@ -439,6 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBurgerHandler();
     mobileListener();
     popupLogic();
+    smoothScroll();
 
     // sliders
 
@@ -527,7 +552,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const worksSliderHandler = () => {
+    const blogSliderHandler = () => {
         if (document.querySelector('.blog-main__slider')) {
             if (document.documentElement.clientWidth < 1024) {
                 const slides = document.querySelectorAll('.publication ');
@@ -551,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    worksSliderHandler();
+    blogSliderHandler();
 
     const teacherSlider = new Swiper('.teachers-slider', {
         slidesPerView: 4,
@@ -613,6 +638,17 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     });
+
+    const worksSliderHandler = () => {
+        let bullets = document.querySelectorAll('.works-slide__bullets');
+
+        if (bullets[0]) {
+            bullets[0].removeChild(bullets[0].lastElementChild);
+            bullets[0].removeChild(bullets[0].lastElementChild);
+        }
+    };
+
+    worksSliderHandler();
 
     const exhibitionSlider = new Swiper('#exhibition', {
         slidesPerView: 3,
